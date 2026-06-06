@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>振込先登録 — Enotter 作家登録</title>
+  <title>Stripe設定完了 — Enotter 作家登録</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
@@ -44,68 +44,50 @@
         <p>あなたのつくる手仕事を、暮らしの中へ届けませんか。</p>
       </div>
 
-      <!-- ステップインジケーター -->
       <div class="steps">
         <div class="step done"><span class="step-num">✓</span>本人情報</div>
         <div class="step done"><span class="step-num">✓</span>ショップ情報</div>
-        <div class="step done"><span class="step-num">✓</span>本人確認</div>
-        <div class="step active"><span class="step-num">4</span>振込先</div>
+        <div class="step done"><span class="step-num">✓</span>本人確認・口座</div>
+        <div class="step active"><span class="step-num">4</span>確認・完了</div>
         <div class="step"><span class="step-num">5</span>規約同意</div>
       </div>
 
-      <!-- 振込先フォーム -->
       <div class="form-card">
-        <h3>振込先口座の登録</h3>
-        <p class="form-card-desc">売上は月末締め・翌月末払いでご指定の口座にお振込みします。</p>
 
-        <div class="form-row-2">
-          <div class="field-block">
-            <label>銀行名 <span class="form-required">必須</span></label>
-            <input type="text" placeholder="○○銀行" />
+        <!-- 完了アイコン -->
+        <div style="text-align:center;padding:16px 0 28px;">
+          <div style="width:72px;height:72px;border-radius:50%;background:rgba(107,127,79,0.12);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#6B7F4F" stroke-width="2.2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
           </div>
-          <div class="field-block">
-            <label>支店名 <span class="form-required">必須</span></label>
-            <input type="text" placeholder="○○支店" />
+          <h3 style="color:var(--accent-green);margin-bottom:8px;">Stripeでの設定が完了しました</h3>
+          <p style="font-size:13px;color:var(--text-mid);">本人確認・振込先口座の登録がStripeで完了しました。<br />次のステップに進んでください。</p>
+        </div>
+
+        <!-- 設定内容サマリ -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">
+          <div style="background:rgba(107,127,79,0.07);border:1px solid rgba(107,127,79,0.2);border-radius:10px;padding:16px 18px;">
+            <div style="font-size:11px;font-weight:700;color:var(--accent-green);letter-spacing:0.08em;margin-bottom:8px;">✓ 本人確認</div>
+            <div style="font-size:13px;color:var(--text-dark);">審査中 — 通常24時間以内に完了</div>
+            <div style="font-size:11px;color:var(--text-mid);margin-top:4px;">完了後にメールでお知らせします</div>
+          </div>
+          <div style="background:rgba(107,127,79,0.07);border:1px solid rgba(107,127,79,0.2);border-radius:10px;padding:16px 18px;">
+            <div style="font-size:11px;font-weight:700;color:var(--accent-green);letter-spacing:0.08em;margin-bottom:8px;">✓ 振込先口座</div>
+            <div style="font-size:13px;color:var(--text-dark);">登録済み（Stripe管理）</div>
+            <div style="font-size:11px;color:var(--text-mid);margin-top:4px;">変更はダッシュボードから</div>
           </div>
         </div>
 
-        <div class="field-block">
-          <label>口座種別 <span class="form-required">必須</span></label>
-          <div class="radio-row">
-            <label>
-              <input type="radio" name="account-type" value="futsu" checked />
-              <span>普通</span>
-            </label>
-            <label>
-              <input type="radio" name="account-type" value="toza" />
-              <span>当座</span>
-            </label>
-          </div>
-        </div>
-
-        <div class="form-row-2">
-          <div class="field-block">
-            <label>口座番号 <span class="form-required">必須</span></label>
-            <input type="text" placeholder="1234567" maxlength="7" />
-            <span class="form-helper">数字7桁</span>
-          </div>
-          <div class="field-block">
-            <label>口座名義 <span class="form-required">必須</span></label>
-            <input type="text" placeholder="ヤマダ　タロウ" />
-            <span class="form-helper">カタカナでご入力ください</span>
-          </div>
-        </div>
-
+        <!-- 振込スケジュール -->
         <div class="schedule-box">
-          <div class="schedule-title">振込スケジュールについて</div>
+          <div class="schedule-title">振込スケジュール（Stripe経由）</div>
           <ul>
-            <li>月末締め、翌月末払い</li>
-            <li>最低振込金額：¥1,000（未満は翌月繰越）</li>
-            <li>振込手数料：作家負担（一律 ¥200）</li>
+            <li>月末締め・翌月10日払い</li>
+            <li>最低振込額：¥1,000（未満は翌月繰越）</li>
+            <li>振込手数料：<strong style="color:var(--accent-green);">無料</strong>（Stripe標準振込）</li>
+            <li>口座・スケジュールの変更はダッシュボード → 振込先設定から</li>
           </ul>
         </div>
 
-        <!-- 次へボタン -->
         <div class="form-action">
           <a href="artist-signup-terms.html" class="btn btn-primary" style="width:100%;text-align:center;display:block;">次へ：規約同意 →</a>
         </div>
