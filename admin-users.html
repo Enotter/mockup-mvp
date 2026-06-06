@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>ユーザー管理 — Enotter Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="demo-nav"><div class="container"><span class="demo-label">— MOCKUP PAGES —</span><nav class="demo-links">
+    <span class="demo-group">買い手</span>
+    <a href="index.html">トップ</a><a href="products.html">商品一覧</a><a href="search.html">検索結果</a><a href="product-detail.html">商品詳細</a><a href="cart.html">カート</a><a href="checkout.html">購入手続き</a><a href="order-complete.html">注文完了</a><a href="order-detail.html">注文詳細</a><a href="review-post.html">レビュー投稿</a><a href="mypage.html">マイページ</a><a href="mypage-orders.html">注文履歴</a><a href="mypage-profile.html">プロフィール編集</a><a href="mypage-addresses.html">住所帳</a><a href="mypage-payment.html">お支払い方法</a><a href="messages.html">メッセージ</a><a href="artists.html">作家一覧</a><a href="artist.html">作家ページ</a><a href="artist-products-list.html">作家作品一覧</a><a href="artist-reviews-list.html">作家レビュー一覧</a>
+    <span class="demo-group">認証</span>
+    <a href="login.html">ログイン</a><a href="signup.html">新規登録</a><a href="email-verify.html">メール認証</a><a href="password-reset.html">パスワード再設定</a>
+    <span class="demo-group">作家</span>
+    <a href="artist-signup.html">作家登録</a><a href="artist-dashboard.html">ダッシュボード</a><a href="product-new.html">出品</a><a href="product-edit.html">商品編集</a><a href="product-manage.html">商品管理</a><a href="order-manage.html">受注管理</a><a href="artist-order-detail.html">受注詳細</a><a href="artist-messages.html">作家メッセージ</a><a href="artist-profile-edit.html">プロフィール編集</a><a href="artist-payout.html">振込先設定</a><a href="artist-shop-edit.html">ショップ設定</a>
+    <span class="demo-group">作家登録フロー</span><a href="artist-signup-id.html">本人確認</a><a href="artist-signup-bank.html">振込先登録</a><a href="artist-signup-terms.html">規約同意</a><span class="demo-group">作家管理</span><a href="artist-pending-orders.html">未対応注文</a><a href="artist-reviews.html">レビュー一覧</a><a href="artist-notices.html">お知らせ</a><span class="demo-group">規約・その他</span>
+    <a href="terms.html">利用規約</a><a href="privacy.html">プライバシー</a><a href="tokushoho.html">特商法</a><a href="about.html">会社概要</a><a href="faq.html">FAQ</a><a href="contact.html">お問い合わせ</a><a href="404.html">404</a>
+    <span class="demo-group">運営</span>
+    <a href="admin-dashboard.html">管理ダッシュボード</a><a href="admin-artist-review.html">作家審査</a><a href="admin-users.html" class="current">ユーザー管理</a><a href="admin-products.html">商品モデレーション</a><a href="admin-features.html">特集・バナー管理</a><a href="admin-payouts.html">精算管理</a><a href="admin-inquiries.html">お問い合わせ</a><a href="admin-analytics.html">分析・レポート</a>
+  </nav></div></div>
+
+  <header style="background:#2C1A0E;color:#FAF6EE;padding:12px 0;">
+    <div class="container" style="display:flex;align-items:center;gap:24px;">
+      <a href="admin-dashboard.html" style="display:flex;gap:10px;align-items:center;color:#FAF6EE;text-decoration:none;">
+        <svg viewBox="0 0 48 48" width="32" height="32"><circle cx="24" cy="24" r="22" fill="none" stroke="#FAF6EE" stroke-width="2"/><path d="M14 30 Q24 14 34 30" stroke="#FAF6EE" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="22" r="2.5" fill="#D4B896"/></svg>
+        <span style="font-family:'Zen Old Mincho',serif;font-size:18px;font-weight:700;">Enotter</span>
+        <span style="font-size:10px;background:#B5523F;color:#fff;padding:2px 8px;border-radius:4px;letter-spacing:0.1em;">ADMIN</span>
+      </a>
+      <nav style="margin-left:auto;display:flex;gap:20px;font-size:13px;">
+        <a href="admin-dashboard.html" style="color:rgba(250,246,238,0.7);">ダッシュボード</a>
+        <a href="admin-artist-review.html" style="color:rgba(250,246,238,0.7);">作家審査</a>
+        <a href="admin-users.html" style="color:#FAF6EE;font-weight:700;">ユーザー</a>
+        <a href="admin-products.html" style="color:rgba(250,246,238,0.7);">商品</a>
+        
+        <a href="admin-payouts.html" style="color:rgba(250,246,238,0.7);">精算</a>
+        <a href="admin-analytics.html" style="color:rgba(250,246,238,0.7);">分析</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mvp-page">
+    <div class="container">
+
+      <div style="margin-bottom:24px;">
+        <span style="font-family:var(--font-hand);color:var(--accent-gold);font-size:13px;">— 運営管理 —</span>
+        <h1 style="font-family:var(--font-mincho);font-size:28px;color:var(--text-dark);margin-top:4px;">ユーザー管理</h1>
+      </div>
+
+      <!-- 検索・フィルタ -->
+      <div class="table-toolbar">
+        <div class="toolbar-left">
+          <input type="text" placeholder="名前・メールアドレスで検索…" style="min-width:280px;" />
+          <select>
+            <option>すべてのロール</option>
+            <option>買い手のみ</option>
+            <option>作家のみ</option>
+            <option>停止中</option>
+          </select>
+          <select>
+            <option>登録日（新しい順）</option>
+            <option>登録日（古い順）</option>
+            <option>最終ログイン順</option>
+          </select>
+        </div>
+        <span style="font-size:13px;color:var(--text-light);">全 12,840 名</span>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>ユーザーID</th>
+            <th>名前</th>
+            <th>メールアドレス</th>
+            <th>ロール</th>
+            <th>登録日</th>
+            <th>最終ログイン</th>
+            <th>ステータス</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-family:var(--font-hand);color:var(--text-light);font-size:12px;">#U-00001</td>
+            <td style="font-weight:700;">大谷 翔正</td>
+            <td style="font-size:12px;color:var(--text-mid);">otani@example.com</td>
+            <td><span style="background:#EEF3E5;color:var(--accent-green);font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700;">買い手</span></td>
+            <td style="font-size:12px;">2025/04/12</td>
+            <td style="font-size:12px;">2026/05/31</td>
+            <td><span class="status-badge published">有効</span></td>
+            <td><div class="row-actions"><button>詳細</button><button>停止</button><button style="color:var(--accent-red);">削除</button></div></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-hand);color:var(--text-light);font-size:12px;">#U-00002</td>
+            <td style="font-weight:700;">金森 朔</td>
+            <td style="font-size:12px;color:var(--text-mid);">kanamori@example.com</td>
+            <td><span style="background:#FDF6E6;color:var(--accent-gold);font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700;">作家</span></td>
+            <td style="font-size:12px;">2024/11/05</td>
+            <td style="font-size:12px;">2026/05/31</td>
+            <td><span class="status-badge published">有効</span></td>
+            <td><div class="row-actions"><button>詳細</button><button>停止</button><button style="color:var(--accent-red);">削除</button></div></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-hand);color:var(--text-light);font-size:12px;">#U-00003</td>
+            <td style="font-weight:700;">山本 花</td>
+            <td style="font-size:12px;color:var(--text-mid);">hana.yamamoto@example.com</td>
+            <td><span style="background:#EEF3E5;color:var(--accent-green);font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700;">買い手</span></td>
+            <td style="font-size:12px;">2025/08/22</td>
+            <td style="font-size:12px;">2026/05/30</td>
+            <td><span class="status-badge published">有効</span></td>
+            <td><div class="row-actions"><button>詳細</button><button>停止</button><button style="color:var(--accent-red);">削除</button></div></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-hand);color:var(--text-light);font-size:12px;">#U-00004</td>
+            <td style="font-weight:700;">陶工房 椿</td>
+            <td style="font-size:12px;color:var(--text-mid);">tsubaki-toki@example.com</td>
+            <td><span style="background:#FDF6E6;color:var(--accent-gold);font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700;">作家</span></td>
+            <td style="font-size:12px;">2024/06/18</td>
+            <td style="font-size:12px;">2026/05/29</td>
+            <td><span class="status-badge published">有効</span></td>
+            <td><div class="row-actions"><button>詳細</button><button>停止</button><button style="color:var(--accent-red);">削除</button></div></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-hand);color:var(--text-light);font-size:12px;">#U-00005</td>
+            <td style="font-weight:700;">小林 美咲</td>
+            <td style="font-size:12px;color:var(--text-mid);">misaki.kobayashi@example.com</td>
+            <td><span style="background:#EEF3E5;color:var(--accent-green);font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700;">買い手</span></td>
+            <td style="font-size:12px;">2026/01/07</td>
+            <td style="font-size:12px;">2026/05/28</td>
+            <td><span class="status-badge published">有効</span></td>
+            <td><div class="row-actions"><button>詳細</button><button>停止</button><button style="color:var(--accent-red);">削除</button></div></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-hand);color:var(--text-light);font-size:12px;">#U-00006</td>
+            <td style="font-weight:700;">佐藤 健太</td>
+            <td style="font-size:12px;color:var(--text-mid);">kenta.sato@example.com</td>
+            <td><span style="background:#EEF3E5;color:var(--accent-green);font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700;">買い手</span></td>
+            <td style="font-size:12px;">2025/03/14</td>
+            <td style="font-size:12px;">2026/05/27</td>
+            <td><span class="status-badge published">有効</span></td>
+            <td><div class="row-actions"><button>詳細</button><button>停止</button><button style="color:var(--accent-red);">削除</button></div></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-hand);color:var(--text-light);font-size:12px;">#U-00007</td>
+            <td style="font-weight:700;">布工房 沙織</td>
+            <td style="font-size:12px;color:var(--text-mid);">saori.nunokoubo@example.com</td>
+            <td><span style="background:#FDF6E6;color:var(--accent-gold);font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700;">作家</span></td>
+            <td style="font-size:12px;">2024/09/02</td>
+            <td style="font-size:12px;">2026/05/26</td>
+            <td><span class="status-badge published">有効</span></td>
+            <td><div class="row-actions"><button>詳細</button><button>停止</button><button style="color:var(--accent-red);">削除</button></div></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-hand);color:var(--text-light);font-size:12px;">#U-00008</td>
+            <td style="font-weight:700;">鈴木 裕子</td>
+            <td style="font-size:12px;color:var(--text-mid);">yuko.suzuki@example.com</td>
+            <td><span style="background:#EEF3E5;color:var(--accent-green);font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700;">買い手</span></td>
+            <td style="font-size:12px;">2025/11/30</td>
+            <td style="font-size:12px;">2026/05/24</td>
+            <td><span class="status-badge published">有効</span></td>
+            <td><div class="row-actions"><button>詳細</button><button>停止</button><button style="color:var(--accent-red);">削除</button></div></td>
+          </tr>
+          <tr style="background:rgba(238,238,238,0.3);">
+            <td style="font-family:var(--font-hand);color:var(--text-light);font-size:12px;">#U-00009</td>
+            <td style="font-weight:700;color:var(--text-light);">中村 太朗</td>
+            <td style="font-size:12px;color:var(--text-light);">taro.nakamura@example.com</td>
+            <td><span style="background:#EEF3E5;color:var(--accent-green);font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700;">買い手</span></td>
+            <td style="font-size:12px;">2025/06/19</td>
+            <td style="font-size:12px;">2026/03/11</td>
+            <td><span class="status-badge cancelled">停止中</span></td>
+            <td><div class="row-actions"><button>詳細</button><button style="color:var(--accent-green);">解除</button><button style="color:var(--accent-red);">削除</button></div></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-hand);color:var(--text-light);font-size:12px;">#U-00010</td>
+            <td style="font-weight:700;">glass studio hana</td>
+            <td style="font-size:12px;color:var(--text-mid);">glass.hana@example.com</td>
+            <td><span style="background:#FDF6E6;color:var(--accent-gold);font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700;">作家</span></td>
+            <td style="font-size:12px;">2024/04/22</td>
+            <td style="font-size:12px;">2026/05/31</td>
+            <td><span class="status-badge published">有効</span></td>
+            <td><div class="row-actions"><button>詳細</button><button>停止</button><button style="color:var(--accent-red);">削除</button></div></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- ページネーション -->
+      <div class="pagination" style="margin-top:24px;">
+        <span>‹</span>
+        <a href="#" class="current">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <span>…</span>
+        <a href="#">128</a>
+        <a href="#">›</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

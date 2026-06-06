@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>新規登録 — Enotter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="demo-nav"><div class="container"><span class="demo-label">— MOCKUP PAGES —</span><nav class="demo-links">
+    <span class="demo-group">買い手</span>
+    <a href="index.html">トップ</a><a href="products.html">商品一覧</a><a href="search.html">検索結果</a><a href="product-detail.html">商品詳細</a><a href="cart.html">カート</a><a href="checkout.html">購入手続き</a><a href="order-complete.html">注文完了</a><a href="order-detail.html">注文詳細</a><a href="review-post.html">レビュー投稿</a><a href="mypage.html">マイページ</a><a href="mypage-orders.html">注文履歴</a><a href="mypage-profile.html">プロフィール編集</a><a href="mypage-addresses.html">住所帳</a><a href="mypage-payment.html">お支払い方法</a><a href="messages.html">メッセージ</a><a href="artists.html">作家一覧</a><a href="artist.html">作家ページ</a><a href="artist-products-list.html">作家作品一覧</a><a href="artist-reviews-list.html">作家レビュー一覧</a>
+    <span class="demo-group">認証</span>
+    <a href="login.html">ログイン</a><a href="signup.html" class="current">新規登録</a><a href="email-verify.html">メール認証</a><a href="password-reset.html">パスワード再設定</a>
+    <span class="demo-group">作家</span>
+    <a href="artist-signup.html">作家登録</a><a href="artist-dashboard.html">ダッシュボード</a><a href="product-new.html">出品</a><a href="product-edit.html">商品編集</a><a href="product-manage.html">商品管理</a><a href="order-manage.html">受注管理</a><a href="artist-order-detail.html">受注詳細</a><a href="artist-messages.html">作家メッセージ</a><a href="artist-profile-edit.html">プロフィール編集</a><a href="artist-payout.html">振込先設定</a><a href="artist-shop-edit.html">ショップ設定</a>
+    <span class="demo-group">作家登録フロー</span><a href="artist-signup-id.html">本人確認</a><a href="artist-signup-bank.html">振込先登録</a><a href="artist-signup-terms.html">規約同意</a><span class="demo-group">作家管理</span><a href="artist-pending-orders.html">未対応注文</a><a href="artist-reviews.html">レビュー一覧</a><a href="artist-notices.html">お知らせ</a><span class="demo-group">運営</span><a href="admin-dashboard.html">管理ダッシュボード</a><a href="admin-artist-review.html">作家審査</a><a href="admin-users.html">ユーザー管理</a><a href="admin-products.html">商品モデレーション</a><a href="admin-features.html">特集・バナー管理</a><a href="admin-payouts.html">精算管理</a><a href="admin-inquiries.html">お問い合わせ</a><a href="admin-analytics.html">分析・レポート</a><span class="demo-group">規約・その他</span>
+    <a href="terms.html">利用規約</a><a href="privacy.html">プライバシー</a><a href="tokushoho.html">特商法</a><a href="about.html">会社概要</a><a href="faq.html">FAQ</a><a href="contact.html">お問い合わせ</a><a href="404.html">404</a>
+  </nav></div></div>
+
+  <header class="header">
+    <div class="container header-inner" style="grid-template-columns: auto 1fr auto;padding:18px 32px;">
+      <a href="index.html" class="logo">
+        <span class="logo-mark"><svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="24" r="22" fill="#FAF6EE" stroke="#5C3A21" stroke-width="2"/><path d="M14 30 Q24 14 34 30" stroke="#5C3A21" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="22" r="2.5" fill="#B5523F"/><path d="M18 34 L30 34" stroke="#5C3A21" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/></svg></span>
+        <span class="logo-text"><span class="logo-jp">Enotter</span></span>
+      </a>
+      <div></div>
+      <a href="index.html" style="font-size:13px;color:var(--text-mid);">← ホームへ戻る</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="auth-layout">
+      <div class="auth-visual">
+        <div class="quote">
+          世界にひとつの<br />
+          <em>作品</em>と、<br />
+          ここで出会う。
+        </div>
+        <div class="author">— Enotter</div>
+
+        <div style="margin-top:60px;display:flex;flex-direction:column;gap:14px;font-size:13px;">
+          <div style="display:flex;gap:10px;align-items:center;"><span style="font-family:var(--font-hand);color:var(--accent-gold);font-size:18px;">01</span>初回登録で500円分のクーポンプレゼント</div>
+          <div style="display:flex;gap:10px;align-items:center;"><span style="font-family:var(--font-hand);color:var(--accent-gold);font-size:18px;">02</span>3,200名以上の作家からお気に入りを見つける</div>
+          <div style="display:flex;gap:10px;align-items:center;"><span style="font-family:var(--font-hand);color:var(--accent-gold);font-size:18px;">03</span>新作・セール情報をいち早くお届け</div>
+        </div>
+      </div>
+
+      <div class="auth-form-wrap">
+        <div class="auth-tabs">
+          <button onclick="location.href='login.html'">ログイン</button>
+          <button class="active">新規登録</button>
+        </div>
+
+        <h2>はじめまして</h2>
+        <p>無料の会員登録で、お気に入りの作品と作家にすぐ出会えます。</p>
+
+        <form class="auth-form">
+          <div class="form-field"><label>メールアドレス <span class="form-required">必須</span></label><input type="email" placeholder="your@email.com" /><span class="form-helper">認証メールをお送りします</span></div>
+
+          <div class="form-field"><label>パスワード <span class="form-required">必須</span></label><input type="password" placeholder="8〜64文字（英数字混在）" /><span class="form-helper">強度: ●●●○○ ふつう</span></div>
+
+          <div class="form-field"><label>パスワード（確認） <span class="form-required">必須</span></label><input type="password" placeholder="もう一度入力" /></div>
+
+          <div class="form-field"><label>ニックネーム <span class="form-required">必須</span></label><input type="text" placeholder="20文字以内" /><span class="form-helper">作品レビューや作家へのコメントで表示されます</span></div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div class="form-field"><label>生年月日 <span class="form-optional">任意</span><span class="form-mvp-out">MVP外</span></label><input type="date" /></div>
+            <div class="form-field"><label>性別 <span class="form-optional">任意</span><span class="form-mvp-out">MVP外</span></label>
+              <select><option>選択しない</option><option>女性</option><option>男性</option><option>その他</option></select>
+            </div>
+          </div>
+
+          <div class="form-field"><label>招待コード <span class="form-optional">任意</span><span class="form-mvp-out">MVP外</span></label><input type="text" placeholder="お友達からの紹介コード" /></div>
+
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:12px;color:var(--text-mid);margin-top:8px;">
+            <label style="display:flex;gap:8px;align-items:flex-start;"><input type="checkbox" checked style="margin-top:3px;" />
+              メールマガジンを購読する（新着・特集情報を月2回お届け）<span class="form-mvp-out" style="align-self:center;">MVP外</span></label>
+            <label style="display:flex;gap:8px;align-items:flex-start;"><input type="checkbox" style="margin-top:3px;" />
+              <span><a href="terms.html" style="color:var(--accent-red);text-decoration:underline;text-decoration-style:dotted;">利用規約</a>に同意します <span class="form-required">必須</span></span></label>
+            <label style="display:flex;gap:8px;align-items:flex-start;"><input type="checkbox" style="margin-top:3px;" />
+              <span><a href="privacy.html" style="color:var(--accent-red);text-decoration:underline;text-decoration-style:dotted;">プライバシーポリシー</a>に同意します <span class="form-required">必須</span></span></label>
+          </div>
+
+          <button class="btn btn-primary auth-submit" onclick="location.href='email-verify.html'">登録する</button>
+        </form>
+
+        <div class="divider">または</div>
+
+        <div class="sns-login">
+          <button class="sns-btn google" onclick="location.href='email-verify.html'"><span class="ico">G</span>Googleで登録</button>
+          <button class="sns-btn apple" onclick="location.href='email-verify.html'"><span class="ico"></span>Appleで登録</button>
+          <button class="sns-btn line" onclick="location.href='email-verify.html'"><span class="ico">L</span>LINEで登録</button>
+        </div>
+
+        <p style="text-align:center;font-size:12px;color:var(--text-mid);margin-top:32px;">
+          すでに会員登録済みですか？  <a href="login.html" style="color:var(--accent-red);font-weight:700;text-decoration:underline;text-decoration-style:dotted;">ログインはこちら →</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><div class="footer-bottom" style="border:0;padding-top:0;"><span>© 2026 Enotter.</span></div></div></footer>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>受注詳細 #ENO-20260515-0374 — Enotter ARTIST STUDIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="demo-nav"><div class="container"><span class="demo-label">— MOCKUP PAGES —</span><nav class="demo-links">
+    <span class="demo-group">買い手</span>
+    <a href="index.html">トップ</a><a href="products.html">商品一覧</a><a href="search.html">検索結果</a><a href="product-detail.html">商品詳細</a><a href="cart.html">カート</a><a href="checkout.html">購入手続き</a><a href="order-complete.html">注文完了</a><a href="order-detail.html">注文詳細</a><a href="review-post.html">レビュー投稿</a><a href="mypage.html">マイページ</a><a href="mypage-orders.html">注文履歴</a><a href="mypage-profile.html">プロフィール編集</a><a href="mypage-addresses.html">住所帳</a><a href="mypage-payment.html">お支払い方法</a><a href="messages.html">メッセージ</a><a href="artists.html">作家一覧</a><a href="artist.html">作家ページ</a><a href="artist-products-list.html">作家作品一覧</a><a href="artist-reviews-list.html">作家レビュー一覧</a>
+    <span class="demo-group">認証</span>
+    <a href="login.html">ログイン</a><a href="signup.html">新規登録</a><a href="email-verify.html">メール認証</a><a href="password-reset.html">パスワード再設定</a>
+    <span class="demo-group">作家</span>
+    <a href="artist-signup.html">作家登録</a><a href="artist-dashboard.html">ダッシュボード</a><a href="product-new.html">出品</a><a href="product-edit.html">商品編集</a><a href="product-manage.html">商品管理</a><a href="order-manage.html">受注管理</a><a href="artist-order-detail.html" class="current">受注詳細</a><a href="artist-messages.html">作家メッセージ</a><a href="artist-profile-edit.html">プロフィール編集</a><a href="artist-payout.html">振込先設定</a><a href="artist-shop-edit.html">ショップ設定</a>
+    <span class="demo-group">作家登録フロー</span><a href="artist-signup-id.html">本人確認</a><a href="artist-signup-bank.html">振込先登録</a><a href="artist-signup-terms.html">規約同意</a><span class="demo-group">作家管理</span><a href="artist-pending-orders.html">未対応注文</a><a href="artist-reviews.html">レビュー一覧</a><a href="artist-notices.html">お知らせ</a><span class="demo-group">運営</span><a href="admin-dashboard.html">管理ダッシュボード</a><a href="admin-artist-review.html">作家審査</a><a href="admin-users.html">ユーザー管理</a><a href="admin-products.html">商品モデレーション</a><a href="admin-features.html">特集・バナー管理</a><a href="admin-payouts.html">精算管理</a><a href="admin-inquiries.html">お問い合わせ</a><a href="admin-analytics.html">分析・レポート</a><span class="demo-group">規約・その他</span>
+    <a href="terms.html">利用規約</a><a href="privacy.html">プライバシー</a><a href="tokushoho.html">特商法</a><a href="about.html">会社概要</a><a href="faq.html">FAQ</a><a href="contact.html">お問い合わせ</a><a href="404.html">404</a>
+  </nav></div></div>
+
+  <!-- 作家スタジオ共通ヘッダー -->
+  <header style="background:var(--wood-dark);color:var(--paper);padding:14px 0;">
+    <div class="container" style="display:flex;align-items:center;gap:24px;">
+      <a href="artist-dashboard.html" style="display:flex;gap:10px;align-items:center;color:var(--paper);text-decoration:none;">
+        <svg viewBox="0 0 48 48" width="36" height="36"><circle cx="24" cy="24" r="22" fill="none" stroke="#FAF6EE" stroke-width="2"/><path d="M14 30 Q24 14 34 30" stroke="#FAF6EE" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="22" r="2.5" fill="#D4B896"/></svg>
+        <span><span style="font-family:var(--font-mincho);font-size:18px;font-weight:700;">Enotter</span><span style="display:block;font-family:var(--font-hand);color:var(--accent-gold);font-size:10px;letter-spacing:0.2em;">— ARTIST STUDIO —</span></span>
+      </a>
+      <nav style="margin-left:auto;display:flex;gap:20px;font-size:13px;">
+        <a href="artist-dashboard.html" style="color:rgba(250,246,238,0.7);text-decoration:none;">ダッシュボード</a>
+        <a href="product-manage.html" style="color:rgba(250,246,238,0.7);text-decoration:none;">商品管理</a>
+        <a href="order-manage.html" style="color:var(--paper);font-weight:700;text-decoration:none;">受注管理</a>
+        <a href="artist-messages.html" style="color:rgba(250,246,238,0.7);text-decoration:none;">メッセージ</a>
+        <a href="artist-payout.html" style="color:rgba(250,246,238,0.7);text-decoration:none;">売上・振込</a>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <img src="https://images.unsplash.com/photo-1531947386298-1b14d8caca91?auto=format&fit=crop&w=120&q=80" style="width:32px;height:32px;border-radius:50%;object-fit:cover;" alt="作家アバター" />
+        <span style="font-size:13px;">atelier mori</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="mvp-page">
+    <div class="container">
+
+      <!-- パンくず -->
+      <div style="font-size:12px;color:var(--text-light);margin-bottom:20px;">
+        <a href="order-manage.html" style="color:var(--text-light);text-decoration:none;">受注管理</a>
+        <span style="margin:0 8px;">›</span>
+        <span style="color:var(--text-dark);">受注詳細</span>
+      </div>
+
+      <!-- ページタイトル -->
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px;">
+        <div>
+          <span style="font-family:var(--font-hand);color:var(--accent-gold);font-size:13px;letter-spacing:0.15em;">— 受注詳細 —</span>
+          <h1 style="font-family:var(--font-mincho);font-size:26px;color:var(--text-dark);margin:4px 0 8px;">注文 #ENO-20260515-0374</h1>
+          <span class="status-badge" style="background:#E8F4FD;color:#1A6FA8;border:1px solid #BFD9EE;font-size:12px;padding:4px 12px;border-radius:999px;font-weight:700;">配送中</span>
+        </div>
+        <a href="order-manage.html" class="btn btn-outline" style="font-size:13px;">← 受注管理に戻る</a>
+      </div>
+
+      <!-- 2カラムレイアウト -->
+      <div style="display:grid;grid-template-columns:3fr 2fr;gap:24px;align-items:start;">
+
+        <!-- 左カラム：メイン情報 -->
+        <div style="display:flex;flex-direction:column;gap:20px;">
+
+          <!-- (1) 注文情報 -->
+          <div class="form-card">
+            <h3 style="font-family:var(--font-mincho);font-size:16px;color:var(--text-dark);margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid var(--paper-edge);">注文情報</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+              <div>
+                <div style="font-size:11px;color:var(--text-light);margin-bottom:3px;">注文番号</div>
+                <div style="font-size:13px;color:var(--text-dark);font-weight:700;">#ENO-20260515-0374</div>
+              </div>
+              <div>
+                <div style="font-size:11px;color:var(--text-light);margin-bottom:3px;">注文日時</div>
+                <div style="font-size:13px;color:var(--text-dark);">2026年5月15日 14:32</div>
+              </div>
+              <div>
+                <div style="font-size:11px;color:var(--text-light);margin-bottom:3px;">決済方法</div>
+                <div style="font-size:13px;color:var(--text-dark);">クレジットカード</div>
+              </div>
+              <div>
+                <div style="font-size:11px;color:var(--text-light);margin-bottom:3px;">決済状況</div>
+                <div style="font-size:13px;color:var(--text-dark);">
+                  <span style="display:inline-flex;align-items:center;gap:4px;">
+                    <span style="width:8px;height:8px;border-radius:50%;background:#27AE60;display:inline-block;"></span>
+                    支払い済み
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- (2) 購入商品 -->
+          <div class="form-card">
+            <h3 style="font-family:var(--font-mincho);font-size:16px;color:var(--text-dark);margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid var(--paper-edge);">購入商品</h3>
+            <div style="display:flex;gap:16px;align-items:flex-start;">
+              <img src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=120&q=80" alt="真鍮の三日月ピアス" style="width:80px;height:80px;object-fit:cover;border-radius:8px;border:1px solid var(--paper-edge);" />
+              <div style="flex:1;">
+                <div style="font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:4px;">真鍮の三日月ピアス</div>
+                <div style="font-size:16px;color:var(--accent-red);font-family:var(--font-mincho);font-weight:700;margin-bottom:8px;">¥4,400</div>
+                <div style="display:flex;gap:16px;">
+                  <div style="font-size:12px;color:var(--text-mid);">数量：<strong>1個</strong></div>
+                  <div style="font-size:12px;color:var(--text-mid);">ギフトラッピング：<strong>なし</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- (3) 配送状況 -->
+          <div class="form-card">
+            <h3 style="font-family:var(--font-mincho);font-size:16px;color:var(--text-dark);margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid var(--paper-edge);">配送状況</h3>
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div>
+                <label style="display:block;font-size:12px;font-weight:700;color:var(--text-mid);margin-bottom:6px;">現在のステータス</label>
+                <select style="width:100%;padding:10px 12px;border:1px solid var(--paper-edge);border-radius:6px;font-size:13px;color:var(--text-dark);background:var(--paper);font-family:inherit;">
+                  <option value="confirmed">受注確認</option>
+                  <option value="packing">梱包中</option>
+                  <option value="shipped" selected>発送済み</option>
+                  <option value="delivered">お届け済み</option>
+                </select>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+                <div>
+                  <label style="display:block;font-size:12px;font-weight:700;color:var(--text-mid);margin-bottom:6px;">追跡番号</label>
+                  <input type="text" value="812345678901" style="width:100%;padding:10px 12px;border:1px solid var(--paper-edge);border-radius:6px;font-size:13px;color:var(--text-dark);background:var(--paper);box-sizing:border-box;" />
+                </div>
+                <div>
+                  <label style="display:block;font-size:12px;font-weight:700;color:var(--text-mid);margin-bottom:6px;">配送会社</label>
+                  <select style="width:100%;padding:10px 12px;border:1px solid var(--paper-edge);border-radius:6px;font-size:13px;color:var(--text-dark);background:var(--paper);box-sizing:border-box;">
+                    <option selected>ヤマト運輸</option>
+                    <option>佐川急便</option>
+                    <option>日本郵便</option>
+                    <option>その他</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label style="display:block;font-size:12px;font-weight:700;color:var(--text-mid);margin-bottom:6px;">発送日</label>
+                <input type="text" value="2026年5月16日" style="width:100%;padding:10px 12px;border:1px solid var(--paper-edge);border-radius:6px;font-size:13px;color:var(--text-dark);background:var(--paper);box-sizing:border-box;" />
+              </div>
+              <div>
+                <button class="btn btn-primary" style="width:100%;">配送情報を更新する</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- (4) 購入者へのメモ -->
+          <div class="form-card">
+            <h3 style="font-family:var(--font-mincho);font-size:16px;color:var(--text-dark);margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid var(--paper-edge);">購入者へのメモ</h3>
+            <textarea rows="4" placeholder="お客様に伝えたいことを入力..." style="width:100%;padding:10px 12px;border:1px solid var(--paper-edge);border-radius:6px;font-size:13px;color:var(--text-dark);background:var(--paper);resize:vertical;box-sizing:border-box;font-family:inherit;line-height:1.7;"></textarea>
+            <div style="margin-top:10px;">
+              <button class="btn btn-outline">保存する</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 右カラム：サイドバー -->
+        <div style="display:flex;flex-direction:column;gap:20px;">
+
+          <!-- (1) 金額サマリー -->
+          <div class="form-card">
+            <h3 style="font-family:var(--font-mincho);font-size:16px;color:var(--text-dark);margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid var(--paper-edge);">金額サマリー</h3>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text-mid);">
+                <span>商品代金</span>
+                <span>¥4,400</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text-mid);">
+                <span>送料</span>
+                <span>¥550</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:15px;font-weight:700;color:var(--text-dark);padding-top:8px;border-top:1px solid var(--paper-edge);margin-top:4px;">
+                <span>合計</span>
+                <span style="font-family:var(--font-mincho);">¥4,950</span>
+              </div>
+              <div style="background:var(--paper-warm);border-radius:8px;padding:12px;margin-top:8px;">
+                <div style="font-size:11px;color:var(--text-light);margin-bottom:4px;">あなたへの入金予定</div>
+                <div style="font-size:18px;font-weight:700;color:var(--wood-dark);font-family:var(--font-mincho);">¥3,960</div>
+                <div style="font-size:11px;color:var(--text-light);margin-top:2px;">手数料20%差引後</div>
+              </div>
+              <div style="font-size:12px;color:var(--text-mid);margin-top:4px;">
+                精算見込み：<strong>2026年6月10日</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- (2) 届け先情報 -->
+          <div class="form-card">
+            <h3 style="font-family:var(--font-mincho);font-size:16px;color:var(--text-dark);margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid var(--paper-edge);">届け先情報</h3>
+            <div style="background:var(--paper-warm);border-radius:6px;padding:10px 12px;font-size:12px;color:var(--text-mid);margin-bottom:12px;line-height:1.6;">
+              ※購入者の個人情報は保護のため詳細は非表示です
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;">
+              <div style="display:flex;justify-content:space-between;font-size:13px;">
+                <span style="color:var(--text-light);">都道府県</span>
+                <span style="color:var(--text-dark);font-weight:600;">東京都</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;">
+                <span style="color:var(--text-light);">ギフト注文</span>
+                <span style="color:var(--text-dark);">なし</span>
+              </div>
+            </div>
+            <a href="artist-messages.html" class="btn btn-outline" style="display:block;text-align:center;font-size:13px;">購入者にメッセージを送る</a>
+          </div>
+
+          <!-- (3) タイムライン -->
+          <div class="form-card">
+            <h3 style="font-family:var(--font-mincho);font-size:16px;color:var(--text-dark);margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid var(--paper-edge);">タイムライン</h3>
+            <div style="display:flex;flex-direction:column;gap:0;">
+
+              <div style="display:flex;gap:12px;padding-bottom:16px;position:relative;">
+                <div style="display:flex;flex-direction:column;align-items:center;min-width:16px;">
+                  <div style="width:10px;height:10px;border-radius:50%;background:var(--accent-gold);border:2px solid var(--paper-warm);flex-shrink:0;margin-top:2px;"></div>
+                  <div style="width:1px;flex:1;background:var(--paper-edge);margin-top:4px;"></div>
+                </div>
+                <div style="flex:1;">
+                  <div style="font-size:11px;color:var(--text-light);margin-bottom:2px;">2026/05/15 14:32</div>
+                  <div style="font-size:13px;color:var(--text-dark);font-weight:600;">注文受付</div>
+                </div>
+              </div>
+
+              <div style="display:flex;gap:12px;padding-bottom:16px;position:relative;">
+                <div style="display:flex;flex-direction:column;align-items:center;min-width:16px;">
+                  <div style="width:10px;height:10px;border-radius:50%;background:var(--accent-gold);border:2px solid var(--paper-warm);flex-shrink:0;margin-top:2px;"></div>
+                  <div style="width:1px;flex:1;background:var(--paper-edge);margin-top:4px;"></div>
+                </div>
+                <div style="flex:1;">
+                  <div style="font-size:11px;color:var(--text-light);margin-bottom:2px;">2026/05/15 14:33</div>
+                  <div style="font-size:13px;color:var(--text-dark);font-weight:600;">決済完了</div>
+                </div>
+              </div>
+
+              <div style="display:flex;gap:12px;padding-bottom:16px;position:relative;">
+                <div style="display:flex;flex-direction:column;align-items:center;min-width:16px;">
+                  <div style="width:10px;height:10px;border-radius:50%;background:var(--accent-gold);border:2px solid var(--paper-warm);flex-shrink:0;margin-top:2px;"></div>
+                  <div style="width:1px;flex:1;background:var(--paper-edge);margin-top:4px;"></div>
+                </div>
+                <div style="flex:1;">
+                  <div style="font-size:11px;color:var(--text-light);margin-bottom:2px;">2026/05/15 16:00</div>
+                  <div style="font-size:13px;color:var(--text-dark);font-weight:600;">受注確認</div>
+                  <div style="font-size:11px;color:var(--text-light);margin-top:2px;">あなたが確認済み</div>
+                </div>
+              </div>
+
+              <div style="display:flex;gap:12px;">
+                <div style="display:flex;flex-direction:column;align-items:center;min-width:16px;">
+                  <div style="width:10px;height:10px;border-radius:50%;background:var(--accent-gold);border:2px solid var(--paper-warm);flex-shrink:0;margin-top:2px;"></div>
+                </div>
+                <div style="flex:1;">
+                  <div style="font-size:11px;color:var(--text-light);margin-bottom:2px;">2026/05/16 10:30</div>
+                  <div style="font-size:13px;color:var(--text-dark);font-weight:600;">発送処理</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer style="background:var(--wood-dark);color:rgba(250,246,238,0.6);text-align:center;padding:24px;font-size:12px;margin-top:60px;">
+    &copy; 2026 Enotter Inc.
+  </footer>
+
+</body>
+</html>

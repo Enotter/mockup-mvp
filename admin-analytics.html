@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>分析・レポート — Enotter Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="demo-nav"><div class="container"><span class="demo-label">— MOCKUP PAGES —</span><nav class="demo-links">
+    <span class="demo-group">買い手</span>
+    <a href="index.html">トップ</a><a href="products.html">商品一覧</a><a href="search.html">検索結果</a><a href="product-detail.html">商品詳細</a><a href="cart.html">カート</a><a href="checkout.html">購入手続き</a><a href="order-complete.html">注文完了</a><a href="order-detail.html">注文詳細</a><a href="review-post.html">レビュー投稿</a><a href="mypage.html">マイページ</a><a href="mypage-orders.html">注文履歴</a><a href="mypage-profile.html">プロフィール編集</a><a href="mypage-addresses.html">住所帳</a><a href="mypage-payment.html">お支払い方法</a><a href="messages.html">メッセージ</a><a href="artists.html">作家一覧</a><a href="artist.html">作家ページ</a><a href="artist-products-list.html">作家作品一覧</a><a href="artist-reviews-list.html">作家レビュー一覧</a>
+    <span class="demo-group">認証</span>
+    <a href="login.html">ログイン</a><a href="signup.html">新規登録</a><a href="email-verify.html">メール認証</a><a href="password-reset.html">パスワード再設定</a>
+    <span class="demo-group">作家</span>
+    <a href="artist-signup.html">作家登録</a><a href="artist-dashboard.html">ダッシュボード</a><a href="product-new.html">出品</a><a href="product-edit.html">商品編集</a><a href="product-manage.html">商品管理</a><a href="order-manage.html">受注管理</a><a href="artist-order-detail.html">受注詳細</a><a href="artist-messages.html">作家メッセージ</a><a href="artist-profile-edit.html">プロフィール編集</a><a href="artist-payout.html">振込先設定</a><a href="artist-shop-edit.html">ショップ設定</a>
+    <span class="demo-group">作家登録フロー</span><a href="artist-signup-id.html">本人確認</a><a href="artist-signup-bank.html">振込先登録</a><a href="artist-signup-terms.html">規約同意</a><span class="demo-group">作家管理</span><a href="artist-pending-orders.html">未対応注文</a><a href="artist-reviews.html">レビュー一覧</a><a href="artist-notices.html">お知らせ</a><span class="demo-group">規約・その他</span>
+    <a href="terms.html">利用規約</a><a href="privacy.html">プライバシー</a><a href="tokushoho.html">特商法</a><a href="about.html">会社概要</a><a href="faq.html">FAQ</a><a href="contact.html">お問い合わせ</a><a href="404.html">404</a>
+    <span class="demo-group">運営</span>
+    <a href="admin-dashboard.html">管理ダッシュボード</a><a href="admin-artist-review.html">作家審査</a><a href="admin-users.html">ユーザー管理</a><a href="admin-products.html">商品モデレーション</a><a href="admin-features.html">特集・バナー管理</a><a href="admin-payouts.html">精算管理</a><a href="admin-inquiries.html">お問い合わせ</a><a href="admin-analytics.html" class="current">分析・レポート</a>
+  </nav></div></div>
+
+  <header style="background:#2C1A0E;color:#FAF6EE;padding:12px 0;">
+    <div class="container" style="display:flex;align-items:center;gap:24px;">
+      <a href="admin-dashboard.html" style="display:flex;gap:10px;align-items:center;color:#FAF6EE;text-decoration:none;">
+        <svg viewBox="0 0 48 48" width="32" height="32"><circle cx="24" cy="24" r="22" fill="none" stroke="#FAF6EE" stroke-width="2"/><path d="M14 30 Q24 14 34 30" stroke="#FAF6EE" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="22" r="2.5" fill="#D4B896"/></svg>
+        <span style="font-family:'Zen Old Mincho',serif;font-size:18px;font-weight:700;">Enotter</span>
+        <span style="font-size:10px;background:#B5523F;color:#fff;padding:2px 8px;border-radius:4px;letter-spacing:0.1em;">ADMIN</span>
+      </a>
+      <nav style="margin-left:auto;display:flex;gap:20px;font-size:13px;">
+        <a href="admin-dashboard.html" style="color:rgba(250,246,238,0.7);">ダッシュボード</a>
+        <a href="admin-artist-review.html" style="color:rgba(250,246,238,0.7);">作家審査</a>
+        <a href="admin-users.html" style="color:rgba(250,246,238,0.7);">ユーザー</a>
+        <a href="admin-products.html" style="color:rgba(250,246,238,0.7);">商品</a>
+        
+        <a href="admin-payouts.html" style="color:rgba(250,246,238,0.7);">精算</a>
+        <a href="admin-analytics.html" style="color:#FAF6EE;font-weight:700;">分析</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mvp-page">
+    <div class="container">
+
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span style="font-family:var(--font-hand);color:var(--accent-gold);font-size:13px;">— 運営管理 —</span>
+          <h1 style="font-family:var(--font-mincho);font-size:28px;color:var(--text-dark);margin-top:4px;">分析・レポート</h1>
+        </div>
+        <!-- 期間選択 -->
+        <div style="display:flex;gap:6px;flex-wrap:wrap;">
+          <button style="padding:8px 16px;border:1px solid var(--accent-red);border-radius:6px;background:var(--accent-red);color:#fff;font-size:12px;font-weight:700;cursor:pointer;">今月</button>
+          <button style="padding:8px 16px;border:1px solid var(--paper-edge);border-radius:6px;background:#fff;color:var(--text-mid);font-size:12px;cursor:pointer;">先月</button>
+          <button style="padding:8px 16px;border:1px solid var(--paper-edge);border-radius:6px;background:#fff;color:var(--text-mid);font-size:12px;cursor:pointer;">過去3ヶ月</button>
+          <button style="padding:8px 16px;border:1px solid var(--paper-edge);border-radius:6px;background:#fff;color:var(--text-mid);font-size:12px;cursor:pointer;">カスタム</button>
+        </div>
+      </div>
+
+      <!-- KPI 4つ -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:28px;">
+        <div class="kpi-card">
+          <span class="kpi-label">GMV（当月）</span>
+          <span class="kpi-value" style="font-size:22px;">¥3,840,000</span>
+          <span class="kpi-delta up">▲ 前月比 +12.4%</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">注文数（当月）</span>
+          <span class="kpi-value">842<span style="font-size:14px;color:var(--text-light);"> 件</span></span>
+          <span class="kpi-delta up">▲ 前月比 +8.8%</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">平均客単価</span>
+          <span class="kpi-value" style="font-size:22px;">¥4,560</span>
+          <span class="kpi-delta up">▲ 前月比 +320円</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">新規ユーザー</span>
+          <span class="kpi-value">128<span style="font-size:14px;color:var(--text-light);"> 名</span></span>
+          <span class="kpi-delta up">▲ 前月比 +22%</span>
+        </div>
+      </div>
+
+      <!-- 売上推移グラフ＋カテゴリ別 -->
+      <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:20px;margin-bottom:24px;">
+
+        <!-- 売上推移 -->
+        <div class="form-card" style="margin-bottom:0;">
+          <h3 style="margin-bottom:20px;">売上推移（2026年5月）</h3>
+          <div style="display:flex;align-items:flex-end;gap:6px;height:160px;padding-bottom:24px;position:relative;">
+            <div style="position:absolute;bottom:24px;left:0;right:0;border-top:1px dashed var(--paper-edge);"></div>
+            <!-- 10本の棒 -->
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:4px;">
+              <div style="width:100%;background:var(--accent-red);border-radius:3px 3px 0 0;height:58px;opacity:0.8;"></div>
+              <span style="font-size:9px;color:var(--text-light);">1-3</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:4px;">
+              <div style="width:100%;background:var(--accent-red);border-radius:3px 3px 0 0;height:72px;opacity:0.85;"></div>
+              <span style="font-size:9px;color:var(--text-light);">4-6</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:4px;">
+              <div style="width:100%;background:var(--accent-red);border-radius:3px 3px 0 0;height:64px;opacity:0.8;"></div>
+              <span style="font-size:9px;color:var(--text-light);">7-9</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:4px;">
+              <div style="width:100%;background:var(--accent-red);border-radius:3px 3px 0 0;height:88px;"></div>
+              <span style="font-size:9px;color:var(--text-light);">10-12</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:4px;">
+              <div style="width:100%;background:var(--accent-red);border-radius:3px 3px 0 0;height:96px;"></div>
+              <span style="font-size:9px;color:var(--text-light);">13-15</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:4px;">
+              <div style="width:100%;background:var(--accent-red);border-radius:3px 3px 0 0;height:104px;"></div>
+              <span style="font-size:9px;color:var(--text-light);">16-18</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:4px;">
+              <div style="width:100%;background:var(--accent-red);border-radius:3px 3px 0 0;height:118px;"></div>
+              <span style="font-size:9px;color:var(--text-light);">19-21</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:4px;">
+              <div style="width:100%;background:var(--accent-red);border-radius:3px 3px 0 0;height:132px;"></div>
+              <span style="font-size:9px;color:var(--text-light);">22-24</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:4px;">
+              <div style="width:100%;background:var(--accent-gold);border-radius:3px 3px 0 0;height:148px;"></div>
+              <span style="font-size:9px;color:var(--text-light);">25-27</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;gap:4px;">
+              <div style="width:100%;background:var(--accent-gold);border-radius:3px 3px 0 0;height:120px;opacity:0.7;"></div>
+              <span style="font-size:9px;color:var(--text-light);">28-31</span>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;font-size:11px;color:var(--text-light);">
+            <span style="display:flex;align-items:center;gap:4px;"><span style="width:12px;height:8px;background:var(--accent-red);border-radius:2px;display:inline-block;"></span>GMV</span>
+            <span style="display:flex;align-items:center;gap:4px;"><span style="width:12px;height:8px;background:var(--accent-gold);border-radius:2px;display:inline-block;"></span>週末・祝日</span>
+          </div>
+        </div>
+
+        <!-- カテゴリ別売上 -->
+        <div class="form-card" style="margin-bottom:0;">
+          <h3 style="margin-bottom:20px;">カテゴリ別売上</h3>
+          <table style="width:100%;border-collapse:collapse;font-size:12px;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--paper-edge);">
+                <th style="text-align:left;padding:6px 8px;font-weight:700;color:var(--text-mid);">カテゴリ</th>
+                <th style="text-align:right;padding:6px 8px;font-weight:700;color:var(--text-mid);">売上</th>
+                <th style="text-align:right;padding:6px 8px;font-weight:700;color:var(--text-mid);">構成比</th>
+                <th style="text-align:right;padding:6px 8px;font-weight:700;color:var(--text-mid);">前月比</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--paper-edge);">
+                <td style="padding:10px 8px;font-weight:700;">陶芸・うつわ</td>
+                <td style="text-align:right;padding:10px 8px;font-weight:700;">¥1,228,800</td>
+                <td style="padding:10px 8px;">
+                  <div style="display:flex;align-items:center;gap:6px;justify-content:flex-end;">
+                    <div style="background:var(--accent-red);height:6px;border-radius:3px;width:62px;"></div>
+                    <span>32%</span>
+                  </div>
+                </td>
+                <td style="text-align:right;padding:10px 8px;color:var(--accent-green);">+14%</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--paper-edge);">
+                <td style="padding:10px 8px;font-weight:700;">アクセサリー</td>
+                <td style="text-align:right;padding:10px 8px;font-weight:700;">¥921,600</td>
+                <td style="padding:10px 8px;">
+                  <div style="display:flex;align-items:center;gap:6px;justify-content:flex-end;">
+                    <div style="background:var(--accent-red);height:6px;border-radius:3px;width:48px;opacity:0.8;"></div>
+                    <span>24%</span>
+                  </div>
+                </td>
+                <td style="text-align:right;padding:10px 8px;color:var(--accent-green);">+8%</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--paper-edge);">
+                <td style="padding:10px 8px;font-weight:700;">木工・家具</td>
+                <td style="text-align:right;padding:10px 8px;font-weight:700;">¥691,200</td>
+                <td style="padding:10px 8px;">
+                  <div style="display:flex;align-items:center;gap:6px;justify-content:flex-end;">
+                    <div style="background:var(--accent-red);height:6px;border-radius:3px;width:36px;opacity:0.7;"></div>
+                    <span>18%</span>
+                  </div>
+                </td>
+                <td style="text-align:right;padding:10px 8px;color:var(--accent-green);">+21%</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--paper-edge);">
+                <td style="padding:10px 8px;font-weight:700;">テキスタイル</td>
+                <td style="text-align:right;padding:10px 8px;font-weight:700;">¥537,600</td>
+                <td style="padding:10px 8px;">
+                  <div style="display:flex;align-items:center;gap:6px;justify-content:flex-end;">
+                    <div style="background:var(--accent-red);height:6px;border-radius:3px;width:28px;opacity:0.6;"></div>
+                    <span>14%</span>
+                  </div>
+                </td>
+                <td style="text-align:right;padding:10px 8px;color:var(--accent-red);">−3%</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 8px;font-weight:700;">その他</td>
+                <td style="text-align:right;padding:10px 8px;font-weight:700;">¥460,800</td>
+                <td style="padding:10px 8px;">
+                  <div style="display:flex;align-items:center;gap:6px;justify-content:flex-end;">
+                    <div style="background:var(--paper-edge);height:6px;border-radius:3px;width:24px;"></div>
+                    <span>12%</span>
+                  </div>
+                </td>
+                <td style="text-align:right;padding:10px 8px;color:var(--text-light);">±0%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- 作家別TOP10 + ユーザー推移 -->
+      <div style="display:grid;grid-template-columns:1fr 320px;gap:20px;">
+
+        <!-- 作家別TOP10 -->
+        <div class="form-card" style="margin-bottom:0;">
+          <h3 style="margin-bottom:20px;">売上TOP10 作家</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width:40px;">順位</th>
+                <th>作家名</th>
+                <th>売上</th>
+                <th>注文数</th>
+                <th>平均評価</th>
+                <th>前月比</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align:center;font-weight:700;color:var(--accent-gold);font-family:var(--font-mincho);font-size:16px;">1</td>
+                <td style="font-weight:700;">陶工房 椿</td>
+                <td style="font-weight:700;">¥298,000</td>
+                <td>62件</td>
+                <td style="color:var(--accent-gold);">★ 4.9</td>
+                <td style="color:var(--accent-green);">+18%</td>
+              </tr>
+              <tr>
+                <td style="text-align:center;font-weight:700;color:var(--wood-mid);font-family:var(--font-mincho);font-size:16px;">2</td>
+                <td style="font-weight:700;">木工房 匠</td>
+                <td style="font-weight:700;">¥210,000</td>
+                <td>38件</td>
+                <td style="color:var(--accent-gold);">★ 4.8</td>
+                <td style="color:var(--accent-green);">+24%</td>
+              </tr>
+              <tr>
+                <td style="text-align:center;font-weight:700;color:var(--wood-mid);font-family:var(--font-mincho);font-size:16px;">3</td>
+                <td style="font-weight:700;">atelier mori</td>
+                <td style="font-weight:700;">¥184,200</td>
+                <td>28件</td>
+                <td style="color:var(--accent-gold);">★ 4.9</td>
+                <td style="color:var(--accent-green);">+12%</td>
+              </tr>
+              <tr>
+                <td style="text-align:center;font-size:13px;color:var(--text-light);">4</td>
+                <td style="font-weight:700;">藍染工房 青空</td>
+                <td style="font-weight:700;">¥156,500</td>
+                <td>22件</td>
+                <td style="color:var(--accent-gold);">★ 4.7</td>
+                <td style="color:var(--accent-red);">−5%</td>
+              </tr>
+              <tr>
+                <td style="text-align:center;font-size:13px;color:var(--text-light);">5</td>
+                <td style="font-weight:700;">布工房 沙織</td>
+                <td style="font-weight:700;">¥122,400</td>
+                <td>34件</td>
+                <td style="color:var(--accent-gold);">★ 4.8</td>
+                <td style="color:var(--accent-green);">+7%</td>
+              </tr>
+              <tr>
+                <td style="text-align:center;font-size:13px;color:var(--text-light);">6</td>
+                <td style="font-weight:700;">縫い人 さくら</td>
+                <td style="font-weight:700;">¥108,000</td>
+                <td>41件</td>
+                <td style="color:var(--accent-gold);">★ 4.6</td>
+                <td style="color:var(--accent-green);">+31%</td>
+              </tr>
+              <tr>
+                <td style="text-align:center;font-size:13px;color:var(--text-light);">7</td>
+                <td style="font-weight:700;">glass studio hana</td>
+                <td style="font-weight:700;">¥88,000</td>
+                <td>11件</td>
+                <td style="color:var(--accent-gold);">★ 5.0</td>
+                <td style="color:var(--accent-green);">+9%</td>
+              </tr>
+              <tr>
+                <td style="text-align:center;font-size:13px;color:var(--text-light);">8</td>
+                <td style="font-weight:700;">陶芸家 青山窯</td>
+                <td style="font-weight:700;">¥76,800</td>
+                <td>16件</td>
+                <td style="color:var(--accent-gold);">★ 4.5</td>
+                <td style="color:var(--text-light);">±0%</td>
+              </tr>
+              <tr>
+                <td style="text-align:center;font-size:13px;color:var(--text-light);">9</td>
+                <td style="font-weight:700;">キャンドル工房 光</td>
+                <td style="font-weight:700;">¥66,000</td>
+                <td>28件</td>
+                <td style="color:var(--accent-gold);">★ 4.7</td>
+                <td style="color:var(--accent-red);">−11%</td>
+              </tr>
+              <tr>
+                <td style="text-align:center;font-size:13px;color:var(--text-light);">10</td>
+                <td style="font-weight:700;">漆器工房 千年</td>
+                <td style="font-weight:700;">¥58,400</td>
+                <td>8件</td>
+                <td style="color:var(--accent-gold);">★ 4.9</td>
+                <td style="color:var(--accent-green);">+44%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ユーザー推移 -->
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div class="form-card" style="margin-bottom:0;">
+            <h3 style="font-size:16px;margin-bottom:16px;">ユーザー推移</h3>
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div style="padding:14px;background:var(--paper-warm);border-radius:8px;">
+                <div style="font-size:11px;color:var(--text-light);margin-bottom:4px;">累計登録ユーザー数</div>
+                <div style="font-family:var(--font-mincho);font-size:28px;font-weight:700;color:var(--text-dark);">12,840<span style="font-size:14px;color:var(--text-light);font-weight:400;"> 名</span></div>
+                <div style="font-size:11px;color:var(--accent-green);">▲ 前月比 +128名</div>
+              </div>
+              <div style="padding:14px;background:var(--paper-warm);border-radius:8px;">
+                <div style="font-size:11px;color:var(--text-light);margin-bottom:4px;">5月 新規ユーザー</div>
+                <div style="font-family:var(--font-mincho);font-size:28px;font-weight:700;color:var(--text-dark);">128<span style="font-size:14px;color:var(--text-light);font-weight:400;"> 名</span></div>
+                <div style="font-size:11px;color:var(--accent-green);">▲ 4月比 +23名</div>
+              </div>
+              <div style="padding:14px;background:var(--paper-warm);border-radius:8px;">
+                <div style="font-size:11px;color:var(--text-light);margin-bottom:4px;">累計登録作家数</div>
+                <div style="font-family:var(--font-mincho);font-size:28px;font-weight:700;color:var(--text-dark);">3,218<span style="font-size:14px;color:var(--text-light);font-weight:400;"> 名</span></div>
+                <div style="font-size:11px;color:var(--accent-green);">▲ 前月比 +42名</div>
+              </div>
+              <div style="padding:14px;background:var(--paper-warm);border-radius:8px;">
+                <div style="font-size:11px;color:var(--text-light);margin-bottom:4px;">5月 新規作家</div>
+                <div style="font-family:var(--font-mincho);font-size:28px;font-weight:700;color:var(--text-dark);">42<span style="font-size:14px;color:var(--text-light);font-weight:400;"> 名</span></div>
+                <div style="font-size:11px;color:var(--accent-green);">▲ 4月比 +8名</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

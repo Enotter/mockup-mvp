@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>振込先・精算設定 — Enotter ARTIST STUDIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="demo-nav"><div class="container"><span class="demo-label">— MOCKUP PAGES —</span><nav class="demo-links">
+    <span class="demo-group">買い手</span>
+    <a href="index.html">トップ</a><a href="products.html">商品一覧</a><a href="search.html">検索結果</a><a href="product-detail.html">商品詳細</a><a href="cart.html">カート</a><a href="checkout.html">購入手続き</a><a href="order-complete.html">注文完了</a><a href="order-detail.html">注文詳細</a><a href="review-post.html">レビュー投稿</a><a href="mypage.html">マイページ</a><a href="mypage-orders.html">注文履歴</a><a href="mypage-profile.html">プロフィール編集</a><a href="mypage-addresses.html">住所帳</a><a href="mypage-payment.html">お支払い方法</a><a href="messages.html">メッセージ</a><a href="artists.html">作家一覧</a><a href="artist.html">作家ページ</a><a href="artist-products-list.html">作家作品一覧</a><a href="artist-reviews-list.html">作家レビュー一覧</a>
+    <span class="demo-group">認証</span>
+    <a href="login.html">ログイン</a><a href="signup.html">新規登録</a><a href="email-verify.html">メール認証</a><a href="password-reset.html">パスワード再設定</a>
+    <span class="demo-group">作家</span>
+    <a href="artist-signup.html">作家登録</a><a href="artist-dashboard.html">ダッシュボード</a><a href="product-new.html">出品</a><a href="product-edit.html">商品編集</a><a href="product-manage.html">商品管理</a><a href="order-manage.html">受注管理</a><a href="artist-order-detail.html">受注詳細</a><a href="artist-messages.html">作家メッセージ</a><a href="artist-profile-edit.html">プロフィール編集</a><a href="artist-payout.html" class="current">振込先設定</a><a href="artist-shop-edit.html">ショップ設定</a>
+    <span class="demo-group">作家登録フロー</span><a href="artist-signup-id.html">本人確認</a><a href="artist-signup-bank.html">振込先登録</a><a href="artist-signup-terms.html">規約同意</a><span class="demo-group">作家管理</span><a href="artist-pending-orders.html">未対応注文</a><a href="artist-reviews.html">レビュー一覧</a><a href="artist-notices.html">お知らせ</a><span class="demo-group">運営</span><a href="admin-dashboard.html">管理ダッシュボード</a><a href="admin-artist-review.html">作家審査</a><a href="admin-users.html">ユーザー管理</a><a href="admin-products.html">商品モデレーション</a><a href="admin-features.html">特集・バナー管理</a><a href="admin-payouts.html">精算管理</a><a href="admin-inquiries.html">お問い合わせ</a><a href="admin-analytics.html">分析・レポート</a><span class="demo-group">規約・その他</span>
+    <a href="terms.html">利用規約</a><a href="privacy.html">プライバシー</a><a href="tokushoho.html">特商法</a><a href="about.html">会社概要</a><a href="faq.html">FAQ</a><a href="contact.html">お問い合わせ</a><a href="404.html">404</a>
+  </nav></div></div>
+
+  <header style="background:var(--wood-dark);color:var(--paper);padding:14px 0;">
+    <div class="container" style="display:flex;align-items:center;gap:24px;">
+      <a href="artist-dashboard.html" style="display:flex;gap:10px;align-items:center;color:var(--paper);">
+        <svg viewBox="0 0 48 48" width="36" height="36"><circle cx="24" cy="24" r="22" fill="none" stroke="#FAF6EE" stroke-width="2"/><path d="M14 30 Q24 14 34 30" stroke="#FAF6EE" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="22" r="2.5" fill="#D4B896"/></svg>
+        <span><span style="font-family:var(--font-mincho);font-size:18px;font-weight:700;">Enotter</span><span style="display:block;font-family:var(--font-hand);color:var(--accent-gold);font-size:10px;letter-spacing:0.2em;">— ARTIST STUDIO —</span></span>
+      </a>
+      <nav style="margin-left:auto;display:flex;gap:20px;font-size:13px;">
+        <a href="artist-dashboard.html" style="color:rgba(250,246,238,0.7);">ダッシュボード</a>
+        <a href="product-manage.html" style="color:rgba(250,246,238,0.7);">商品管理</a>
+        <a href="order-manage.html" style="color:rgba(250,246,238,0.7);">受注管理 <span style="background:var(--accent-red);color:#fff;font-size:10px;padding:1px 6px;border-radius:999px;margin-left:2px;">3</span></a>
+        <a href="artist-messages.html" style="color:rgba(250,246,238,0.7);">メッセージ <span style="background:var(--accent-red);color:#fff;font-size:10px;padding:1px 6px;border-radius:999px;margin-left:2px;">2</span></a>
+        <a href="artist.html" style="color:rgba(250,246,238,0.7);">公開ページ</a>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <img src="https://images.unsplash.com/photo-1531947386298-1b14d8caca91?auto=format&fit=crop&w=120&q=80" style="width:32px;height:32px;border-radius:50%;object-fit:cover;" />
+        <span style="font-size:13px;">atelier mori</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="mvp-page">
+    <div class="container">
+
+      <nav class="breadcrumb" style="padding-top:0;">
+        <ol style="display:flex;gap:8px;color:var(--text-mid);">
+          <li><a href="artist-dashboard.html" style="color:var(--text-mid);">ダッシュボード</a></li>
+          <li>›</li>
+          <li style="color:var(--text-dark);">振込先・精算設定</li>
+        </ol>
+      </nav>
+
+      <div class="page-title">
+        <h1 style="font-family:var(--font-mincho);font-size:28px;color:var(--text-dark);margin-bottom:6px;">振込先・精算設定</h1>
+        <p style="color:var(--text-mid);font-size:13px;">売上の精算と振込先口座を管理します。</p>
+      </div>
+
+      <!-- 売上残高KPI -->
+      <div class="dashboard-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:24px;">
+        <div class="kpi-card">
+          <span class="kpi-label">未振込残高</span>
+          <span class="kpi-value" style="color:var(--accent-red);">¥24,500</span>
+          <span class="kpi-delta">6/10 振込予定（5月分）</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">今月の売上</span>
+          <span class="kpi-value">¥68,200</span>
+          <span class="kpi-delta up">▲ 前月比 +12%</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">累計売上</span>
+          <span class="kpi-value">¥412,800</span>
+          <span class="kpi-delta">手数料控除後</span>
+        </div>
+      </div>
+
+      <!-- 振込スケジュール説明 -->
+      <div class="form-card" style="background:var(--paper-warm);border:1px solid var(--paper-edge);">
+        <div style="display:flex;gap:16px;align-items:flex-start;">
+          <div style="font-size:28px;flex-shrink:0;">📅</div>
+          <div>
+            <h3 style="font-size:15px;margin-bottom:6px;">振込スケジュール</h3>
+            <p style="font-size:13px;color:var(--text-mid);line-height:1.8;margin-bottom:8px;">
+              <strong>月末締め・翌月10日払い</strong>：毎月末日に売上を締め、翌月10日に登録の口座へ自動振込します。<br />
+              最低振込金額は <strong>¥1,000</strong> です。¥1,000未満の場合は翌月に繰り越されます。<br />
+              振込手数料はEnotterが負担します。
+            </p>
+            <div style="font-size:12px;color:var(--text-light);">次回振込日：2026年6月10日（対象期間：2026年5月1日〜5月31日）</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 振込先口座カード -->
+      <div class="form-card">
+        <h3>振込先口座</h3>
+
+        <div style="background:var(--paper-warm);border-radius:10px;padding:18px;display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+          <div>
+            <span style="font-size:11px;color:var(--text-light);display:block;margin-bottom:4px;">現在登録中の口座</span>
+            <div style="font-size:15px;font-weight:700;color:var(--text-dark);">○○銀行 ○○支店</div>
+            <div style="font-size:13px;color:var(--text-mid);">普通 1234567</div>
+          </div>
+          <span style="background:#e8f5e9;color:#388e3c;font-size:11px;padding:4px 12px;border-radius:999px;font-weight:700;">登録済み</span>
+        </div>
+
+        <details>
+          <summary style="cursor:pointer;list-style:none;padding:10px 16px;background:#fff;border:1px solid var(--paper-edge);border-radius:8px;font-size:13px;font-weight:700;color:var(--text-dark);display:inline-flex;align-items:center;gap:6px;">
+            口座情報を編集する
+          </summary>
+
+          <div style="padding-top:20px;">
+            <div class="form-row-2">
+              <div class="field-block">
+                <label>銀行名 <span class="form-required">必須</span></label>
+                <input type="text" placeholder="○○銀行" />
+                <span class="form-helper">銀行名を入力すると候補が表示されます</span>
+              </div>
+              <div class="field-block">
+                <label>支店名 <span class="form-required">必須</span></label>
+                <input type="text" placeholder="○○支店" />
+              </div>
+            </div>
+
+            <div class="field-block">
+              <label>口座種別 <span class="form-required">必須</span></label>
+              <div style="display:flex;gap:10px;">
+                <label style="display:flex;gap:6px;align-items:center;font-size:13px;cursor:pointer;">
+                  <input type="radio" name="account-type" checked /> 普通
+                </label>
+                <label style="display:flex;gap:6px;align-items:center;font-size:13px;cursor:pointer;">
+                  <input type="radio" name="account-type" /> 当座
+                </label>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="field-block">
+                <label>口座番号 <span class="form-required">必須・数字7桁</span></label>
+                <input type="text" placeholder="1234567" maxlength="7" />
+              </div>
+              <div class="field-block">
+                <label>口座名義（カタカナ） <span class="form-required">必須</span></label>
+                <input type="text" placeholder="カナモリ サク" />
+              </div>
+            </div>
+
+            <button class="btn btn-primary" style="margin-top:8px;" onclick="location.href='artist-dashboard.html'">口座情報を保存する</button>
+          </div>
+        </details>
+      </div>
+
+      <!-- 本人確認ステータスカード -->
+      <div class="form-card">
+        <h3>本人確認ステータス</h3>
+        <div style="display:flex;align-items:center;gap:16px;padding:16px;background:#e8f5e9;border-radius:10px;border:1px solid #c8e6c9;">
+          <div style="width:44px;height:44px;border-radius:50%;background:#388e3c;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M5 12l5 5L20 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:700;color:#2e7d32;margin-bottom:2px;">本人確認済み</div>
+            <div style="font-size:12px;color:#388e3c;">本人確認書類が確認されました（2026年3月1日）</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 振込履歴テーブル -->
+      <div class="form-card">
+        <h3>振込履歴</h3>
+
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:13px;">
+            <thead>
+              <tr style="background:var(--paper-warm);">
+                <th style="text-align:left;padding:12px;border-bottom:1px solid var(--paper-edge);white-space:nowrap;">振込日</th>
+                <th style="text-align:left;padding:12px;border-bottom:1px solid var(--paper-edge);white-space:nowrap;">対象期間</th>
+                <th style="text-align:right;padding:12px;border-bottom:1px solid var(--paper-edge);white-space:nowrap;">売上</th>
+                <th style="text-align:right;padding:12px;border-bottom:1px solid var(--paper-edge);white-space:nowrap;">手数料(10%)</th>
+                <th style="text-align:right;padding:12px;border-bottom:1px solid var(--paper-edge);white-space:nowrap;">振込金額</th>
+                <th style="text-align:center;padding:12px;border-bottom:1px solid var(--paper-edge);">ステータス</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:12px;border-bottom:1px solid var(--paper-edge);">2026/05/31</td>
+                <td style="padding:12px;border-bottom:1px solid var(--paper-edge);color:var(--text-mid);">2026/04/01〜04/30</td>
+                <td style="padding:12px;border-bottom:1px solid var(--paper-edge);text-align:right;">¥60,800</td>
+                <td style="padding:12px;border-bottom:1px solid var(--paper-edge);text-align:right;color:var(--text-mid);">¥6,080</td>
+                <td style="padding:12px;border-bottom:1px solid var(--paper-edge);text-align:right;font-weight:700;font-family:var(--font-mincho);">¥54,720</td>
+                <td style="padding:12px;border-bottom:1px solid var(--paper-edge);text-align:center;"><span style="background:#e8f5e9;color:#388e3c;font-size:11px;padding:3px 10px;border-radius:999px;font-weight:700;">振込済み</span></td>
+              </tr>
+              <tr>
+                <td style="padding:12px;border-bottom:1px solid var(--paper-edge);">2026/04/30</td>
+                <td style="padding:12px;border-bottom:1px solid var(--paper-edge);color:var(--text-mid);">2026/03/01〜03/31</td>
+                <td style="padding:12px;border-bottom:1px solid var(--paper-edge);text-align:right;">¥84,200</td>
+                <td style="padding:12px;border-bottom:1px solid var(--paper-edge);text-align:right;color:var(--text-mid);">¥8,420</td>
+                <td style="padding:12px;border-bottom:1px solid var(--paper-edge);text-align:right;font-weight:700;font-family:var(--font-mincho);">¥75,780</td>
+                <td style="padding:12px;border-bottom:1px solid var(--paper-edge);text-align:center;"><span style="background:#e8f5e9;color:#388e3c;font-size:11px;padding:3px 10px;border-radius:999px;font-weight:700;">振込済み</span></td>
+              </tr>
+              <tr>
+                <td style="padding:12px;">2026/03/31</td>
+                <td style="padding:12px;color:var(--text-mid);">2026/02/01〜02/28</td>
+                <td style="padding:12px;text-align:right;">¥42,600</td>
+                <td style="padding:12px;text-align:right;color:var(--text-mid);">¥4,260</td>
+                <td style="padding:12px;text-align:right;font-weight:700;font-family:var(--font-mincho);">¥38,340</td>
+                <td style="padding:12px;text-align:center;"><span style="background:#e8f5e9;color:#388e3c;font-size:11px;padding:3px 10px;border-radius:999px;font-weight:700;">振込済み</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><div class="footer-bottom" style="border:0;padding-top:20px;"><span>© 2026 Enotter.  Artist Studio.</span></div></div></footer>
+
+</body>
+</html>

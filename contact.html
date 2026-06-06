@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>お問い合わせ — Enotter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="demo-nav"><div class="container"><span class="demo-label">— MOCKUP PAGES —</span><nav class="demo-links">
+    <span class="demo-group">買い手</span>
+    <a href="index.html">トップ</a><a href="products.html">商品一覧</a><a href="search.html">検索結果</a><a href="product-detail.html">商品詳細</a><a href="cart.html">カート</a><a href="checkout.html">購入手続き</a><a href="order-complete.html">注文完了</a><a href="order-detail.html">注文詳細</a><a href="review-post.html">レビュー投稿</a><a href="mypage.html">マイページ</a><a href="mypage-orders.html">注文履歴</a><a href="mypage-profile.html">プロフィール編集</a><a href="mypage-addresses.html">住所帳</a><a href="mypage-payment.html">お支払い方法</a><a href="messages.html">メッセージ</a><a href="artists.html">作家一覧</a><a href="artist.html">作家ページ</a><a href="artist-products-list.html">作家作品一覧</a><a href="artist-reviews-list.html">作家レビュー一覧</a>
+    <span class="demo-group">認証</span>
+    <a href="login.html">ログイン</a><a href="signup.html">新規登録</a><a href="email-verify.html">メール認証</a><a href="password-reset.html">パスワード再設定</a>
+    <span class="demo-group">作家</span>
+    <a href="artist-signup.html">作家登録</a><a href="artist-dashboard.html">ダッシュボード</a><a href="product-new.html">出品</a><a href="product-edit.html">商品編集</a><a href="product-manage.html">商品管理</a><a href="order-manage.html">受注管理</a><a href="artist-order-detail.html">受注詳細</a><a href="artist-messages.html">作家メッセージ</a><a href="artist-profile-edit.html">プロフィール編集</a><a href="artist-payout.html">振込先設定</a><a href="artist-shop-edit.html">ショップ設定</a>
+    <span class="demo-group">作家登録フロー</span><a href="artist-signup-id.html">本人確認</a><a href="artist-signup-bank.html">振込先登録</a><a href="artist-signup-terms.html">規約同意</a><span class="demo-group">作家管理</span><a href="artist-pending-orders.html">未対応注文</a><a href="artist-reviews.html">レビュー一覧</a><a href="artist-notices.html">お知らせ</a><span class="demo-group">運営</span><a href="admin-dashboard.html">管理ダッシュボード</a><a href="admin-artist-review.html">作家審査</a><a href="admin-users.html">ユーザー管理</a><a href="admin-products.html">商品モデレーション</a><a href="admin-features.html">特集・バナー管理</a><a href="admin-payouts.html">精算管理</a><a href="admin-inquiries.html">お問い合わせ</a><a href="admin-analytics.html">分析・レポート</a><span class="demo-group">規約・その他</span>
+    <a href="terms.html">利用規約</a><a href="privacy.html">プライバシー</a><a href="tokushoho.html">特商法</a><a href="about.html">会社概要</a><a href="faq.html">FAQ</a><a href="contact.html" class="current">お問い合わせ</a><a href="404.html">404</a>
+  </nav></div></div>
+
+  <!-- ユーティリティバー（未ログイン） -->
+  <div class="utility-bar">
+    <div class="container">
+      <div class="utility-left">
+        <span>送料無料キャンペーン実施中（5,000円以上のお買い物で）</span>
+      </div>
+      <div class="utility-right">
+        <a href="faq.html">ヘルプ</a>
+        <a href="artist-signup.html">出品する</a>
+        <a href="login.html">ログイン</a>
+        <a href="signup.html">新規登録</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインヘッダー -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" fill="#FAF6EE" stroke="#5C3A21" stroke-width="2"/>
+            <path d="M14 30 Q24 14 34 30" stroke="#5C3A21" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <circle cx="24" cy="22" r="2.5" fill="#B5523F"/>
+            <path d="M18 34 L30 34" stroke="#5C3A21" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-jp">Enotter</span>
+        </span>
+      </a>
+      <form class="search">
+        <input type="text" placeholder="作家名・作品名・キーワードで探す" />
+        <button type="submit" aria-label="検索">
+          <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20 L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </form>
+      <nav class="header-icons">
+        <a href="favorites.html" class="icon-btn" aria-label="お気に入り">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span>お気に入り</span>
+        </a>
+        <a href="mypage.html" class="icon-btn" aria-label="マイページ">
+          <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>マイページ</span>
+        </a>
+        <a href="cart.html" class="icon-btn cart" aria-label="カート">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 4h3l3 12h10l3-9H7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.5" fill="currentColor"/><circle cx="18" cy="20" r="1.5" fill="currentColor"/></svg>
+          <span>カート</span>
+        </a>
+      </nav>
+    </div>
+    <nav class="category-nav">
+      <div class="container">
+        <ul>
+          <li><a href="products.html">アクセサリー</a></li>
+          <li><a href="products.html">陶器・うつわ</a></li>
+          <li><a href="products.html">布・テキスタイル</a></li>
+          <li><a href="products.html">木工・家具</a></li>
+          <li><a href="products.html">レザー・革小物</a></li>
+          <li><a href="products.html">アート・絵画</a></li>
+          <li><a href="products.html">キャンドル・石けん</a></li>
+          <li><a href="products.html">食品・お菓子</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ヒーロー（小さめ） -->
+  <section style="background:var(--paper-warm);border-bottom:1px solid var(--paper-edge);padding:48px 0 40px;">
+    <div class="container" style="text-align:center;">
+      <span style="font-family:var(--font-hand);color:var(--accent-gold);font-size:13px;letter-spacing:0.2em;">— CONTACT —</span>
+      <h1 style="font-family:var(--font-mincho);font-size:32px;color:var(--text-dark);margin:8px 0 10px;">お問い合わせ</h1>
+      <p style="font-size:14px;color:var(--text-mid);">ご不明な点はお気軽にご連絡ください。</p>
+    </div>
+  </section>
+
+  <div class="mvp-page">
+    <div class="container">
+
+      <!-- 2カラム：フォーム 2/3、補足情報 1/3 -->
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:32px;align-items:start;">
+
+        <!-- 左：お問い合わせフォーム -->
+        <div class="form-card">
+          <h2 style="font-family:var(--font-mincho);font-size:18px;color:var(--text-dark);margin:0 0 20px;">お問い合わせフォーム</h2>
+
+          <div style="display:flex;flex-direction:column;gap:18px;">
+
+            <div>
+              <label style="display:block;font-size:13px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">
+                お問い合わせ種別 <span style="color:var(--accent-red);margin-left:4px;">必須</span>
+              </label>
+              <select style="width:100%;padding:11px 14px;border:1px solid var(--paper-edge);border-radius:6px;font-size:14px;color:var(--text-dark);background:var(--paper);font-family:inherit;box-sizing:border-box;">
+                <option>商品・注文について</option>
+                <option>返品・交換について</option>
+                <option>作家登録について</option>
+                <option>支払いについて</option>
+                <option>その他</option>
+              </select>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+              <div>
+                <label style="display:block;font-size:13px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">
+                  お名前 <span style="color:var(--accent-red);margin-left:4px;">必須</span>
+                </label>
+                <input type="text" required placeholder="山田 花子" style="width:100%;padding:11px 14px;border:1px solid var(--paper-edge);border-radius:6px;font-size:14px;color:var(--text-dark);background:var(--paper);box-sizing:border-box;" />
+              </div>
+              <div>
+                <label style="display:block;font-size:13px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">
+                  メールアドレス <span style="color:var(--accent-red);margin-left:4px;">必須</span>
+                </label>
+                <input type="email" required placeholder="mail@example.com" style="width:100%;padding:11px 14px;border:1px solid var(--paper-edge);border-radius:6px;font-size:14px;color:var(--text-dark);background:var(--paper);box-sizing:border-box;" />
+              </div>
+            </div>
+
+            <div>
+              <label style="display:block;font-size:13px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">
+                注文番号 <span style="font-size:11px;color:var(--text-light);font-weight:400;margin-left:6px;">任意</span>
+              </label>
+              <input type="text" placeholder="ENO-20260515-0374（お問い合わせの対象注文がある場合）" style="width:100%;padding:11px 14px;border:1px solid var(--paper-edge);border-radius:6px;font-size:14px;color:var(--text-dark);background:var(--paper);box-sizing:border-box;" />
+            </div>
+
+            <div>
+              <label style="display:block;font-size:13px;font-weight:700;color:var(--text-dark);margin-bottom:6px;">
+                お問い合わせ内容 <span style="color:var(--accent-red);margin-left:4px;">必須</span>
+              </label>
+              <textarea required rows="5" placeholder="お問い合わせ内容を具体的にご記入ください。" style="width:100%;padding:11px 14px;border:1px solid var(--paper-edge);border-radius:6px;font-size:14px;color:var(--text-dark);background:var(--paper);resize:vertical;box-sizing:border-box;font-family:inherit;line-height:1.8;"></textarea>
+            </div>
+
+            <div style="padding-top:4px;">
+              <button
+                class="btn btn-primary"
+                style="width:100%;padding:14px;font-size:15px;"
+                onclick="alert('お問い合わせを受け付けました。3営業日以内にご返信いたします。'); location.href='index.html'">
+                送信する
+              </button>
+              <p style="font-size:11px;color:var(--text-light);text-align:center;margin-top:10px;">送信後3営業日以内にご登録メールアドレスへご返信いたします。</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 右：補足情報 -->
+        <div style="display:flex;flex-direction:column;gap:16px;">
+
+          <!-- 対応時間 -->
+          <div class="form-card">
+            <h3 style="font-family:var(--font-mincho);font-size:15px;color:var(--text-dark);margin:0 0 12px;">
+              <svg viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;margin-right:6px;color:var(--accent-gold);"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              サポート対応時間
+            </h3>
+            <div style="font-size:13px;color:var(--text-mid);line-height:1.9;">
+              <div><strong style="color:var(--text-dark);">平日</strong> 10:00〜17:00</div>
+              <div style="font-size:12px;color:var(--text-light);">土日祝日を除く</div>
+            </div>
+            <div style="background:var(--paper-warm);border-radius:6px;padding:10px 12px;margin-top:12px;font-size:12px;color:var(--text-mid);">
+              返信まで通常3営業日ほどいただいております。お急ぎの場合はFAQをご確認ください。
+            </div>
+          </div>
+
+          <!-- FAQ -->
+          <div class="form-card">
+            <h3 style="font-family:var(--font-mincho);font-size:15px;color:var(--text-dark);margin:0 0 10px;">よくある質問</h3>
+            <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin:0 0 14px;">まずFAQをご確認ください。多くの疑問が解決できます。</p>
+            <a href="faq.html" class="btn btn-outline" style="display:block;text-align:center;font-size:13px;">FAQ を見る →</a>
+          </div>
+
+          <!-- 作家向け -->
+          <div class="form-card" style="border:1px solid var(--paper-edge);background:var(--paper-warm);">
+            <h3 style="font-family:var(--font-mincho);font-size:15px;color:var(--text-dark);margin:0 0 10px;">作家の方へ</h3>
+            <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin:0 0 14px;">出品・販売に関するご相談は作家専用サポートへどうぞ。</p>
+            <a href="artist-signup.html" class="btn btn-outline" style="display:block;text-align:center;font-size:13px;">作家専用サポートはこちら</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer style="background:var(--wood-dark);color:rgba(250,246,238,0.6);padding:40px 0 24px;margin-top:60px;">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;margin-bottom:32px;">
+      <div>
+        <div style="font-family:var(--font-mincho);font-size:18px;color:var(--paper);font-weight:700;margin-bottom:6px;">Enotter</div>
+        <div style="font-size:12px;line-height:1.8;">日本の手仕事を、次の世代へ。</div>
+      </div>
+      <div style="display:flex;gap:32px;font-size:12px;">
+        <div>
+          <div style="color:var(--paper);font-weight:700;margin-bottom:8px;">サポート</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <a href="faq.html" style="color:rgba(250,246,238,0.6);text-decoration:none;">よくある質問</a>
+            <a href="contact.html" style="color:rgba(250,246,238,0.6);text-decoration:none;">お問い合わせ</a>
+          </div>
+        </div>
+        <div>
+          <div style="color:var(--paper);font-weight:700;margin-bottom:8px;">会社情報</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <a href="about.html" style="color:rgba(250,246,238,0.6);text-decoration:none;">Enotterについて</a>
+            <a href="terms.html" style="color:rgba(250,246,238,0.6);text-decoration:none;">利用規約</a>
+            <a href="privacy.html" style="color:rgba(250,246,238,0.6);text-decoration:none;">プライバシーポリシー</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(250,246,238,0.1);padding-top:20px;text-align:center;font-size:12px;">&copy; 2026 Enotter Inc. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>

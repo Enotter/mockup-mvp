@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>よくある質問（FAQ） — Enotter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="demo-nav"><div class="container"><span class="demo-label">— MOCKUP PAGES —</span><nav class="demo-links">
+    <span class="demo-group">買い手</span>
+    <a href="index.html">トップ</a><a href="products.html">商品一覧</a><a href="search.html">検索結果</a><a href="product-detail.html">商品詳細</a><a href="cart.html">カート</a><a href="checkout.html">購入手続き</a><a href="order-complete.html">注文完了</a><a href="order-detail.html">注文詳細</a><a href="review-post.html">レビュー投稿</a><a href="mypage.html">マイページ</a><a href="mypage-orders.html">注文履歴</a><a href="mypage-profile.html">プロフィール編集</a><a href="mypage-addresses.html">住所帳</a><a href="mypage-payment.html">お支払い方法</a><a href="messages.html">メッセージ</a><a href="artists.html">作家一覧</a><a href="artist.html">作家ページ</a><a href="artist-products-list.html">作家作品一覧</a><a href="artist-reviews-list.html">作家レビュー一覧</a>
+    <span class="demo-group">認証</span>
+    <a href="login.html">ログイン</a><a href="signup.html">新規登録</a><a href="email-verify.html">メール認証</a><a href="password-reset.html">パスワード再設定</a>
+    <span class="demo-group">作家</span>
+    <a href="artist-signup.html">作家登録</a><a href="artist-dashboard.html">ダッシュボード</a><a href="product-new.html">出品</a><a href="product-edit.html">商品編集</a><a href="product-manage.html">商品管理</a><a href="order-manage.html">受注管理</a><a href="artist-order-detail.html">受注詳細</a><a href="artist-messages.html">作家メッセージ</a><a href="artist-profile-edit.html">プロフィール編集</a><a href="artist-payout.html">振込先設定</a><a href="artist-shop-edit.html">ショップ設定</a>
+    <span class="demo-group">作家登録フロー</span><a href="artist-signup-id.html">本人確認</a><a href="artist-signup-bank.html">振込先登録</a><a href="artist-signup-terms.html">規約同意</a><span class="demo-group">作家管理</span><a href="artist-pending-orders.html">未対応注文</a><a href="artist-reviews.html">レビュー一覧</a><a href="artist-notices.html">お知らせ</a><span class="demo-group">運営</span><a href="admin-dashboard.html">管理ダッシュボード</a><a href="admin-artist-review.html">作家審査</a><a href="admin-users.html">ユーザー管理</a><a href="admin-products.html">商品モデレーション</a><a href="admin-features.html">特集・バナー管理</a><a href="admin-payouts.html">精算管理</a><a href="admin-inquiries.html">お問い合わせ</a><a href="admin-analytics.html">分析・レポート</a><span class="demo-group">規約・その他</span>
+    <a href="terms.html">利用規約</a><a href="privacy.html">プライバシー</a><a href="tokushoho.html">特商法</a><a href="about.html">会社概要</a><a href="faq.html" class="current">FAQ</a><a href="contact.html">お問い合わせ</a><a href="404.html">404</a>
+  </nav></div></div>
+
+  <!-- ユーティリティバー（未ログイン） -->
+  <div class="utility-bar">
+    <div class="container">
+      <div class="utility-left">
+        <span>送料無料キャンペーン実施中（5,000円以上のお買い物で）</span>
+      </div>
+      <div class="utility-right">
+        <a href="faq.html">ヘルプ</a>
+        <a href="artist-signup.html">出品する</a>
+        <a href="login.html">ログイン</a>
+        <a href="signup.html">新規登録</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインヘッダー -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" fill="#FAF6EE" stroke="#5C3A21" stroke-width="2"/>
+            <path d="M14 30 Q24 14 34 30" stroke="#5C3A21" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <circle cx="24" cy="22" r="2.5" fill="#B5523F"/>
+            <path d="M18 34 L30 34" stroke="#5C3A21" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-jp">Enotter</span>
+        </span>
+      </a>
+      <form class="search">
+        <input type="text" placeholder="作家名・作品名・キーワードで探す" />
+        <button type="submit" aria-label="検索">
+          <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20 L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </form>
+      <nav class="header-icons">
+        <a href="favorites.html" class="icon-btn" aria-label="お気に入り">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span>お気に入り</span>
+        </a>
+        <a href="mypage.html" class="icon-btn" aria-label="マイページ">
+          <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>マイページ</span>
+        </a>
+        <a href="cart.html" class="icon-btn cart" aria-label="カート">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 4h3l3 12h10l3-9H7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.5" fill="currentColor"/><circle cx="18" cy="20" r="1.5" fill="currentColor"/></svg>
+          <span>カート</span>
+        </a>
+      </nav>
+    </div>
+    <nav class="category-nav">
+      <div class="container">
+        <ul>
+          <li><a href="products.html">アクセサリー</a></li>
+          <li><a href="products.html">陶器・うつわ</a></li>
+          <li><a href="products.html">布・テキスタイル</a></li>
+          <li><a href="products.html">木工・家具</a></li>
+          <li><a href="products.html">レザー・革小物</a></li>
+          <li><a href="products.html">アート・絵画</a></li>
+          <li><a href="products.html">キャンドル・石けん</a></li>
+          <li><a href="products.html">食品・お菓子</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ヒーロー -->
+  <section style="background:var(--paper-warm);border-bottom:1px solid var(--paper-edge);padding:48px 0 40px;">
+    <div class="container" style="text-align:center;">
+      <span style="font-family:var(--font-hand);color:var(--accent-gold);font-size:13px;letter-spacing:0.2em;">— FAQ —</span>
+      <h1 style="font-family:var(--font-mincho);font-size:32px;color:var(--text-dark);margin:8px 0 10px;">よくある質問</h1>
+      <p style="font-size:14px;color:var(--text-mid);">ご不明な点が解決しない場合は<a href="contact.html" style="color:var(--accent-red);">お問い合わせ</a>ください。</p>
+    </div>
+  </section>
+
+  <div class="mvp-page">
+    <div class="container" style="max-width:780px;">
+
+      <!-- タブナビゲーション -->
+      <div style="display:flex;gap:0;border-bottom:2px solid var(--paper-edge);margin-bottom:32px;overflow-x:auto;">
+        <button class="faq-tab active" data-target="shopping" style="padding:12px 20px;background:none;border:none;border-bottom:2px solid var(--wood-dark);margin-bottom:-2px;font-size:13px;font-weight:700;color:var(--wood-dark);cursor:pointer;white-space:nowrap;font-family:inherit;">買い物について</button>
+        <button class="faq-tab" data-target="payment" style="padding:12px 20px;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;font-size:13px;color:var(--text-mid);cursor:pointer;white-space:nowrap;font-family:inherit;">支払い・送料</button>
+        <button class="faq-tab" data-target="returns" style="padding:12px 20px;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;font-size:13px;color:var(--text-mid);cursor:pointer;white-space:nowrap;font-family:inherit;">返品・交換</button>
+        <button class="faq-tab" data-target="artist" style="padding:12px 20px;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;font-size:13px;color:var(--text-mid);cursor:pointer;white-space:nowrap;font-family:inherit;">作家登録</button>
+        <button class="faq-tab" data-target="account" style="padding:12px 20px;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;font-size:13px;color:var(--text-mid);cursor:pointer;white-space:nowrap;font-family:inherit;">アカウント</button>
+      </div>
+
+      <!-- タブコンテンツ -->
+
+      <!-- 買い物について -->
+      <div class="faq-panel" id="faq-shopping">
+        <h2 style="font-family:var(--font-mincho);font-size:18px;color:var(--text-dark);margin:0 0 16px;">買い物について</h2>
+        <div class="form-card" style="padding:0 20px;">
+
+          <div style="border-bottom:1px solid var(--paper-edge);">
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. 注文後にキャンセルはできますか？
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. 作家が発送手続きを開始する前であればキャンセル可能です。注文詳細ページからキャンセル申請をお送りください。発送後のキャンセルはお受けできませんのでご注意ください。
+            </div>
+          </div>
+
+          <div style="border-bottom:1px solid var(--paper-edge);">
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. ギフト包装はできますか？
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. 作家ページやショップごとに対応状況が異なります。商品詳細ページでギフトラッピングのオプションをご確認ください。ご不明な点は作家へのメッセージ機能でお問い合わせいただくことも可能です。
+            </div>
+          </div>
+
+          <div style="border-bottom:1px solid var(--paper-edge);">
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. 在庫がない商品を購入することはできますか？
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. 受注制作に対応している作家の場合、メッセージ機能から制作のご相談をすることができます。作家プロフィールページの「メッセージを送る」ボタンよりお問い合わせください。
+            </div>
+          </div>
+
+          <div style="border-bottom:1px solid var(--paper-edge);">
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. 複数の作家の商品をまとめて購入できますか？
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. カートには複数の作家の商品をまとめて入れることができますが、配送は各作家から個別に行われます。そのため、送料は作家ごとに加算されます。
+            </div>
+          </div>
+
+          <div>
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. 作品の詳細サイズや素材を確認したい
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. 商品詳細ページの「商品説明」「素材・サイズ」タブをご確認ください。詳細情報が記載されていない場合は、作家へのメッセージ機能でお問い合わせいただけます。
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 支払い・送料 -->
+      <div class="faq-panel" id="faq-payment" style="display:none;">
+        <h2 style="font-family:var(--font-mincho);font-size:18px;color:var(--text-dark);margin:0 0 16px;">支払い・送料</h2>
+        <div class="form-card" style="padding:0 20px;">
+
+          <div style="border-bottom:1px solid var(--paper-edge);">
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. 支払い方法は何がありますか？
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. クレジットカード（VISA / Mastercard / JCB / AMEX）、コンビニ払い、PayPayに対応しています。今後さらに決済方法を拡充予定です。
+            </div>
+          </div>
+
+          <div style="border-bottom:1px solid var(--paper-edge);">
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. 送料はいくらですか？
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. 送料は作家・商品・配送先によって異なります。商品詳細ページでご確認ください。なお、5,000円以上のご注文で送料無料のキャンペーンも実施中です。
+            </div>
+          </div>
+
+          <div>
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. 領収書は発行できますか？
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. 注文詳細ページから領収書PDFをダウンロードできます。マイページ → 注文履歴 → 対象注文 → 「領収書をダウンロード」ボタンよりご利用ください。
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 返品・交換 -->
+      <div class="faq-panel" id="faq-returns" style="display:none;">
+        <h2 style="font-family:var(--font-mincho);font-size:18px;color:var(--text-dark);margin:0 0 16px;">返品・交換</h2>
+        <div class="form-card" style="padding:0 20px;">
+
+          <div style="border-bottom:1px solid var(--paper-edge);">
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. 商品が届いたが破損していた場合はどうすればよいですか？
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. 商品到着後7日以内に、注文詳細ページから「問題を報告する」をご利用ください。破損状況の写真をご添付いただけますとスムーズに対応できます。
+            </div>
+          </div>
+
+          <div style="border-bottom:1px solid var(--paper-edge);">
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. イメージと違った場合に返品できますか？
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. ハンドメイド品の性質上、イメージの相違のみによる返品は原則お受けできません。購入前に商品詳細をよくご確認いただき、不明点は作家へお問い合わせください。
+            </div>
+          </div>
+
+          <div>
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. 返品・返金はどのくらい時間がかかりますか？
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. 返品受付後、3〜5営業日以内に審査の上ご連絡します。返金はお支払い方法によって異なりますが、通常5〜10営業日程度かかります。
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 作家登録 -->
+      <div class="faq-panel" id="faq-artist" style="display:none;">
+        <h2 style="font-family:var(--font-mincho);font-size:18px;color:var(--text-dark);margin:0 0 16px;">作家登録</h2>
+        <div class="form-card" style="padding:0 20px;">
+
+          <div style="border-bottom:1px solid var(--paper-edge);">
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. 誰でも作家として出品できますか？
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. 本人確認・作品審査を経て登録いただけます。工場生産品や海外仕入れ品は出品対象外となります。日本国内在住の方で、自ら手仕事で制作した作品を販売される方が対象です。
+            </div>
+          </div>
+
+          <div style="border-bottom:1px solid var(--paper-edge);">
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. 手数料はどのくらいですか？
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. 販売手数料は一律20%（税込）です。初期費用・月額費用は一切かかりません。売れた分だけ手数料をいただく完全成果報酬型です。
+            </div>
+          </div>
+
+          <div>
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. 審査にはどのくらい時間がかかりますか？
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. 書類審査・作品審査を合わせて通常3〜7営業日ほどです。審査完了後にメールでご連絡します。
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- アカウント -->
+      <div class="faq-panel" id="faq-account" style="display:none;">
+        <h2 style="font-family:var(--font-mincho);font-size:18px;color:var(--text-dark);margin:0 0 16px;">アカウント</h2>
+        <div class="form-card" style="padding:0 20px;">
+
+          <div style="border-bottom:1px solid var(--paper-edge);">
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. パスワードを忘れてしまいました。
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. ログインページの「パスワードをお忘れの方」よりメールアドレスを入力してください。再設定用のリンクをメールでお送りします。
+            </div>
+          </div>
+
+          <div style="border-bottom:1px solid var(--paper-edge);">
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. メールアドレスを変更したい
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. マイページ → プロフィール編集 から変更できます。新しいメールアドレス宛に確認メールが届きますので、リンクをクリックして変更を完了させてください。
+            </div>
+          </div>
+
+          <div>
+            <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+              Q. アカウントを削除したい
+              <span class="faq-arrow" style="color:var(--accent-gold);font-size:12px;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none;padding:0 0 16px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+              A. マイページ → 設定 → 「アカウントを削除する」から手続きできます。削除後は取引履歴・レビューなどが全て消去されます。未完了の取引がある場合は削除できません。
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- お問い合わせCTA -->
+      <div style="background:var(--paper-warm);border-radius:12px;padding:32px;text-align:center;border:1px solid var(--paper-edge);margin-top:40px;">
+        <div style="font-family:var(--font-mincho);font-size:16px;color:var(--text-dark);margin-bottom:8px;">解決しない場合はお問い合わせください</div>
+        <p style="font-size:13px;color:var(--text-mid);margin:0 0 20px;">平日10:00〜17:00、3営業日以内にご返信いたします。</p>
+        <a href="contact.html" class="btn btn-primary">お問い合わせする</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer style="background:var(--wood-dark);color:rgba(250,246,238,0.6);padding:40px 0 24px;margin-top:60px;">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;margin-bottom:32px;">
+      <div>
+        <div style="font-family:var(--font-mincho);font-size:18px;color:var(--paper);font-weight:700;margin-bottom:6px;">Enotter</div>
+        <div style="font-size:12px;line-height:1.8;">日本の手仕事を、次の世代へ。</div>
+      </div>
+      <div style="display:flex;gap:32px;font-size:12px;">
+        <div>
+          <div style="color:var(--paper);font-weight:700;margin-bottom:8px;">サポート</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <a href="faq.html" style="color:rgba(250,246,238,0.6);text-decoration:none;">よくある質問</a>
+            <a href="contact.html" style="color:rgba(250,246,238,0.6);text-decoration:none;">お問い合わせ</a>
+          </div>
+        </div>
+        <div>
+          <div style="color:var(--paper);font-weight:700;margin-bottom:8px;">会社情報</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <a href="about.html" style="color:rgba(250,246,238,0.6);text-decoration:none;">Enotterについて</a>
+            <a href="terms.html" style="color:rgba(250,246,238,0.6);text-decoration:none;">利用規約</a>
+            <a href="privacy.html" style="color:rgba(250,246,238,0.6);text-decoration:none;">プライバシーポリシー</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(250,246,238,0.1);padding-top:20px;text-align:center;font-size:12px;">&copy; 2026 Enotter Inc. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // タブ切り替え
+    document.querySelectorAll('.faq-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.target;
+
+        // タブのスタイルをリセット
+        document.querySelectorAll('.faq-tab').forEach(t => {
+          t.style.borderBottom = '2px solid transparent';
+          t.style.color = 'var(--text-mid)';
+          t.style.fontWeight = 'normal';
+        });
+        // アクティブタブのスタイルを適用
+        tab.style.borderBottom = '2px solid var(--wood-dark)';
+        tab.style.color = 'var(--wood-dark)';
+        tab.style.fontWeight = '700';
+
+        // パネルを非表示
+        document.querySelectorAll('.faq-panel').forEach(panel => {
+          panel.style.display = 'none';
+        });
+        // 対象パネルを表示
+        document.getElementById('faq-' + target).style.display = 'block';
+
+        // アコーディオンをリセット
+        document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+        document.querySelectorAll('.faq-arrow').forEach(a => a.textContent = '▼');
+      });
+    });
+
+    // アコーディオン
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.style.display === 'block';
+        document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+        document.querySelectorAll('.faq-arrow').forEach(a => a.textContent = '▼');
+        if (!isOpen) {
+          answer.style.display = 'block';
+          btn.querySelector('.faq-arrow').textContent = '▲';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>お支払い方法 — Enotter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .card-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 20px;
+      border: 1.5px solid var(--paper-edge);
+      border-radius: 12px;
+      background: var(--paper-warm);
+      margin-bottom: 14px;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .card-row.default-card {
+      border-color: var(--accent-gold);
+      background: rgba(199, 160, 86, 0.05);
+    }
+    .card-row:last-child { margin-bottom: 0; }
+    .card-icon {
+      width: 52px;
+      height: 34px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+      flex-shrink: 0;
+    }
+    .card-icon.visa {
+      background: #1A1F71;
+      color: white;
+    }
+    .card-icon.mastercard {
+      background: #EB001B;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-icon.mastercard::after {
+      content: '';
+      position: absolute;
+      right: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #F79E1B;
+      opacity: 0.85;
+    }
+    .card-info {
+      flex: 1;
+    }
+    .card-info .card-number {
+      font-family: var(--font-hand);
+      font-size: 15px;
+      color: var(--text-dark);
+      letter-spacing: 0.1em;
+      margin-bottom: 3px;
+    }
+    .card-info .card-meta {
+      font-size: 12px;
+      color: var(--text-mid);
+    }
+    .card-info .card-name {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 2px;
+      letter-spacing: 0.05em;
+    }
+    .default-badge {
+      background: var(--accent-gold);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+    .card-actions {
+      display: flex;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .card-actions button {
+      font-size: 12px;
+      padding: 7px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 700;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-set-default {
+      background: var(--paper);
+      border: 1.5px solid var(--wood-dark);
+      color: var(--wood-dark);
+    }
+    .btn-set-default:hover {
+      background: var(--wood-dark);
+      color: var(--paper);
+    }
+    .btn-delete {
+      background: var(--paper);
+      border: 1px solid var(--paper-edge);
+      color: var(--text-light);
+    }
+    .btn-delete:hover:not(:disabled) {
+      border-color: var(--accent-red);
+      color: var(--accent-red);
+    }
+    .btn-delete:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+    .add-card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .add-card-grid .full {
+      grid-column: 1 / -1;
+    }
+    .field-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-mid);
+      margin-bottom: 6px;
+    }
+    .field-input {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--paper-edge);
+      border-radius: 8px;
+      background: var(--paper-warm);
+      font-size: 14px;
+      color: var(--text-dark);
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .field-input:focus {
+      border-color: var(--wood-mid);
+    }
+    .field-input::placeholder {
+      color: var(--text-light);
+    }
+    .expiry-row {
+      display: flex;
+      gap: 8px;
+    }
+    .expiry-row select {
+      flex: 1;
+      padding: 11px 10px;
+      border: 1.5px solid var(--paper-edge);
+      border-radius: 8px;
+      background: var(--paper-warm);
+      font-size: 14px;
+      color: var(--text-dark);
+      font-family: inherit;
+      outline: none;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .expiry-row select:focus {
+      border-color: var(--wood-mid);
+    }
+    .section-heading {
+      font-family: var(--font-mincho);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed var(--paper-edge);
+    }
+    .other-payment-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      border: 1px solid var(--paper-edge);
+      border-radius: 10px;
+      background: var(--paper-warm);
+      margin-bottom: 12px;
+    }
+    .other-payment-item:last-child { margin-bottom: 0; }
+    .payment-logo {
+      width: 52px;
+      height: 34px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .payment-logo.cvs {
+      background: #2C4A8C;
+      color: white;
+    }
+    .payment-logo.paypay {
+      background: #FF0033;
+      color: white;
+    }
+    .payment-label {
+      flex: 1;
+    }
+    .payment-label .name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 2px;
+    }
+    .payment-label .desc {
+      font-size: 12px;
+      color: var(--text-mid);
+    }
+    .payment-status-tag {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      flex-shrink: 0;
+    }
+    .payment-status-tag.active {
+      background: rgba(107, 127, 79, 0.12);
+      color: var(--accent-green);
+    }
+    .payment-status-tag.inactive {
+      background: var(--paper-edge);
+      color: var(--text-mid);
+    }
+    .panel h1 {
+      font-family: var(--font-mincho);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0 0 20px;
+    }
+    .tooltip-wrap {
+      position: relative;
+      display: inline-block;
+    }
+    .tooltip-wrap .tooltip-text {
+      visibility: hidden;
+      background: var(--text-dark);
+      color: var(--paper);
+      font-size: 11px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      position: absolute;
+      bottom: calc(100% + 6px);
+      right: 0;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none;
+    }
+    .tooltip-wrap:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="demo-nav"><div class="container"><span class="demo-label">— MOCKUP PAGES —</span><nav class="demo-links">
+    <span class="demo-group">買い手</span>
+    <a href="index.html">トップ</a><a href="products.html">商品一覧</a><a href="search.html">検索結果</a><a href="product-detail.html">商品詳細</a><a href="cart.html">カート</a><a href="checkout.html">購入手続き</a><a href="order-complete.html">注文完了</a><a href="order-detail.html">注文詳細</a><a href="review-post.html">レビュー投稿</a><a href="mypage.html">マイページ</a><a href="mypage-orders.html">注文履歴</a><a href="mypage-profile.html">プロフィール編集</a><a href="mypage-addresses.html">住所帳</a><a href="mypage-payment.html" class="current">お支払い方法</a><a href="messages.html">メッセージ</a><a href="artists.html">作家一覧</a><a href="artist.html">作家ページ</a><a href="artist-products-list.html">作家作品一覧</a><a href="artist-reviews-list.html">作家レビュー一覧</a>
+    <span class="demo-group">認証</span>
+    <a href="login.html">ログイン</a><a href="signup.html">新規登録</a><a href="email-verify.html">メール認証</a><a href="password-reset.html">パスワード再設定</a>
+    <span class="demo-group">作家</span>
+    <a href="artist-signup.html">作家登録</a><a href="artist-dashboard.html">ダッシュボード</a><a href="product-new.html">出品</a><a href="product-edit.html">商品編集</a><a href="product-manage.html">商品管理</a><a href="order-manage.html">受注管理</a><a href="artist-order-detail.html">受注詳細</a><a href="artist-messages.html">作家メッセージ</a><a href="artist-profile-edit.html">プロフィール編集</a><a href="artist-payout.html">振込先設定</a><a href="artist-shop-edit.html">ショップ設定</a>
+    <span class="demo-group">作家登録フロー</span><a href="artist-signup-id.html">本人確認</a><a href="artist-signup-bank.html">振込先登録</a><a href="artist-signup-terms.html">規約同意</a><span class="demo-group">作家管理</span><a href="artist-pending-orders.html">未対応注文</a><a href="artist-reviews.html">レビュー一覧</a><a href="artist-notices.html">お知らせ</a><span class="demo-group">運営</span><a href="admin-dashboard.html">管理ダッシュボード</a><a href="admin-artist-review.html">作家審査</a><a href="admin-users.html">ユーザー管理</a><a href="admin-products.html">商品モデレーション</a><a href="admin-features.html">特集・バナー管理</a><a href="admin-payouts.html">精算管理</a><a href="admin-inquiries.html">お問い合わせ</a><a href="admin-analytics.html">分析・レポート</a><span class="demo-group">規約・その他</span>
+    <a href="terms.html">利用規約</a><a href="privacy.html">プライバシー</a><a href="tokushoho.html">特商法</a><a href="about.html">会社概要</a><a href="faq.html">FAQ</a><a href="contact.html">お問い合わせ</a><a href="404.html">404</a>
+  </nav></div></div>
+
+  <div class="utility-bar"><div class="container"><div class="utility-left"><span>送料無料キャンペーン実施中（5,000円以上のお買い物で）</span></div><div class="utility-right"><a href="faq.html">ヘルプ</a><a href="artist-signup.html">出品する</a><a href="login.html">ログアウト</a></div></div></div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark"><svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="#FAF6EE" stroke="#5C3A21" stroke-width="2"/><path d="M14 30 Q24 14 34 30" stroke="#5C3A21" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="22" r="2.5" fill="#B5523F"/><path d="M18 34 L30 34" stroke="#5C3A21" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/></svg></span>
+        <span class="logo-text"><span class="logo-jp">Enotter</span></span>
+      </a>
+      <form class="search"><input type="text" placeholder="作家名・作品名・キーワードで探す" /><button type="submit"><svg viewBox="0 0 24 24" width="20" height="20"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20 L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></form>
+      <nav class="header-icons">
+        <a href="favorites.html" class="icon-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>お気に入り</span></a>
+        <a href="mypage.html" class="icon-btn"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>マイページ</span></a>
+        <a href="cart.html" class="icon-btn cart"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 4h3l3 12h10l3-9H7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.5" fill="currentColor"/><circle cx="18" cy="20" r="1.5" fill="currentColor"/></svg><span>カート</span><span class="badge">3</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="mypage-banner">
+      <div class="avatar" style="background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80')"></div>
+      <div class="welcome">
+        <span class="greet">— WELCOME BACK —</span>
+        <h1>こんにちは、大谷 翔正さん</h1>
+        <p>今日も素敵な作品に出会えますように。</p>
+      </div>
+      <div class="stats">
+        <div><strong>12</strong><span>これまでの注文</span></div>
+        <div><strong>48</strong><span>お気に入り</span></div>
+        <div><strong>¥1,250</strong><span>ポイント残高</span></div>
+      </div>
+    </div>
+
+    <div class="mypage-layout">
+      <!-- Sidebar -->
+      <aside class="mypage-sidebar">
+        <ul>
+          <li><a href="mypage.html"><span class="ico">🏠</span>ダッシュボード</a></li>
+          <li><a href="mypage-orders.html"><span class="ico">📦</span>注文履歴</a></li>
+          <li><a href="favorites.html"><span class="ico">♡</span>お気に入り作品</a></li>
+          <li><a href="mypage-following.html"><span class="ico">★</span>フォロー作家</a></li>
+          <li><a href="mypage-reviews.html"><span class="ico">✎</span>レビュー履歴</a></li>
+          <li><a href="mypage-coupon.html"><span class="ico">🎫</span>クーポン</a></li>
+          <li><a href="messages.html"><span class="ico">📨</span>メッセージ <span style="margin-left:auto;background:var(--accent-red);color:white;border-radius:999px;padding:1px 8px;font-size:10px;">3</span></a></li>
+          <hr />
+          <li><a href="mypage-profile.html"><span class="ico">👤</span>プロフィール設定</a></li>
+          <li><a href="mypage-addresses.html"><span class="ico">📍</span>お届け先管理</a></li>
+          <li><a href="mypage-payment.html" class="active"><span class="ico">💳</span>お支払い方法</a></li>
+          <li><a href="mypage-profile.html"><span class="ico">⚙</span>各種設定</a></li>
+          <hr />
+          <li><a href="login.html" style="color:var(--accent-red);"><span class="ico">↪</span>ログアウト</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main -->
+      <div class="mypage-main">
+
+        <!-- 登録済みカード一覧 -->
+        <div class="panel">
+          <h1>お支払い方法</h1>
+          <div class="form-card" style="margin-bottom:0;">
+            <h3>登録済みのカード</h3>
+            <p class="form-card-desc" style="margin-bottom:20px;">ご注文時に使用するお支払いカードを管理できます。</p>
+
+            <!-- カード1：デフォルト -->
+            <div class="card-row default-card">
+              <div class="card-icon visa">VISA</div>
+              <div class="card-info">
+                <div class="card-number">****-****-****-4242</div>
+                <div class="card-meta">有効期限：08/28</div>
+                <div class="card-name">SHOHEI OTANI</div>
+              </div>
+              <span class="default-badge">デフォルト</span>
+              <div class="card-actions">
+                <div class="tooltip-wrap">
+                  <button class="btn-delete" disabled>削除</button>
+                  <span class="tooltip-text">デフォルトカードは削除できません</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- カード2 -->
+            <div class="card-row">
+              <div class="card-icon mastercard">MC</div>
+              <div class="card-info">
+                <div class="card-number">****-****-****-5555</div>
+                <div class="card-meta">有効期限：03/27</div>
+                <div class="card-name">SHOHEI OTANI</div>
+              </div>
+              <div class="card-actions">
+                <button class="btn-set-default" onclick="alert('デフォルトカードを変更しました。')">デフォルトに設定</button>
+                <button class="btn-delete" onclick="confirm('このカードを削除しますか？') && alert('カードを削除しました。')">削除</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 新しいカードを追加 -->
+        <div class="panel">
+          <div class="form-card" style="margin-bottom:0;">
+            <h3>新しいカードを追加</h3>
+            <p class="form-card-desc" style="margin-bottom:20px;">クレジットカード・デビットカードを登録できます。</p>
+
+            <div class="add-card-grid">
+              <!-- カード番号 -->
+              <div class="full">
+                <label class="field-label">カード番号</label>
+                <input type="text" class="field-input" placeholder="1234 5678 9012 3456" maxlength="19" />
+              </div>
+
+              <!-- 有効期限 -->
+              <div>
+                <label class="field-label">有効期限</label>
+                <div class="expiry-row">
+                  <select>
+                    <option value="">月</option>
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                  </select>
+                  <select>
+                    <option value="">年</option>
+                    <option>2026</option>
+                    <option>2027</option>
+                    <option>2028</option>
+                    <option>2029</option>
+                    <option>2030</option>
+                    <option>2031</option>
+                    <option>2032</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- セキュリティコード -->
+              <div>
+                <label class="field-label">セキュリティコード</label>
+                <input type="password" class="field-input" placeholder="CVV" maxlength="4" />
+              </div>
+
+              <!-- カード名義 -->
+              <div class="full">
+                <label class="field-label">カード名義（半角英字）</label>
+                <input type="text" class="field-input" placeholder="TARO YAMADA" />
+              </div>
+
+              <!-- 登録ボタン -->
+              <div class="full" style="margin-top:8px;">
+                <button class="btn btn-primary" style="width:100%;padding:14px;" onclick="alert('カードを登録しました。')">カードを登録する</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- その他の支払い方法 -->
+        <div class="panel">
+          <div class="form-card" style="margin-bottom:0;">
+            <h3>その他の支払い方法</h3>
+            <p class="form-card-desc" style="margin-bottom:20px;">コンビニ払いやQRコード決済も利用できます。</p>
+
+            <!-- コンビニ払い -->
+            <div class="other-payment-item">
+              <div class="payment-logo cvs">CVS</div>
+              <div class="payment-label">
+                <div class="name">コンビニ払い</div>
+                <div class="desc">ローソン・ファミリーマート・セブン-イレブン等でお支払いいただけます。注文ごとに番号が発行されます。</div>
+              </div>
+              <span class="payment-status-tag active">利用可能</span>
+            </div>
+
+            <!-- PayPay -->
+            <div class="other-payment-item">
+              <div class="payment-logo paypay" style="font-size:10px;">Pay<br>Pay</div>
+              <div class="payment-label">
+                <div class="name">PayPay <span class="form-mvp-out">MVP外</span></div>
+                <div class="desc">PayPayアカウントと連携してスムーズにお支払いいただけます。</div>
+              </div>
+              <a href="login.html" class="btn btn-outline" style="font-size:12px;padding:8px 18px;border-radius:6px;white-space:nowrap;">連携する</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><div class="footer-bottom" style="border:0;padding-top:0;"><span>© 2026 Enotter.</span></div></div></footer>
+
+</body>
+</html>

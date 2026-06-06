@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>購入手続き — Enotter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="demo-nav"><div class="container"><span class="demo-label">— MOCKUP PAGES —</span><nav class="demo-links">
+    <span class="demo-group">買い手</span>
+    <a href="index.html">トップ</a><a href="products.html">商品一覧</a><a href="search.html">検索結果</a><a href="product-detail.html">商品詳細</a><a href="cart.html">カート</a><a href="checkout.html" class="current">購入手続き</a><a href="order-complete.html">注文完了</a><a href="order-detail.html">注文詳細</a><a href="review-post.html">レビュー投稿</a><a href="mypage.html">マイページ</a><a href="mypage-orders.html">注文履歴</a><a href="mypage-profile.html">プロフィール編集</a><a href="mypage-addresses.html">住所帳</a><a href="mypage-payment.html">お支払い方法</a><a href="messages.html">メッセージ</a><a href="artists.html">作家一覧</a><a href="artist.html">作家ページ</a><a href="artist-products-list.html">作家作品一覧</a><a href="artist-reviews-list.html">作家レビュー一覧</a>
+    <span class="demo-group">認証</span>
+    <a href="login.html">ログイン</a><a href="signup.html">新規登録</a><a href="email-verify.html">メール認証</a><a href="password-reset.html">パスワード再設定</a>
+    <span class="demo-group">作家</span>
+    <a href="artist-signup.html">作家登録</a><a href="artist-dashboard.html">ダッシュボード</a><a href="product-new.html">出品</a><a href="product-edit.html">商品編集</a><a href="product-manage.html">商品管理</a><a href="order-manage.html">受注管理</a><a href="artist-order-detail.html">受注詳細</a><a href="artist-messages.html">作家メッセージ</a><a href="artist-profile-edit.html">プロフィール編集</a><a href="artist-payout.html">振込先設定</a><a href="artist-shop-edit.html">ショップ設定</a>
+    <span class="demo-group">作家登録フロー</span><a href="artist-signup-id.html">本人確認</a><a href="artist-signup-bank.html">振込先登録</a><a href="artist-signup-terms.html">規約同意</a><span class="demo-group">作家管理</span><a href="artist-pending-orders.html">未対応注文</a><a href="artist-reviews.html">レビュー一覧</a><a href="artist-notices.html">お知らせ</a><span class="demo-group">運営</span><a href="admin-dashboard.html">管理ダッシュボード</a><a href="admin-artist-review.html">作家審査</a><a href="admin-users.html">ユーザー管理</a><a href="admin-products.html">商品モデレーション</a><a href="admin-features.html">特集・バナー管理</a><a href="admin-payouts.html">精算管理</a><a href="admin-inquiries.html">お問い合わせ</a><a href="admin-analytics.html">分析・レポート</a><span class="demo-group">規約・その他</span>
+    <a href="terms.html">利用規約</a><a href="privacy.html">プライバシー</a><a href="tokushoho.html">特商法</a><a href="about.html">会社概要</a><a href="faq.html">FAQ</a><a href="contact.html">お問い合わせ</a><a href="404.html">404</a>
+  </nav></div></div>
+
+  <div class="utility-bar"><div class="container"><div class="utility-left"><span>SSL暗号化通信で安全にお買い物いただけます</span></div><div class="utility-right"><a href="faq.html">ヘルプ</a><a href="cart.html">← カートに戻る</a></div></div></div>
+
+  <header class="header">
+    <div class="container header-inner" style="grid-template-columns: auto 1fr auto;">
+      <a href="index.html" class="logo">
+        <span class="logo-mark"><svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="#FAF6EE" stroke="#5C3A21" stroke-width="2"/><path d="M14 30 Q24 14 34 30" stroke="#5C3A21" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="22" r="2.5" fill="#B5523F"/><path d="M18 34 L30 34" stroke="#5C3A21" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/></svg></span>
+        <span class="logo-text"><span class="logo-jp">Enotter</span></span>
+      </a>
+      <div></div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:var(--text-mid);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        SSL暗号化通信で安全に
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="checkout-steps">
+      <div class="step done"><div class="num">✓</div><span>カート</span></div>
+      <div class="connector"></div>
+      <div class="step active"><div class="num">2</div><span>お届け先・お支払い</span></div>
+      <div class="connector"></div>
+      <div class="step"><div class="num">3</div><span>ご注文確認</span></div>
+      <div class="connector"></div>
+      <div class="step"><div class="num">4</div><span>完了</span></div>
+    </div>
+
+    <div class="checkout-layout">
+      <div>
+        <div class="checkout-form">
+          <div class="form-section">
+            <h3><span class="num">1</span>お届け先</h3>
+            <div class="form-grid">
+              <div class="form-field"><label>お名前（姓）</label><input type="text" value="大谷" /></div>
+              <div class="form-field"><label>お名前（名）</label><input type="text" value="翔正" /></div>
+              <div class="form-field"><label>ふりがな（姓）</label><input type="text" value="おおたに" /></div>
+              <div class="form-field"><label>ふりがな（名）</label><input type="text" value="しょうせい" /></div>
+              <div class="form-field"><label>電話番号</label><input type="tel" placeholder="090-0000-0000" /></div>
+              <div class="form-field"><label>郵便番号</label><input type="text" placeholder="100-0001" /></div>
+              <div class="form-field full"><label>都道府県</label>
+                <select>
+                  <option>東京都</option>
+                  <option>大阪府</option>
+                  <option>京都府</option>
+                </select>
+              </div>
+              <div class="form-field full"><label>住所</label><input type="text" placeholder="市区町村・番地・建物名" /></div>
+              <div class="form-field full"><label>配達メモ（任意）<span class="form-mvp-out">MVP外</span></label><textarea rows="3" placeholder="置き配希望、不在時の対応など"></textarea></div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3><span class="num">2</span>配送方法</h3>
+            <div class="payment-options">
+              <label class="payment-option selected">
+                <input type="radio" name="ship" checked />
+                <span class="label">通常便（ヤマト運輸）</span>
+                <span class="desc">3〜5日でお届け</span>
+                <span style="font-family:var(--font-mincho);font-weight:700;color:var(--accent-green);">無料</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="ship" />
+                <span class="label">お急ぎ便（クール宅急便）<span class="form-mvp-out">MVP外</span></span>
+                <span class="desc">1〜2日でお届け</span>
+                <span style="font-family:var(--font-mincho);font-weight:700;">+¥800</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="ship" />
+                <span class="label">日時指定便<span class="form-mvp-out">MVP外</span></span>
+                <span class="desc">ご希望の日時にお届け</span>
+                <span style="font-family:var(--font-mincho);font-weight:700;">+¥300</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3><span class="num">3</span>お支払い方法</h3>
+            <div class="payment-options">
+              <label class="payment-option selected">
+                <input type="radio" name="pay" checked />
+                <span class="label">クレジットカード</span>
+                <div class="icons"><span>VISA</span><span>MASTER</span><span>JCB</span><span>AMEX</span></div>
+              </label>
+              <div style="padding:0 20px 20px;background:rgba(92,58,33,0.04);border-radius:0 0 10px 10px;margin-top:-12px;border:1.5px solid var(--paper-edge);border-top:0;">
+                <div class="form-grid" style="padding-top:16px;">
+                  <div class="form-field full"><label>カード番号</label><input type="text" placeholder="1234 5678 9012 3456" /></div>
+                  <div class="form-field"><label>有効期限</label><input type="text" placeholder="MM / YY" /></div>
+                  <div class="form-field"><label>セキュリティコード</label><input type="text" placeholder="3桁" /></div>
+                  <div class="form-field full"><label>カード名義（半角英字）</label><input type="text" placeholder="TARO YAMADA" /></div>
+                </div>
+              </div>
+              <label class="payment-option">
+                <input type="radio" name="pay" />
+                <span class="label">コンビニ後払い<span class="form-mvp-out">MVP外</span></span>
+                <span class="desc">商品到着後、コンビニでお支払い</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="pay" />
+                <span class="label">銀行振込<span class="form-mvp-out">MVP外</span></span>
+                <span class="desc">前払い・ご入金確認後の発送</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="pay" />
+                <span class="label">PayPay / LINE Pay<span class="form-mvp-out">MVP外</span></span>
+                <span class="desc">QRコード決済</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section" style="margin-bottom:0;">
+            <h3><span class="num">4</span>ラッピング・メッセージ <span class="form-mvp-out">MVP外</span></h3>
+            <div class="payment-options">
+              <label class="payment-option selected">
+                <input type="radio" name="wrap" checked />
+                <span class="label">そのまま発送</span>
+                <span class="desc">通常の梱包でお届け</span>
+                <span style="font-family:var(--font-mincho);font-weight:700;color:var(--accent-green);">無料</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="wrap" />
+                <span class="label">ギフトラッピング</span>
+                <span class="desc">和紙包み + 麻紐</span>
+                <span style="font-family:var(--font-mincho);font-weight:700;">+¥400</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="wrap" />
+                <span class="label">+ メッセージカード</span>
+                <span class="desc">手書き風カード添付（80文字まで）</span>
+                <span style="font-family:var(--font-mincho);font-weight:700;">+¥200</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="checkout-summary">
+        <h3>ご注文内容</h3>
+        <div class="summary-items">
+          <div class="summary-item">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=200&q=80" alt="" />
+            <div><div class="name">真鍮の三日月ピアス</div><div class="qty">数量：1</div></div>
+            <div class="price">¥4,500</div>
+          </div>
+          <div class="summary-item">
+            <img src="https://images.unsplash.com/photo-1518049362265-d5b2a6b00b37?auto=format&fit=crop&w=200&q=80" alt="" />
+            <div><div class="name">粉引マグカップ（生成り）</div><div class="qty">数量：2</div></div>
+            <div class="price">¥8,000</div>
+          </div>
+          <div class="summary-item">
+            <img src="https://images.unsplash.com/photo-1605883705077-8d3d3cebe78c?auto=format&fit=crop&w=200&q=80" alt="" />
+            <div><div class="name">くるみの木のカッティングボード</div><div class="qty">数量：1</div></div>
+            <div class="price">¥5,440</div>
+          </div>
+        </div>
+
+        <div class="summary-row"><span>小計</span><strong>¥17,940</strong></div>
+        <div class="summary-row"><span>送料</span><strong style="color:var(--accent-green);">無料</strong></div>
+        <div class="summary-row discount"><span>初回クーポン</span><strong>－¥500</strong></div>
+        <div class="summary-row total"><span>合計</span><span class="amount">¥17,440</span></div>
+
+        <button class="btn btn-primary place-order-btn" onclick="location.href='order-complete.html'">注文を確定する</button>
+        <p class="cart-note">
+          「注文を確定する」を押すと<br />
+          <a href="terms.html" style="text-decoration:underline;">利用規約</a>と<a href="privacy.html" style="text-decoration:underline;">プライバシーポリシー</a>に同意したものとみなします。
+        </p>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><div class="footer-bottom" style="border:0;padding-top:0;"><span>© 2026 Enotter.</span></div></div></footer>
+
+</body>
+</html>

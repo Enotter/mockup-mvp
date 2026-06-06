@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>作家ダッシュボード — Enotter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="demo-nav"><div class="container"><span class="demo-label">— MOCKUP PAGES —</span><nav class="demo-links">
+    <span class="demo-group">買い手</span>
+    <a href="index.html">トップ</a><a href="products.html">商品一覧</a><a href="search.html">検索結果</a><a href="product-detail.html">商品詳細</a><a href="cart.html">カート</a><a href="checkout.html">購入手続き</a><a href="order-complete.html">注文完了</a><a href="order-detail.html">注文詳細</a><a href="review-post.html">レビュー投稿</a><a href="mypage.html">マイページ</a><a href="mypage-orders.html">注文履歴</a><a href="mypage-profile.html">プロフィール編集</a><a href="mypage-addresses.html">住所帳</a><a href="mypage-payment.html">お支払い方法</a><a href="messages.html">メッセージ</a><a href="artists.html">作家一覧</a><a href="artist.html">作家ページ</a><a href="artist-products-list.html">作家作品一覧</a><a href="artist-reviews-list.html">作家レビュー一覧</a>
+    <span class="demo-group">認証</span>
+    <a href="login.html">ログイン</a><a href="signup.html">新規登録</a><a href="email-verify.html">メール認証</a><a href="password-reset.html">パスワード再設定</a>
+    <span class="demo-group">作家</span>
+    <a href="artist-signup.html">作家登録</a><a href="artist-dashboard.html" class="current">ダッシュボード</a><a href="product-new.html">出品</a><a href="product-edit.html">商品編集</a><a href="product-manage.html">商品管理</a><a href="order-manage.html">受注管理</a><a href="artist-order-detail.html">受注詳細</a><a href="artist-messages.html">作家メッセージ</a><a href="artist-profile-edit.html">プロフィール編集</a><a href="artist-payout.html">振込先設定</a><a href="artist-shop-edit.html">ショップ設定</a>
+    <span class="demo-group">作家登録フロー</span><a href="artist-signup-id.html">本人確認</a><a href="artist-signup-bank.html">振込先登録</a><a href="artist-signup-terms.html">規約同意</a><span class="demo-group">作家管理</span><a href="artist-pending-orders.html">未対応注文</a><a href="artist-reviews.html">レビュー一覧</a><a href="artist-notices.html">お知らせ</a><span class="demo-group">運営</span><a href="admin-dashboard.html">管理ダッシュボード</a><a href="admin-artist-review.html">作家審査</a><a href="admin-users.html">ユーザー管理</a><a href="admin-products.html">商品モデレーション</a><a href="admin-features.html">特集・バナー管理</a><a href="admin-payouts.html">精算管理</a><a href="admin-inquiries.html">お問い合わせ</a><a href="admin-analytics.html">分析・レポート</a><span class="demo-group">規約・その他</span>
+    <a href="terms.html">利用規約</a><a href="privacy.html">プライバシー</a><a href="tokushoho.html">特商法</a><a href="about.html">会社概要</a><a href="faq.html">FAQ</a><a href="contact.html">お問い合わせ</a><a href="404.html">404</a>
+  </nav></div></div>
+
+  <!-- 作家用ヘッダー -->
+  <header style="background:var(--wood-dark);color:var(--paper);padding:14px 0;">
+    <div class="container" style="display:flex;align-items:center;gap:24px;">
+      <a href="artist-dashboard.html" style="display:flex;gap:10px;align-items:center;color:var(--paper);">
+        <svg viewBox="0 0 48 48" width="36" height="36"><circle cx="24" cy="24" r="22" fill="none" stroke="#FAF6EE" stroke-width="2"/><path d="M14 30 Q24 14 34 30" stroke="#FAF6EE" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="22" r="2.5" fill="#D4B896"/></svg>
+        <span><span style="font-family:var(--font-mincho);font-size:18px;font-weight:700;">Enotter</span><span style="display:block;font-family:var(--font-hand);color:var(--accent-gold);font-size:10px;letter-spacing:0.2em;">— ARTIST STUDIO —</span></span>
+      </a>
+      <nav style="margin-left:auto;display:flex;gap:20px;font-size:13px;">
+        <a href="artist-dashboard.html" style="color:var(--paper);font-weight:700;">ダッシュボード</a>
+        <a href="product-manage.html" style="color:rgba(250,246,238,0.7);">商品管理</a>
+        <a href="order-manage.html" style="color:rgba(250,246,238,0.7);">受注管理 <span style="background:var(--accent-red);color:#fff;font-size:10px;padding:1px 6px;border-radius:999px;margin-left:2px;">3</span></a>
+        <a href="artist-messages.html" style="color:rgba(250,246,238,0.7);">メッセージ <span style="background:var(--accent-red);color:#fff;font-size:10px;padding:1px 6px;border-radius:999px;margin-left:2px;">2</span></a>
+        <a href="artist.html" style="color:rgba(250,246,238,0.7);">公開ページ</a>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <img src="https://images.unsplash.com/photo-1531947386298-1b14d8caca91?auto=format&fit=crop&w=120&q=80" style="width:32px;height:32px;border-radius:50%;object-fit:cover;" />
+        <span style="font-size:13px;">atelier mori</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="mvp-page">
+    <div class="container">
+
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span style="font-family:var(--font-hand);color:var(--accent-gold);font-size:13px;">— おかえりなさい —</span>
+          <h1 style="font-family:var(--font-mincho);font-size:28px;color:var(--text-dark);margin-top:4px;">金森 朔 さん</h1>
+        </div>
+        <div style="display:flex;gap:10px;">
+          <a href="product-new.html" class="btn btn-primary">+ 新しい作品を出品</a>
+          <a href="order-manage.html" class="btn btn-outline">未対応の注文を見る</a>
+        </div>
+      </div>
+
+      <!-- アラート -->
+      <div class="kpi-card alert" style="margin-bottom:24px;display:flex;align-items:center;gap:16px;">
+        <span style="font-size:24px;">⚠️</span>
+        <div style="flex:1;">
+          <div style="font-weight:700;color:var(--accent-red);margin-bottom:2px;">未発送の注文が3件あります</div>
+          <div style="font-size:12px;color:var(--text-mid);">最古は2026/05/22の注文です。発送目安日を過ぎないようご対応をお願いします。</div>
+        </div>
+        <a href="order-manage.html" class="btn btn-primary" style="font-size:12px;padding:8px 16px;">対応する →</a>
+      </div>
+
+      <!-- KPI -->
+      <div class="dashboard-grid">
+        <div class="kpi-card">
+          <span class="kpi-label">今月の売上</span>
+          <span class="kpi-value">¥184,200</span>
+          <span class="kpi-delta up">▲ 前月比 +18%</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">今月の注文数</span>
+          <span class="kpi-value">28<span style="font-size:14px;color:var(--text-light);"> 件</span></span>
+          <span class="kpi-delta up">▲ 前月比 +5件</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">未発送</span>
+          <span class="kpi-value" style="color:var(--accent-red);">3<span style="font-size:14px;color:var(--text-light);"> 件</span></span>
+          <span class="kpi-delta down">最古：5/22</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">公開中の作品</span>
+          <span class="kpi-value">42<span style="font-size:14px;color:var(--text-light);"> 点</span></span>
+          <span class="kpi-delta">下書き 3 / 在庫切れ 2</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">フォロワー</span>
+          <span class="kpi-value">1,840</span>
+          <span class="kpi-delta up">▲ 今週 +12</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">平均評価</span>
+          <span class="kpi-value">★ 4.9</span>
+          <span class="kpi-delta">216 件のレビュー</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">今月の閲覧数</span>
+          <span class="kpi-value">8,420</span>
+          <span class="kpi-delta up">▲ 前月比 +24%</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">次回振込予定</span>
+          <span class="kpi-value" style="font-size:22px;">¥168,420</span>
+          <span class="kpi-delta">6/30 入金予定</span>
+        </div>
+      </div>
+
+      <!-- 2カラム：未対応 + 最近のレビュー -->
+      <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:20px;margin-bottom:20px;">
+
+        <div class="form-card" style="margin-bottom:0;">
+          <h3 style="display:flex;justify-content:space-between;align-items:center;">未対応の注文 <a href="order-manage.html" style="font-size:12px;font-weight:400;color:var(--accent-red);">すべて見る →</a></h3>
+
+          <div style="display:flex;flex-direction:column;gap:12px;">
+
+            <div style="display:flex;gap:12px;align-items:center;padding:12px;background:var(--paper-warm);border-radius:8px;">
+              <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=120&q=80" style="width:48px;height:48px;border-radius:6px;object-fit:cover;" />
+              <div style="flex:1;font-size:12px;">
+                <div style="font-weight:700;color:var(--text-dark);">真鍮の三日月ピアス × 2</div>
+                <div style="color:var(--text-mid);">大谷 翔正 様 / 5/23 注文</div>
+              </div>
+              <span class="status-badge new">新規</span>
+              <a href="artist-order-detail.html" style="font-size:11px;color:var(--accent-red);text-decoration:underline;">詳細</a>
+            </div>
+
+            <div style="display:flex;gap:12px;align-items:center;padding:12px;background:var(--paper-warm);border-radius:8px;">
+              <img src="https://images.unsplash.com/photo-1605883705077-8d3d3cebe78c?auto=format&fit=crop&w=120&q=80" style="width:48px;height:48px;border-radius:6px;object-fit:cover;" />
+              <div style="flex:1;font-size:12px;">
+                <div style="font-weight:700;color:var(--text-dark);">真鍮のシンプルリング</div>
+                <div style="color:var(--text-mid);">山本 花 様 / 5/22 注文</div>
+              </div>
+              <span class="status-badge preparing">準備中</span>
+              <a href="artist-order-detail.html" style="font-size:11px;color:var(--accent-red);text-decoration:underline;">詳細</a>
+            </div>
+
+            <div style="display:flex;gap:12px;align-items:center;padding:12px;background:var(--paper-warm);border-radius:8px;">
+              <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=120&q=80" style="width:48px;height:48px;border-radius:6px;object-fit:cover;" />
+              <div style="flex:1;font-size:12px;">
+                <div style="font-weight:700;color:var(--text-dark);">月のネックレス（受注生産）</div>
+                <div style="color:var(--text-mid);">小林 美咲 様 / 5/22 注文</div>
+              </div>
+              <span class="status-badge preparing">準備中</span>
+              <a href="artist-order-detail.html" style="font-size:11px;color:var(--accent-red);text-decoration:underline;">詳細</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="form-card" style="margin-bottom:0;">
+          <h3 style="display:flex;justify-content:space-between;align-items:center;">最近のレビュー <a href="artist-reviews.html" style="font-size:12px;font-weight:400;color:var(--accent-red);">すべて見る →</a></h3>
+
+          <div style="display:flex;flex-direction:column;gap:14px;">
+
+            <div style="padding:12px;border:1px solid var(--paper-edge);border-radius:8px;">
+              <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                <span style="color:var(--accent-gold);font-weight:700;font-size:13px;">★ 5.0</span>
+                <span style="font-size:11px;color:var(--text-light);">5/21 さくらさん</span>
+              </div>
+              <div style="font-size:12px;color:var(--text-dark);font-weight:700;margin-bottom:4px;">プレゼントに最高でした</div>
+              <div style="font-size:11px;color:var(--text-mid);line-height:1.7;">母の誕生日に贈ったところ、とても喜んでくれました。包装も丁寧で…</div>
+            </div>
+
+            <div style="padding:12px;border:1px solid var(--paper-edge);border-radius:8px;">
+              <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                <span style="color:var(--accent-gold);font-weight:700;font-size:13px;">★ 4.5</span>
+                <span style="font-size:11px;color:var(--text-light);">5/18 ゆうこさん</span>
+              </div>
+              <div style="font-size:12px;color:var(--text-dark);font-weight:700;margin-bottom:4px;">想像以上の質感でした</div>
+              <div style="font-size:11px;color:var(--text-mid);line-height:1.7;">写真で見るより華奢で繊細でした。普段使いに重宝しそうです。</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- お知らせ -->
+      <div class="form-card">
+        <h3>運営からのお知らせ</h3>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:10px;">
+          <li style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--paper-edge);font-size:13px;">
+            <span style="font-size:11px;color:var(--text-light);">5/20</span>
+            <a href="artist-notices.html" style="color:var(--text-dark);">【特集募集】6月「梅雨を楽しむ手仕事」企画への参加申込受付中</a>
+          </li>
+          <li style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--paper-edge);font-size:13px;">
+            <span style="font-size:11px;color:var(--text-light);">5/15</span>
+            <a href="artist-notices.html" style="color:var(--text-dark);">配送パートナーに「ヤマト運輸 宅急便コンパクト」が追加されました</a>
+          </li>
+          <li style="display:flex;gap:10px;padding:8px 0;font-size:13px;">
+            <span style="font-size:11px;color:var(--text-light);">5/10</span>
+            <a href="artist-notices.html" style="color:var(--text-dark);">手数料体系の変更について（2026/07/01より）</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><div class="footer-bottom" style="border:0;padding-top:20px;"><span>© 2026 Enotter.  Artist Studio.</span></div></div></footer>
+
+</body>
+</html>

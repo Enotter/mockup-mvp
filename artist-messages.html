@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>メッセージ — Enotter ARTIST STUDIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="demo-nav"><div class="container"><span class="demo-label">— MOCKUP PAGES —</span><nav class="demo-links">
+    <span class="demo-group">買い手</span>
+    <a href="index.html">トップ</a><a href="products.html">商品一覧</a><a href="search.html">検索結果</a><a href="product-detail.html">商品詳細</a><a href="cart.html">カート</a><a href="checkout.html">購入手続き</a><a href="order-complete.html">注文完了</a><a href="order-detail.html">注文詳細</a><a href="review-post.html">レビュー投稿</a><a href="mypage.html">マイページ</a><a href="mypage-orders.html">注文履歴</a><a href="mypage-profile.html">プロフィール編集</a><a href="mypage-addresses.html">住所帳</a><a href="mypage-payment.html">お支払い方法</a><a href="messages.html">メッセージ</a><a href="artists.html">作家一覧</a><a href="artist.html">作家ページ</a><a href="artist-products-list.html">作家作品一覧</a><a href="artist-reviews-list.html">作家レビュー一覧</a>
+    <span class="demo-group">認証</span>
+    <a href="login.html">ログイン</a><a href="signup.html">新規登録</a><a href="email-verify.html">メール認証</a><a href="password-reset.html">パスワード再設定</a>
+    <span class="demo-group">作家</span>
+    <a href="artist-signup.html">作家登録</a><a href="artist-dashboard.html">ダッシュボード</a><a href="product-new.html">出品</a><a href="product-edit.html">商品編集</a><a href="product-manage.html">商品管理</a><a href="order-manage.html">受注管理</a><a href="artist-order-detail.html">受注詳細</a><a href="artist-messages.html" class="current">作家メッセージ</a><a href="artist-profile-edit.html">プロフィール編集</a><a href="artist-payout.html">振込先設定</a><a href="artist-shop-edit.html">ショップ設定</a>
+    <span class="demo-group">作家登録フロー</span><a href="artist-signup-id.html">本人確認</a><a href="artist-signup-bank.html">振込先登録</a><a href="artist-signup-terms.html">規約同意</a><span class="demo-group">作家管理</span><a href="artist-pending-orders.html">未対応注文</a><a href="artist-reviews.html">レビュー一覧</a><a href="artist-notices.html">お知らせ</a><span class="demo-group">運営</span><a href="admin-dashboard.html">管理ダッシュボード</a><a href="admin-artist-review.html">作家審査</a><a href="admin-users.html">ユーザー管理</a><a href="admin-products.html">商品モデレーション</a><a href="admin-features.html">特集・バナー管理</a><a href="admin-payouts.html">精算管理</a><a href="admin-inquiries.html">お問い合わせ</a><a href="admin-analytics.html">分析・レポート</a><span class="demo-group">規約・その他</span>
+    <a href="terms.html">利用規約</a><a href="privacy.html">プライバシー</a><a href="tokushoho.html">特商法</a><a href="about.html">会社概要</a><a href="faq.html">FAQ</a><a href="contact.html">お問い合わせ</a><a href="404.html">404</a>
+  </nav></div></div>
+
+  <header style="background:var(--wood-dark);color:var(--paper);padding:14px 0;">
+    <div class="container" style="display:flex;align-items:center;gap:24px;">
+      <a href="artist-dashboard.html" style="display:flex;gap:10px;align-items:center;color:var(--paper);">
+        <svg viewBox="0 0 48 48" width="36" height="36"><circle cx="24" cy="24" r="22" fill="none" stroke="#FAF6EE" stroke-width="2"/><path d="M14 30 Q24 14 34 30" stroke="#FAF6EE" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="22" r="2.5" fill="#D4B896"/></svg>
+        <span><span style="font-family:var(--font-mincho);font-size:18px;font-weight:700;">Enotter</span><span style="display:block;font-family:var(--font-hand);color:var(--accent-gold);font-size:10px;letter-spacing:0.2em;">— ARTIST STUDIO —</span></span>
+      </a>
+      <nav style="margin-left:auto;display:flex;gap:20px;font-size:13px;">
+        <a href="artist-dashboard.html" style="color:rgba(250,246,238,0.7);">ダッシュボード</a>
+        <a href="product-manage.html" style="color:rgba(250,246,238,0.7);">商品管理</a>
+        <a href="order-manage.html" style="color:rgba(250,246,238,0.7);">受注管理</a><a href="artist-order-detail.html">受注詳細</a>
+        <a href="artist-messages.html" style="color:var(--paper);font-weight:700;">メッセージ <span style="background:var(--accent-red);color:#fff;font-size:10px;padding:1px 6px;border-radius:999px;margin-left:2px;">2</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mvp-page">
+    <div class="container">
+
+      <div class="page-title">
+        <h1 style="font-family:var(--font-mincho);font-size:28px;color:var(--text-dark);margin-bottom:6px;">メッセージ</h1>
+        <p style="color:var(--text-mid);font-size:13px;">購入者からのお問い合わせ・カスタムオーダーのご相談</p>
+      </div>
+
+      <div class="thread-layout">
+
+        <aside class="thread-list">
+          <div class="thread-list-head">
+            <input type="text" placeholder="🔍 購入者・本文を検索" />
+            <div style="display:flex;gap:6px;margin-top:10px;font-size:11px;">
+              <button style="padding:4px 10px;border:1px solid var(--paper-edge);background:#fff;color:var(--text-mid);border-radius:999px;font-size:11px;">全て</button>
+              <button style="padding:4px 10px;border:1px solid var(--accent-red);background:var(--accent-red);color:#fff;border-radius:999px;font-size:11px;">未読 (2)</button>
+              <button style="padding:4px 10px;border:1px solid var(--paper-edge);background:#fff;color:var(--text-mid);border-radius:999px;font-size:11px;">対応中</button>
+              <button style="padding:4px 10px;border:1px solid var(--paper-edge);background:#fff;color:var(--text-mid);border-radius:999px;font-size:11px;">完了</button>
+            </div>
+          </div>
+
+          <div class="thread-item active">
+            <div class="avatar" style="background:var(--accent-gold);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;">O</div>
+            <div class="thread-meta">
+              <div class="name">大谷 翔正<span class="time">11:08</span></div>
+              <div class="preview">受注生産でサイズを少し大きくすることは可能でしょうか？</div>
+            </div>
+            <div class="unread-dot"></div>
+          </div>
+
+          <div class="thread-item">
+            <div class="avatar" style="background:var(--accent-green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;">Y</div>
+            <div class="thread-meta">
+              <div class="name">山本 花<span class="time">昨日</span></div>
+              <div class="preview">商品到着しました。とても素敵で気に入りました！ありがとうございます。</div>
+            </div>
+          </div>
+
+          <div class="thread-item">
+            <div class="avatar" style="background:var(--wood-mid);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;">S</div>
+            <div class="thread-meta">
+              <div class="name">さくら<span class="time">5/22</span></div>
+              <div class="preview">プレゼント用に2つ購入したいのですが、ラッピングは別々にしていただけますか？</div>
+            </div>
+            <div class="unread-dot"></div>
+          </div>
+
+          <div class="thread-item">
+            <div class="avatar" style="background:var(--accent-red);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;">M</div>
+            <div class="thread-meta">
+              <div class="name">小林 美咲<span class="time">5/20</span></div>
+              <div class="preview">承知いたしました。完成を楽しみにお待ちしております。</div>
+            </div>
+          </div>
+
+          <div class="thread-item">
+            <div class="avatar" style="background:var(--text-light);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;">Y</div>
+            <div class="thread-meta">
+              <div class="name">ゆうこ<span class="time">5/18</span></div>
+              <div class="preview">レビュー書かせていただきました。これからも素敵な作品をお願いします♪</div>
+            </div>
+          </div>
+
+        </aside>
+
+        <section class="conversation">
+          <div class="conversation-head">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--accent-gold);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;">O</div>
+            <div>
+              <div style="font-weight:700;color:var(--text-dark);font-size:14px;">大谷 翔正 さん</div>
+              <div style="font-size:11px;color:var(--text-light);">購入歴：3回 / 累計 ¥24,500</div>
+            </div>
+            <span class="related-tag">👜 注文 TI-2026-0523-04812</span>
+            <button style="background:none;border:0;color:var(--text-light);cursor:pointer;font-size:18px;" title="その他">⋯</button>
+          </div>
+
+          <div class="conversation-body">
+            <div class="msg-date-sep">— 2026年5月24日 —</div>
+
+            <div class="msg-bubble in">
+              いつもお世話になっております。先日購入させていただいた三日月ピアスがとても気に入っています◎
+              <span class="msg-time">10:55</span>
+            </div>
+
+            <div class="msg-bubble in">
+              一つお伺いしたいのですが、月のネックレスを受注生産していただく場合、チェーンの長さを通常より5cm長くすることは可能でしょうか？
+              <span class="msg-time">11:08</span>
+            </div>
+          </div>
+
+          <!-- クイック返信テンプレ -->
+          <div style="padding:10px 16px;background:var(--paper-warm);border-top:1px solid var(--paper-edge);display:flex;gap:8px;flex-wrap:wrap;font-size:11px;">
+            <span style="color:var(--text-light);align-self:center;">テンプレ:</span>
+            <button style="padding:4px 10px;background:#fff;border:1px solid var(--paper-edge);border-radius:999px;cursor:pointer;font-size:11px;">お問い合わせありがとうございます</button>
+            <button style="padding:4px 10px;background:#fff;border:1px solid var(--paper-edge);border-radius:999px;cursor:pointer;font-size:11px;">本日発送しました</button>
+            <button style="padding:4px 10px;background:#fff;border:1px solid var(--paper-edge);border-radius:999px;cursor:pointer;font-size:11px;">カスタム対応可</button>
+            <button style="padding:4px 10px;background:#fff;border:1px solid var(--paper-edge);border-radius:999px;cursor:pointer;font-size:11px;">+ 追加</button>
+          </div>
+
+          <form class="conversation-input">
+            <button type="button" class="attach-btn" title="画像添付">📎</button>
+            <textarea placeholder="返信を入力（Shift+Enterで改行）"></textarea>
+            <button type="submit" class="send-btn">送信</button>
+          </form>
+        </section>
+
+      </div>
+
+      <p style="font-size:11px;color:var(--text-light);text-align:center;margin-top:16px;">
+        💡 24時間以内の返信が、リピート率向上のポイントです。/ 違反通報は <a href="#" style="color:var(--text-mid);">こちら</a>
+      </p>
+
+    </div>
+  </div>
+
+  <footer class="footer"><div class="container"><div class="footer-bottom" style="border:0;padding-top:20px;"><span>© 2026 Enotter.  Artist Studio.</span></div></div></footer>
+
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enotter — つくり手と暮らしをつなぐ、ハンドメイドマーケット</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Demo Nav (mockup pages switcher) ===== -->
+  <div class="demo-nav"><div class="container"><span class="demo-label">— MOCKUP PAGES —</span><nav class="demo-links">
+    <span class="demo-group">買い手</span>
+    <a href="index.html" class="current">トップ</a><a href="products.html">商品一覧</a><a href="search.html">検索結果</a><a href="product-detail.html">商品詳細</a><a href="cart.html">カート</a><a href="checkout.html">購入手続き</a><a href="order-complete.html">注文完了</a><a href="order-detail.html">注文詳細</a><a href="review-post.html">レビュー投稿</a><a href="mypage.html">マイページ</a><a href="mypage-orders.html">注文履歴</a><a href="mypage-profile.html">プロフィール編集</a><a href="mypage-addresses.html">住所帳</a><a href="mypage-payment.html">お支払い方法</a><a href="messages.html">メッセージ</a><a href="artists.html">作家一覧</a><a href="artist.html">作家ページ</a><a href="artist-products-list.html">作家作品一覧</a><a href="artist-reviews-list.html">作家レビュー一覧</a>
+    <span class="demo-group">認証</span>
+    <a href="login.html">ログイン</a><a href="signup.html">新規登録</a><a href="email-verify.html">メール認証</a><a href="password-reset.html">パスワード再設定</a>
+    <span class="demo-group">作家</span>
+    <a href="artist-signup.html">作家登録</a><a href="artist-dashboard.html">ダッシュボード</a><a href="product-new.html">出品</a><a href="product-edit.html">商品編集</a><a href="product-manage.html">商品管理</a><a href="order-manage.html">受注管理</a><a href="artist-order-detail.html">受注詳細</a><a href="artist-messages.html">作家メッセージ</a><a href="artist-profile-edit.html">プロフィール編集</a><a href="artist-payout.html">振込先設定</a><a href="artist-shop-edit.html">ショップ設定</a>
+    <span class="demo-group">作家登録フロー</span><a href="artist-signup-id.html">本人確認</a><a href="artist-signup-bank.html">振込先登録</a><a href="artist-signup-terms.html">規約同意</a><span class="demo-group">作家管理</span><a href="artist-pending-orders.html">未対応注文</a><a href="artist-reviews.html">レビュー一覧</a><a href="artist-notices.html">お知らせ</a><span class="demo-group">運営</span><a href="admin-dashboard.html">管理ダッシュボード</a><a href="admin-artist-review.html">作家審査</a><a href="admin-users.html">ユーザー管理</a><a href="admin-products.html">商品モデレーション</a><a href="admin-features.html">特集・バナー管理</a><a href="admin-payouts.html">精算管理</a><a href="admin-inquiries.html">お問い合わせ</a><a href="admin-analytics.html">分析・レポート</a><span class="demo-group">規約・その他</span>
+    <a href="terms.html">利用規約</a><a href="privacy.html">プライバシー</a><a href="tokushoho.html">特商法</a><a href="about.html">会社概要</a><a href="faq.html">FAQ</a><a href="contact.html">お問い合わせ</a><a href="404.html">404</a>
+  </nav></div></div>
+
+  <!-- ===== Utility Bar ===== -->
+  <div class="utility-bar">
+    <div class="container">
+      <div class="utility-left">
+        <span>送料無料キャンペーン実施中（5,000円以上のお買い物で）</span>
+      </div>
+      <div class="utility-right">
+        <a href="faq.html">ヘルプ</a>
+        <a href="artist-signup.html">出品する</a>
+        <a href="login.html">ログイン</a>
+        <a href="signup.html">新規登録</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 48 48" width="44" height="44" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" fill="#FAF6EE" stroke="#5C3A21" stroke-width="2"/>
+            <path d="M14 30 Q24 14 34 30" stroke="#5C3A21" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <circle cx="24" cy="22" r="2.5" fill="#B5523F"/>
+            <path d="M18 34 L30 34" stroke="#5C3A21" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-jp">Enotter</span>
+          
+        </span>
+      </a>
+
+      <form class="search">
+        <input type="text" placeholder="作家名・作品名・キーワードで探す" />
+        <button type="submit" aria-label="検索">
+          <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20 L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </form>
+
+      <nav class="header-icons">
+        <a href="favorites.html" class="icon-btn" aria-label="お気に入り">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span>お気に入り</span>
+        </a>
+        <a href="mypage.html" class="icon-btn" aria-label="マイページ">
+          <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>マイページ</span>
+        </a>
+        <a href="cart.html" class="icon-btn cart" aria-label="カート">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 4h3l3 12h10l3-9H7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.5" fill="currentColor"/><circle cx="18" cy="20" r="1.5" fill="currentColor"/></svg>
+          <span>カート</span>
+          <span class="badge">2</span>
+        </a>
+      </nav>
+    </div>
+
+    <nav class="category-nav">
+      <div class="container">
+        <ul>
+          <li><a href="products.html">アクセサリー</a></li>
+          <li><a href="products.html">陶器・うつわ</a></li>
+          <li><a href="products.html">布・テキスタイル</a></li>
+          <li><a href="products.html">木工・家具</a></li>
+          <li><a href="products.html">レザー・革小物</a></li>
+          <li><a href="products.html">アート・絵画</a></li>
+          <li><a href="products.html">キャンドル・石けん</a></li>
+          <li><a href="products.html">食品・お菓子</a></li>
+          <li><a href="products.html" class="sale">セール</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="eyebrow">— 春のあたらしい暮らし —</span>
+        <h1>
+          つくり手の<br />
+          <em>あたたかさ</em>を、<br />
+          暮らしのそばに。
+        </h1>
+        <p>
+          国内で活動する 3,200 名以上の作家・工房がつくる、<br />
+          ひとつひとつ手仕事で生まれた作品をお届けします。
+        </p>
+        <div class="hero-cta">
+          <a href="products.html" class="btn btn-primary">作品をさがす</a>
+          <a href="artists.html" class="btn btn-ghost">作家をさがす →</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>3,200+</strong><span>登録作家</span></div>
+          <div><strong>85,000+</strong><span>出品作品</span></div>
+          <div><strong>★4.8</strong><span>平均評価</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="tape tape-1"></div>
+        <div class="tape tape-2"></div>
+        <img src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=900&q=80" alt="" class="hero-img main" />
+        <img src="https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?auto=format&fit=crop&w=500&q=80" alt="" class="hero-img sub-1" />
+        <img src="https://images.unsplash.com/photo-1528283648649-33347faa5d9c?auto=format&fit=crop&w=500&q=80" alt="" class="hero-img sub-2" />
+        <div class="price-tag">
+          <span class="tag-label">特集</span>
+          <span class="tag-title">春の陶器市</span>
+          <span class="tag-meta">3/15 — 4/30</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Special Banner ===== -->
+  <div style="background:linear-gradient(135deg,#5C3A21 0%,#7D4E2D 50%,#5C3A21 100%);padding:0;">
+    <div class="container" style="display:flex;align-items:center;gap:40px;padding-top:0;padding-bottom:0;">
+      <div style="flex:1;padding:32px 0;">
+        <span style="font-size:11px;letter-spacing:0.25em;color:var(--accent-gold);font-weight:700;">— SPECIAL CAMPAIGN —</span>
+        <h2 style="font-family:var(--font-mincho);font-size:26px;color:#FAF6EE;margin:8px 0 6px;line-height:1.5;">梅雨を楽しむ手仕事　<span style="font-size:14px;font-weight:400;color:rgba(250,246,238,0.7);">6/1 — 6/30</span></h2>
+        <p style="font-size:13px;color:rgba(250,246,238,0.75);margin-bottom:20px;">雨の季節をあたたかく過ごす、作家の手仕事を集めました。</p>
+        <a href="products.html" class="btn btn-primary" style="background:var(--accent-gold);border-color:var(--accent-gold);color:#fff;font-size:13px;padding:10px 24px;">特集を見る →</a>
+      </div>
+      <div style="flex-shrink:0;display:flex;gap:12px;padding:24px 0;opacity:0.92;">
+        <div style="width:100px;height:120px;border-radius:8px;background-image:url('https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=300&q=80');background-size:cover;background-position:center;box-shadow:0 4px 16px rgba(0,0,0,0.3);"></div>
+        <div style="width:100px;height:120px;border-radius:8px;background-image:url('https://images.unsplash.com/photo-1518049362265-d5b2a6b00b37?auto=format&fit=crop&w=300&q=80');background-size:cover;background-position:center;box-shadow:0 4px 16px rgba(0,0,0,0.3);margin-top:16px;"></div>
+        <div style="width:100px;height:120px;border-radius:8px;background-image:url('https://images.unsplash.com/photo-1602874801006-d1f1b8d4ba9e?auto=format&fit=crop&w=300&q=80');background-size:cover;background-position:center;box-shadow:0 4px 16px rgba(0,0,0,0.3);"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Categories ===== -->
+  <section class="categories">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">CATEGORY</span>
+        <h2>カテゴリーから探す</h2>
+        <p>あなたの暮らしに、ぴったりのひとつを。</p>
+      </header>
+
+      <div class="category-grid">
+        <a href="products.html" class="cat-card">
+          <div class="cat-img" style="background-image:url('https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=600&q=80')"></div>
+          <span class="cat-name">アクセサリー</span>
+          <span class="cat-count">12,480 点</span>
+        </a>
+        <a href="products.html" class="cat-card">
+          <div class="cat-img" style="background-image:url('https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=600&q=80')"></div>
+          <span class="cat-name">陶器・うつわ</span>
+          <span class="cat-count">8,920 点</span>
+        </a>
+        <a href="products.html" class="cat-card">
+          <div class="cat-img" style="background-image:url('https://images.unsplash.com/photo-1606293459209-c8ce9fe9c2c5?auto=format&fit=crop&w=600&q=80')"></div>
+          <span class="cat-name">布・テキスタイル</span>
+          <span class="cat-count">6,310 点</span>
+        </a>
+        <a href="products.html" class="cat-card">
+          <div class="cat-img" style="background-image:url('https://images.unsplash.com/photo-1611486212557-88be5ff6f941?auto=format&fit=crop&w=600&q=80')"></div>
+          <span class="cat-name">木工・家具</span>
+          <span class="cat-count">4,150 点</span>
+        </a>
+        <a href="products.html" class="cat-card">
+          <div class="cat-img" style="background-image:url('https://images.unsplash.com/photo-1607344645866-009c320b63e0?auto=format&fit=crop&w=600&q=80')"></div>
+          <span class="cat-name">レザー・革小物</span>
+          <span class="cat-count">3,840 点</span>
+        </a>
+        <a href="products.html" class="cat-card">
+          <div class="cat-img" style="background-image:url('https://images.unsplash.com/photo-1602874801006-d1f1b8d4ba9e?auto=format&fit=crop&w=600&q=80')"></div>
+          <span class="cat-name">キャンドル・石けん</span>
+          <span class="cat-count">2,670 点</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Featured Products ===== -->
+  <section class="products">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">FEATURED</span>
+        <h2>今週のおすすめ</h2>
+        <p>編集部が選んだ、手仕事の逸品。</p>
+      </header>
+
+      <div class="product-grid">
+        <article class="product-card" onclick="location.href='product-detail.html'" style="cursor:pointer">
+          <div class="product-img-wrap">
+            <span class="product-badge new">NEW</span>
+            <button class="fav-btn" aria-label="お気に入りに追加">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1518049362265-d5b2a6b00b37?auto=format&fit=crop&w=600&q=80" alt="" />
+          </div>
+          <div class="product-info">
+            <span class="artist">— 陶房 つきの ・京都</span>
+            <h3>粉引マグカップ（生成り）</h3>
+            <div class="rating">★ 4.9 <span>(82件)</span></div>
+            <div class="price">¥3,800 <span>（税込）</span></div>
+          </div>
+        </article>
+
+        <article class="product-card" onclick="location.href='product-detail.html'" style="cursor:pointer">
+          <div class="product-img-wrap">
+            <span class="product-badge popular">人気</span>
+            <button class="fav-btn" aria-label="お気に入りに追加">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="" />
+          </div>
+          <div class="product-info">
+            <span class="artist">— atelier mori ・長野</span>
+            <h3>真鍮の三日月ピアス</h3>
+            <div class="rating">★ 4.8 <span>(216件)</span></div>
+            <div class="price">¥4,500 <span>（税込）</span></div>
+          </div>
+        </article>
+
+        <article class="product-card" onclick="location.href='product-detail.html'" style="cursor:pointer">
+          <div class="product-img-wrap">
+            <span class="product-badge sale">SALE</span>
+            <button class="fav-btn" aria-label="お気に入りに追加">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1605883705077-8d3d3cebe78c?auto=format&fit=crop&w=600&q=80" alt="" />
+          </div>
+          <div class="product-info">
+            <span class="artist">— 木工房 ひだまり ・岐阜</span>
+            <h3>くるみの木のカッティングボード</h3>
+            <div class="rating">★ 4.9 <span>(141件)</span></div>
+            <div class="price"><s>¥6,800</s> <strong>¥5,440</strong> <span>（税込）</span></div>
+          </div>
+        </article>
+
+        <article class="product-card" onclick="location.href='product-detail.html'" style="cursor:pointer">
+          <div class="product-img-wrap">
+            <button class="fav-btn" aria-label="お気に入りに追加">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1603204077779-bed963ea7d0e?auto=format&fit=crop&w=600&q=80" alt="" />
+          </div>
+          <div class="product-info">
+            <span class="artist">— 布もの店 こよみ ・倉敷</span>
+            <h3>手織りリネンのトートバッグ</h3>
+            <div class="rating">★ 4.7 <span>(58件)</span></div>
+            <div class="price">¥7,200 <span>（税込）</span></div>
+          </div>
+        </article>
+
+        <article class="product-card" onclick="location.href='product-detail.html'" style="cursor:pointer">
+          <div class="product-img-wrap">
+            <span class="product-badge new">NEW</span>
+            <button class="fav-btn" aria-label="お気に入りに追加">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1602523498311-b9006d8ca96f?auto=format&fit=crop&w=600&q=80" alt="" />
+          </div>
+          <div class="product-info">
+            <span class="artist">— Candle nico ・神戸</span>
+            <h3>蜜蝋のアロマキャンドル（柚子）</h3>
+            <div class="rating">★ 4.8 <span>(94件)</span></div>
+            <div class="price">¥2,800 <span>（税込）</span></div>
+          </div>
+        </article>
+
+        <article class="product-card" onclick="location.href='product-detail.html'" style="cursor:pointer">
+          <div class="product-img-wrap">
+            <span class="product-badge popular">人気</span>
+            <button class="fav-btn" aria-label="お気に入りに追加">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80" alt="" />
+          </div>
+          <div class="product-info">
+            <span class="artist">— 革工房 KURUMI ・大阪</span>
+            <h3>ヌメ革のミニ財布</h3>
+            <div class="rating">★ 4.9 <span>(312件)</span></div>
+            <div class="price">¥9,800 <span>（税込）</span></div>
+          </div>
+        </article>
+
+        <article class="product-card" onclick="location.href='product-detail.html'" style="cursor:pointer">
+          <div class="product-img-wrap">
+            <button class="fav-btn" aria-label="お気に入りに追加">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=600&q=80" alt="" />
+          </div>
+          <div class="product-info">
+            <span class="artist">— 硝子工房 nagi ・沖縄</span>
+            <h3>琉球ガラスの小皿（藍）</h3>
+            <div class="rating">★ 4.6 <span>(47件)</span></div>
+            <div class="price">¥2,400 <span>（税込）</span></div>
+          </div>
+        </article>
+
+        <article class="product-card" onclick="location.href='product-detail.html'" style="cursor:pointer">
+          <div class="product-img-wrap">
+            <span class="product-badge sale">SALE</span>
+            <button class="fav-btn" aria-label="お気に入りに追加">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1612152605222-2d4a8d4eb1f5?auto=format&fit=crop&w=600&q=80" alt="" />
+          </div>
+          <div class="product-info">
+            <span class="artist">— soap labo はる ・札幌</span>
+            <h3>ハーブ石けん 3個セット</h3>
+            <div class="rating">★ 4.8 <span>(178件)</span></div>
+            <div class="price"><s>¥3,600</s> <strong>¥2,880</strong> <span>（税込）</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="see-more">
+        <a href="products.html" class="btn btn-outline">もっと見る（85,200点）→</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Artist Spotlight ===== -->
+  <section class="artist-spotlight">
+    <div class="container">
+      <header class="section-head light">
+        <span class="eyebrow">ARTIST OF THE WEEK</span>
+        <h2>今週の作家</h2>
+        <p>つくり手の物語に、耳を傾けて。</p>
+      </header>
+
+      <div class="spotlight-card">
+        <div class="spotlight-img">
+          <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=900&q=80" alt="" />
+          <div class="stamp">since 2014</div>
+        </div>
+        <div class="spotlight-text">
+          <span class="artist-name-en">— ATELIER MORI —</span>
+          <h3>金森 朔（かなもり・さく）さん</h3>
+          <p class="location">📍 長野県・松本市</p>
+          <p class="bio">
+            森のなかの小さなアトリエで、真鍮と銀をひとつずつ手で打ちながら、
+            身につける人の暮らしに静かに寄り添うアクセサリーをつくっています。
+            <br /><br />
+            「派手さはいらない。10年後にも変わらず似合うものを。」
+          </p>
+          <div class="spotlight-meta">
+            <div><strong>216</strong><span>出品作品</span></div>
+            <div><strong>★4.9</strong><span>平均評価</span></div>
+            <div><strong>1,840</strong><span>フォロワー</span></div>
+          </div>
+          <a href="artist.html" class="btn btn-light">作家ページを見る →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Stories ===== -->
+  <section class="stories">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">JOURNAL</span>
+        <h2>作家と作品の物語</h2>
+        <p>暮らしを彩る、小さな読みもの。</p>
+      </header>
+
+      <div class="story-grid">
+        <a href="journal-detail.html" class="story-card">
+          <div class="story-img" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=700&q=80')"></div>
+          <span class="story-cat">うつわのある暮らし</span>
+          <h3>毎日のごはんが愛おしくなる、うつわの選び方</h3>
+          <span class="story-date">2026.05.10</span>
+        </a>
+        <a href="journal-detail.html" class="story-card">
+          <div class="story-img" style="background-image:url('https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=700&q=80')"></div>
+          <span class="story-cat">作家インタビュー</span>
+          <h3>真鍮を打つ音と、森のしずけさ。— 金森 朔さんを訪ねて</h3>
+          <span class="story-date">2026.05.03</span>
+        </a>
+        <a href="journal-detail.html" class="story-card">
+          <div class="story-img" style="background-image:url('https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=700&q=80')"></div>
+          <span class="story-cat">ものづくり辞典</span>
+          <h3>知っておきたい、木のうつわのお手入れのこと</h3>
+          <span class="story-date">2026.04.27</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-mark">
+              <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+                <circle cx="24" cy="24" r="22" fill="none" stroke="#FAF6EE" stroke-width="2"/>
+                <path d="M14 30 Q24 14 34 30" stroke="#FAF6EE" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <circle cx="24" cy="22" r="2.5" fill="#D4B896"/>
+                <path d="M18 34 L30 34" stroke="#FAF6EE" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/>
+              </svg>
+            </span>
+            <span class="logo-text">
+              <span class="logo-jp">Enotter</span>
+              
+            </span>
+          </div>
+          <p>つくり手と暮らしをつなぐ、<br />ハンドメイドマーケットプレイス。</p>
+        </div>
+        <div class="footer-col">
+          <h4>はじめての方へ</h4>
+          <ul>
+            <li><a href="about.html">Enotterについて</a></li>
+            <li><a href="faq.html">買い物ガイド</a></li>
+            <li><a href="faq.html">送料・お支払いについて</a></li>
+            <li><a href="faq.html">返品・交換について</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>作家のみなさまへ</h4>
+          <ul>
+            <li><a href="artist-signup.html">出品をはじめる</a></li>
+            <li><a href="faq.html">手数料について</a></li>
+            <li><a href="contact.html">作家サポート</a></li>
+            <li><a href="admin-features.html">特集企画への参加</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>ヘルプ</h4>
+          <ul>
+            <li><a href="faq.html">よくあるご質問</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+            <li><a href="terms.html">利用規約</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Enotter.  すべての手仕事に、敬意を込めて。</span>
+        <div class="sns">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M4 4 L20 20 M20 4 L4 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M14 6h3V3h-3a4 4 0 0 0-4 4v3H7v3h3v8h3v-8h3l1-3h-4V7a1 1 0 0 1 1-1z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

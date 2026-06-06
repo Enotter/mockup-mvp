@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>作家をさがす — Enotter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="demo-nav"><div class="container"><span class="demo-label">— MOCKUP PAGES —</span><nav class="demo-links">
+    <span class="demo-group">買い手</span>
+    <a href="index.html">トップ</a><a href="products.html">商品一覧</a><a href="search.html">検索結果</a><a href="product-detail.html">商品詳細</a><a href="cart.html">カート</a><a href="checkout.html">購入手続き</a><a href="order-complete.html">注文完了</a><a href="order-detail.html">注文詳細</a><a href="review-post.html">レビュー投稿</a><a href="mypage.html">マイページ</a><a href="mypage-orders.html">注文履歴</a><a href="mypage-profile.html">プロフィール編集</a><a href="mypage-addresses.html">住所帳</a><a href="mypage-payment.html">お支払い方法</a><a href="messages.html">メッセージ</a><a href="artists.html" class="current">作家一覧</a><a href="artist.html">作家ページ</a><a href="artist-products-list.html">作家作品一覧</a><a href="artist-reviews-list.html">作家レビュー一覧</a>
+    <span class="demo-group">認証</span>
+    <a href="login.html">ログイン</a><a href="signup.html">新規登録</a><a href="email-verify.html">メール認証</a><a href="password-reset.html">パスワード再設定</a>
+    <span class="demo-group">作家</span>
+    <a href="artist-signup.html">作家登録</a><a href="artist-dashboard.html">ダッシュボード</a><a href="product-new.html">出品</a><a href="product-edit.html">商品編集</a><a href="product-manage.html">商品管理</a><a href="order-manage.html">受注管理</a><a href="artist-order-detail.html">受注詳細</a><a href="artist-messages.html">作家メッセージ</a><a href="artist-profile-edit.html">プロフィール編集</a><a href="artist-payout.html">振込先設定</a><a href="artist-shop-edit.html">ショップ設定</a>
+    <span class="demo-group">作家登録フロー</span><a href="artist-signup-id.html">本人確認</a><a href="artist-signup-bank.html">振込先登録</a><a href="artist-signup-terms.html">規約同意</a><span class="demo-group">作家管理</span><a href="artist-pending-orders.html">未対応注文</a><a href="artist-reviews.html">レビュー一覧</a><a href="artist-notices.html">お知らせ</a><span class="demo-group">運営</span><a href="admin-dashboard.html">管理ダッシュボード</a><a href="admin-artist-review.html">作家審査</a><a href="admin-users.html">ユーザー管理</a><a href="admin-products.html">商品モデレーション</a><a href="admin-features.html">特集・バナー管理</a><a href="admin-payouts.html">精算管理</a><a href="admin-inquiries.html">お問い合わせ</a><a href="admin-analytics.html">分析・レポート</a><span class="demo-group">規約・その他</span>
+    <a href="terms.html">利用規約</a><a href="privacy.html">プライバシー</a><a href="tokushoho.html">特商法</a><a href="about.html">会社概要</a><a href="faq.html">FAQ</a><a href="contact.html">お問い合わせ</a><a href="404.html">404</a>
+  </nav></div></div>
+
+  <div class="utility-bar"><div class="container"><div class="utility-left"><span>送料無料キャンペーン実施中（5,000円以上のお買い物で）</span></div><div class="utility-right"><a href="faq.html">ヘルプ</a><a href="artist-signup.html">出品する</a><a href="login.html">ログイン</a><a href="signup.html">新規登録</a></div></div></div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark"><svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="22" fill="#FAF6EE" stroke="#5C3A21" stroke-width="2"/><path d="M14 30 Q24 14 34 30" stroke="#5C3A21" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="22" r="2.5" fill="#B5523F"/><path d="M18 34 L30 34" stroke="#5C3A21" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/></svg></span>
+        <span class="logo-text"><span class="logo-jp">Enotter</span></span>
+      </a>
+      <form class="search"><input type="text" placeholder="作家名・作品名・キーワードで探す" /><button type="submit"><svg viewBox="0 0 24 24" width="20" height="20"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20 L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></form>
+      <nav class="header-icons">
+        <a href="favorites.html" class="icon-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>お気に入り</span></a>
+        <a href="mypage.html" class="icon-btn"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>マイページ</span></a>
+        <a href="cart.html" class="icon-btn cart"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 4h3l3 12h10l3-9H7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.5" fill="currentColor"/><circle cx="18" cy="20" r="1.5" fill="currentColor"/></svg><span>カート</span><span class="badge">2</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="breadcrumb"><ol><li><a href="index.html">ホーム</a></li><li>作家をさがす</li></ol></nav>
+    <div class="page-title">
+      <span class="eyebrow">FIND ARTISTS</span>
+      <h1>作家をさがす</h1>
+      <p>全国 3,200 名以上の作家・工房から、あなたのお気に入りの作り手を見つけてください。</p>
+    </div>
+  </div>
+
+  <div class="container" style="display:grid;grid-template-columns:220px 1fr;gap:32px;padding-top:24px;padding-bottom:64px;align-items:start;">
+
+    <!-- ===== Sidebar Filter ===== -->
+    <aside class="filter-sidebar">
+
+      <div class="filter-section">
+        <h4>カテゴリ</h4>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" checked /> アクセサリー <span class="filter-count">842</span></label></li>
+          <li><label><input type="checkbox" /> 陶器・うつわ <span class="filter-count">621</span></label></li>
+          <li><label><input type="checkbox" /> 布・テキスタイル <span class="filter-count">509</span></label></li>
+          <li><label><input type="checkbox" /> 木工・家具 <span class="filter-count">387</span></label></li>
+          <li><label><input type="checkbox" /> レザー・革小物 <span class="filter-count">314</span></label></li>
+          <li><label><input type="checkbox" /> アート・絵画 <span class="filter-count">278</span></label></li>
+          <li><label><input type="checkbox" /> キャンドル・石けん <span class="filter-count">203</span></label></li>
+          <li><label><input type="checkbox" /> 食品・お菓子 <span class="filter-count">165</span></label></li>
+          <li><label><input type="checkbox" /> その他 <span class="filter-count">96</span></label></li>
+        </ul>
+      </div>
+
+      <div class="filter-section" style="margin-top:24px;">
+        <h4>活動地域</h4>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" /> 北海道・東北</label></li>
+          <li><label><input type="checkbox" /> 関東</label></li>
+          <li><label><input type="checkbox" /> 中部・北陸</label></li>
+          <li><label><input type="checkbox" checked /> 近畿</label></li>
+          <li><label><input type="checkbox" /> 中国・四国</label></li>
+          <li><label><input type="checkbox" /> 九州・沖縄</label></li>
+        </ul>
+      </div>
+
+      <div class="filter-section" style="margin-top:24px;">
+        <h4>評価</h4>
+        <ul class="filter-list">
+          <li><label><input type="radio" name="rating" /> ★ 4.8 以上</label></li>
+          <li><label><input type="radio" name="rating" checked /> ★ 4.5 以上</label></li>
+          <li><label><input type="radio" name="rating" /> ★ 4.0 以上</label></li>
+          <li><label><input type="radio" name="rating" /> すべて</label></li>
+        </ul>
+      </div>
+
+      <div class="filter-section" style="margin-top:24px;">
+        <h4>ギフト対応</h4>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" /> ラッピング対応</label></li>
+          <li><label><input type="checkbox" /> メッセージカード</label></li>
+          <li><label><input type="checkbox" /> のし対応</label></li>
+        </ul>
+      </div>
+
+      <div class="filter-section" style="margin-top:24px;">
+        <h4>受注・制作</h4>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" /> オーダーメイド受付中</label></li>
+          <li><label><input type="checkbox" /> 即日発送可</label></li>
+        </ul>
+      </div>
+
+      <a href="#" class="btn btn-outline" style="width:100%;padding:10px;font-size:13px;margin-top:20px;text-align:center;display:block;">条件をリセット</a>
+    </aside>
+
+    <!-- ===== Main Content ===== -->
+    <div>
+
+      <!-- Sort bar -->
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--paper-edge);">
+        <span style="font-size:13px;color:var(--text-mid);"><strong style="color:var(--text-dark);">384名</strong> の作家が見つかりました</span>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <span style="font-size:12px;color:var(--text-light);">並び替え：</span>
+          <select style="font-size:13px;padding:6px 10px;border:1px solid var(--paper-edge);border-radius:6px;background:var(--paper);color:var(--text-dark);font-family:inherit;">
+            <option>人気順</option>
+            <option>評価が高い順</option>
+            <option>新規登録順</option>
+            <option>作品数が多い順</option>
+            <option>フォロワーが多い順</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Artist Grid -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+
+        <!-- Artist Card 1 -->
+        <a href="artist.html" class="artist-list-card" style="text-decoration:none;background:var(--paper);border:1px solid var(--paper-edge);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s;display:block;" onmouseover="this.style.boxShadow='0 4px 20px rgba(92,58,33,0.12)'" onmouseout="this.style.boxShadow='none'">
+          <div style="height:120px;background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80');background-size:cover;background-position:center;position:relative;">
+            <div style="position:absolute;bottom:-32px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;border:3px solid var(--paper);overflow:hidden;background-image:url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=200&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div style="padding:44px 16px 16px;text-align:center;">
+            <div style="font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:2px;">atelier mori</div>
+            <div style="font-size:11px;color:var(--text-light);margin-bottom:8px;">長野県 ・ アクセサリー</div>
+            <div style="font-size:12px;color:var(--text-mid);margin-bottom:12px;line-height:1.6;">森の素材を生かした真鍮アクセサリーを制作しています。一つひとつ手で打ち出す質感が特徴です。</div>
+            <div style="display:flex;justify-content:center;gap:16px;font-size:12px;color:var(--text-mid);margin-bottom:14px;">
+              <span>★ <strong style="color:var(--text-dark);">4.9</strong> (312件)</span>
+              <span>作品 <strong style="color:var(--text-dark);">216</strong></span>
+              <span>フォロワー <strong style="color:var(--text-dark);">1,840</strong></span>
+            </div>
+            <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;">
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">真鍮</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">受注制作</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">ラッピング可</span>
+            </div>
+            <button onclick="event.preventDefault()" style="width:100%;padding:8px;border:1px solid var(--wood-dark);border-radius:6px;background:none;color:var(--wood-dark);font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;">+ フォローする</button>
+          </div>
+        </a>
+
+        <!-- Artist Card 2 -->
+        <a href="artist.html" class="artist-list-card" style="text-decoration:none;background:var(--paper);border:1px solid var(--paper-edge);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s;display:block;" onmouseover="this.style.boxShadow='0 4px 20px rgba(92,58,33,0.12)'" onmouseout="this.style.boxShadow='none'">
+          <div style="height:120px;background-image:url('https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=600&q=80');background-size:cover;background-position:center;position:relative;">
+            <div style="position:absolute;bottom:-32px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;border:3px solid var(--paper);overflow:hidden;background-image:url('https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=200&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div style="padding:44px 16px 16px;text-align:center;">
+            <div style="font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:2px;">陶房 つきの</div>
+            <div style="font-size:11px;color:var(--text-light);margin-bottom:8px;">京都府 ・ 陶器・うつわ</div>
+            <div style="font-size:12px;color:var(--text-mid);margin-bottom:12px;line-height:1.6;">京都の土と釉薬にこだわった日常使いの器を作っています。粉引・灰釉が得意です。</div>
+            <div style="display:flex;justify-content:center;gap:16px;font-size:12px;color:var(--text-mid);margin-bottom:14px;">
+              <span>★ <strong style="color:var(--text-dark);">4.8</strong> (198件)</span>
+              <span>作品 <strong style="color:var(--text-dark);">140</strong></span>
+              <span>フォロワー <strong style="color:var(--text-dark);">1,240</strong></span>
+            </div>
+            <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;">
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">粉引</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">食器</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">ギフト可</span>
+            </div>
+            <button onclick="event.preventDefault()" style="width:100%;padding:8px;border:1px solid var(--wood-dark);border-radius:6px;background:none;color:var(--wood-dark);font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;">+ フォローする</button>
+          </div>
+        </a>
+
+        <!-- Artist Card 3 -->
+        <a href="artist.html" class="artist-list-card" style="text-decoration:none;background:var(--paper);border:1px solid var(--paper-edge);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s;display:block;" onmouseover="this.style.boxShadow='0 4px 20px rgba(92,58,33,0.12)'" onmouseout="this.style.boxShadow='none'">
+          <div style="height:120px;background-image:url('https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=600&q=80');background-size:cover;background-position:center;position:relative;">
+            <div style="position:absolute;bottom:-32px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;border:3px solid var(--paper);overflow:hidden;background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div style="padding:44px 16px 16px;text-align:center;">
+            <div style="font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:2px;">布もの店 こよみ</div>
+            <div style="font-size:11px;color:var(--text-light);margin-bottom:8px;">奈良県 ・ 布・テキスタイル</div>
+            <div style="font-size:12px;color:var(--text-mid);margin-bottom:12px;line-height:1.6;">天然素材の布を使ったバッグ・ポーチ・暮らしの布物を作っています。</div>
+            <div style="display:flex;justify-content:center;gap:16px;font-size:12px;color:var(--text-mid);margin-bottom:14px;">
+              <span>★ <strong style="color:var(--text-dark);">4.7</strong> (143件)</span>
+              <span>作品 <strong style="color:var(--text-dark);">92</strong></span>
+              <span>フォロワー <strong style="color:var(--text-dark);">876</strong></span>
+            </div>
+            <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;">
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">リネン</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">天然素材</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">名入れ可</span>
+            </div>
+            <button onclick="event.preventDefault()" style="width:100%;padding:8px;border:1px solid var(--wood-dark);border-radius:6px;background:none;color:var(--wood-dark);font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;">+ フォローする</button>
+          </div>
+        </a>
+
+        <!-- Artist Card 4 -->
+        <a href="artist.html" class="artist-list-card" style="text-decoration:none;background:var(--paper);border:1px solid var(--paper-edge);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s;display:block;" onmouseover="this.style.boxShadow='0 4px 20px rgba(92,58,33,0.12)'" onmouseout="this.style.boxShadow='none'">
+          <div style="height:120px;background-image:url('https://images.unsplash.com/photo-1611486212557-88be5ff6f941?auto=format&fit=crop&w=600&q=80');background-size:cover;background-position:center;position:relative;">
+            <div style="position:absolute;bottom:-32px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;border:3px solid var(--paper);overflow:hidden;background-image:url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div style="padding:44px 16px 16px;text-align:center;">
+            <div style="font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:2px;">木工房 ひだまり</div>
+            <div style="font-size:11px;color:var(--text-light);margin-bottom:8px;">岐阜県 ・ 木工・家具</div>
+            <div style="font-size:12px;color:var(--text-mid);margin-bottom:12px;line-height:1.6;">飛騨の木材を使った家具・雑貨を制作。木の温もりと機能美を大切にしています。</div>
+            <div style="display:flex;justify-content:center;gap:16px;font-size:12px;color:var(--text-mid);margin-bottom:14px;">
+              <span>★ <strong style="color:var(--text-dark);">4.9</strong> (87件)</span>
+              <span>作品 <strong style="color:var(--text-dark);">54</strong></span>
+              <span>フォロワー <strong style="color:var(--text-dark);">2,130</strong></span>
+            </div>
+            <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;">
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">飛騨木材</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">受注制作</span>
+            </div>
+            <button onclick="event.preventDefault()" style="width:100%;padding:8px;border:1px solid var(--wood-dark);border-radius:6px;background:none;color:var(--wood-dark);font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;">+ フォローする</button>
+          </div>
+        </a>
+
+        <!-- Artist Card 5 -->
+        <a href="artist.html" class="artist-list-card" style="text-decoration:none;background:var(--paper);border:1px solid var(--paper-edge);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s;display:block;" onmouseover="this.style.boxShadow='0 4px 20px rgba(92,58,33,0.12)'" onmouseout="this.style.boxShadow='none'">
+          <div style="height:120px;background-image:url('https://images.unsplash.com/photo-1607344645866-009c320b63e0?auto=format&fit=crop&w=600&q=80');background-size:cover;background-position:center;position:relative;">
+            <div style="position:absolute;bottom:-32px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;border:3px solid var(--paper);overflow:hidden;background-image:url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div style="padding:44px 16px 16px;text-align:center;">
+            <div style="font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:2px;">革工房 KURUMI</div>
+            <div style="font-size:11px;color:var(--text-light);margin-bottom:8px;">大阪府 ・ レザー・革小物</div>
+            <div style="font-size:12px;color:var(--text-mid);margin-bottom:12px;line-height:1.6;">植物なめしのヌメ革を一点ずつ手縫い。使い込むほど味が出る財布・バッグを作っています。</div>
+            <div style="display:flex;justify-content:center;gap:16px;font-size:12px;color:var(--text-mid);margin-bottom:14px;">
+              <span>★ <strong style="color:var(--text-dark);">4.8</strong> (221件)</span>
+              <span>作品 <strong style="color:var(--text-dark);">73</strong></span>
+              <span>フォロワー <strong style="color:var(--text-dark);">1,560</strong></span>
+            </div>
+            <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;">
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">ヌメ革</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">名入れ可</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">ラッピング可</span>
+            </div>
+            <button onclick="event.preventDefault()" style="width:100%;padding:8px;border:1px solid var(--wood-dark);border-radius:6px;background:none;color:var(--wood-dark);font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;">+ フォローする</button>
+          </div>
+        </a>
+
+        <!-- Artist Card 6 -->
+        <a href="artist.html" class="artist-list-card" style="text-decoration:none;background:var(--paper);border:1px solid var(--paper-edge);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s;display:block;" onmouseover="this.style.boxShadow='0 4px 20px rgba(92,58,33,0.12)'" onmouseout="this.style.boxShadow='none'">
+          <div style="height:120px;background-image:url('https://images.unsplash.com/photo-1602874801006-d1f1b8d4ba9e?auto=format&fit=crop&w=600&q=80');background-size:cover;background-position:center;position:relative;">
+            <div style="position:absolute;bottom:-32px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;border:3px solid var(--paper);overflow:hidden;background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div style="padding:44px 16px 16px;text-align:center;">
+            <div style="font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:2px;">Candle nico</div>
+            <div style="font-size:11px;color:var(--text-light);margin-bottom:8px;">兵庫県 ・ キャンドル・石けん</div>
+            <div style="font-size:12px;color:var(--text-mid);margin-bottom:12px;line-height:1.6;">国産蜜蝋とボタニカル素材を使ったアロマキャンドルを作っています。季節の香りをお届けします。</div>
+            <div style="display:flex;justify-content:center;gap:16px;font-size:12px;color:var(--text-mid);margin-bottom:14px;">
+              <span>★ <strong style="color:var(--text-dark);">4.7</strong> (159件)</span>
+              <span>作品 <strong style="color:var(--text-dark);">48</strong></span>
+              <span>フォロワー <strong style="color:var(--text-dark);">720</strong></span>
+            </div>
+            <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;">
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">蜜蝋</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">ギフト可</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">即日発送</span>
+            </div>
+            <button onclick="event.preventDefault()" style="width:100%;padding:8px;border:1px solid var(--wood-dark);border-radius:6px;background:none;color:var(--wood-dark);font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;">+ フォローする</button>
+          </div>
+        </a>
+
+        <!-- Artist Card 7 -->
+        <a href="artist.html" class="artist-list-card" style="text-decoration:none;background:var(--paper);border:1px solid var(--paper-edge);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s;display:block;" onmouseover="this.style.boxShadow='0 4px 20px rgba(92,58,33,0.12)'" onmouseout="this.style.boxShadow='none'">
+          <div style="height:120px;background-image:url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=600&q=80');background-size:cover;background-position:center;position:relative;">
+            <div style="position:absolute;bottom:-32px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;border:3px solid var(--paper);overflow:hidden;background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div style="padding:44px 16px 16px;text-align:center;">
+            <div style="font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:2px;">工房 月と野</div>
+            <div style="font-size:11px;color:var(--text-light);margin-bottom:8px;">福岡県 ・ アート・絵画</div>
+            <div style="font-size:12px;color:var(--text-mid);margin-bottom:12px;line-height:1.6;">水彩と版画を組み合わせた独自の表現で、日常の中の美しさを描いています。</div>
+            <div style="display:flex;justify-content:center;gap:16px;font-size:12px;color:var(--text-mid);margin-bottom:14px;">
+              <span>★ <strong style="color:var(--text-dark);">4.9</strong> (64件)</span>
+              <span>作品 <strong style="color:var(--text-dark);">38</strong></span>
+              <span>フォロワー <strong style="color:var(--text-dark);">1,080</strong></span>
+            </div>
+            <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;">
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">水彩</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">版画</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">受注可</span>
+            </div>
+            <button onclick="event.preventDefault()" style="width:100%;padding:8px;border:1px solid var(--wood-dark);border-radius:6px;background:none;color:var(--wood-dark);font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;">+ フォローする</button>
+          </div>
+        </a>
+
+        <!-- Artist Card 8 -->
+        <a href="artist.html" class="artist-list-card" style="text-decoration:none;background:var(--paper);border:1px solid var(--paper-edge);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s;display:block;" onmouseover="this.style.boxShadow='0 4px 20px rgba(92,58,33,0.12)'" onmouseout="this.style.boxShadow='none'">
+          <div style="height:120px;background-image:url('https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=600&q=80');background-size:cover;background-position:center;position:relative;">
+            <div style="position:absolute;bottom:-32px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;border:3px solid var(--paper);overflow:hidden;background-image:url('https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=200&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div style="padding:44px 16px 16px;text-align:center;">
+            <div style="font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:2px;">glass studio hana</div>
+            <div style="font-size:11px;color:var(--text-light);margin-bottom:8px;">神奈川県 ・ アクセサリー</div>
+            <div style="font-size:12px;color:var(--text-mid);margin-bottom:12px;line-height:1.6;">とんぼ玉と吹きガラスを組み合わせたアクセサリーを制作。光を纏う透明感が得意です。</div>
+            <div style="display:flex;justify-content:center;gap:16px;font-size:12px;color:var(--text-mid);margin-bottom:14px;">
+              <span>★ <strong style="color:var(--text-dark);">4.8</strong> (102件)</span>
+              <span>作品 <strong style="color:var(--text-dark);">67</strong></span>
+              <span>フォロワー <strong style="color:var(--text-dark);">934</strong></span>
+            </div>
+            <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;">
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">ガラス</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">とんぼ玉</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">ラッピング可</span>
+            </div>
+            <button onclick="event.preventDefault()" style="width:100%;padding:8px;border:1px solid var(--wood-dark);border-radius:6px;background:none;color:var(--wood-dark);font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;">+ フォローする</button>
+          </div>
+        </a>
+
+        <!-- Artist Card 9 -->
+        <a href="artist.html" class="artist-list-card" style="text-decoration:none;background:var(--paper);border:1px solid var(--paper-edge);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s;display:block;" onmouseover="this.style.boxShadow='0 4px 20px rgba(92,58,33,0.12)'" onmouseout="this.style.boxShadow='none'">
+          <div style="height:120px;background-image:url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80');background-size:cover;background-position:center;position:relative;">
+            <div style="position:absolute;bottom:-32px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;border:3px solid var(--paper);overflow:hidden;background-image:url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80');background-size:cover;background-position:center;"></div>
+          </div>
+          <div style="padding:44px 16px 16px;text-align:center;">
+            <div style="font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:2px;">焼き菓子工房 あめ</div>
+            <div style="font-size:11px;color:var(--text-light);margin-bottom:8px;">北海道 ・ 食品・お菓子</div>
+            <div style="font-size:12px;color:var(--text-mid);margin-bottom:12px;line-height:1.6;">北海道産素材にこだわった焼き菓子を丁寧に作っています。贈り物にも喜ばれます。</div>
+            <div style="display:flex;justify-content:center;gap:16px;font-size:12px;color:var(--text-mid);margin-bottom:14px;">
+              <span>★ <strong style="color:var(--text-dark);">4.9</strong> (284件)</span>
+              <span>作品 <strong style="color:var(--text-dark);">31</strong></span>
+              <span>フォロワー <strong style="color:var(--text-dark);">2,450</strong></span>
+            </div>
+            <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;">
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">焼き菓子</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">ギフト可</span>
+              <span style="font-size:10px;background:var(--paper-warm);color:var(--text-mid);padding:2px 8px;border-radius:999px;">のし対応</span>
+            </div>
+            <button onclick="event.preventDefault()" style="width:100%;padding:8px;border:1px solid var(--wood-dark);border-radius:6px;background:none;color:var(--wood-dark);font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;">+ フォローする</button>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination" style="margin-top:40px;">
+        <a href="#">‹ 前へ</a>
+        <a href="#" class="current">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <span>…</span>
+        <a href="#">43</a>
+        <a href="#">次へ ›</a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text" style="font-size:22px;">Enotter</span>
+          <p>つくり手のあたたかさを、暮らしのそばに。</p>
+        </div>
+        <div class="footer-col"><h5>Enotterについて</h5><ul><li><a href="#">Enotterについて</a></li><li><a href="#">買い物ガイド</a></li><li><a href="terms.html">利用規約</a></li><li><a href="privacy.html">プライバシーポリシー</a></li><li><a href="tokushoho.html">特定商取引法に基づく表記</a></li></ul></div>
+        <div class="footer-col"><h5>作家の方へ</h5><ul><li><a href="artist-signup.html">出品をはじめる</a></li><li><a href="#">手数料について</a></li><li><a href="#">作家サポート</a></li></ul></div>
+        <div class="footer-col"><h5>ヘルプ</h5><ul><li><a href="#">よくあるご質問</a></li><li><a href="#">お問い合わせ</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Enotter.</span></div>
+    </div>
+  </footer>
+
+</body>
+</html>

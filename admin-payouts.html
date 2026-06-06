@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>精算管理 — Enotter Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="demo-nav"><div class="container"><span class="demo-label">— MOCKUP PAGES —</span><nav class="demo-links">
+    <span class="demo-group">買い手</span>
+    <a href="index.html">トップ</a><a href="products.html">商品一覧</a><a href="search.html">検索結果</a><a href="product-detail.html">商品詳細</a><a href="cart.html">カート</a><a href="checkout.html">購入手続き</a><a href="order-complete.html">注文完了</a><a href="order-detail.html">注文詳細</a><a href="review-post.html">レビュー投稿</a><a href="mypage.html">マイページ</a><a href="mypage-orders.html">注文履歴</a><a href="mypage-profile.html">プロフィール編集</a><a href="mypage-addresses.html">住所帳</a><a href="mypage-payment.html">お支払い方法</a><a href="messages.html">メッセージ</a><a href="artists.html">作家一覧</a><a href="artist.html">作家ページ</a><a href="artist-products-list.html">作家作品一覧</a><a href="artist-reviews-list.html">作家レビュー一覧</a>
+    <span class="demo-group">認証</span>
+    <a href="login.html">ログイン</a><a href="signup.html">新規登録</a><a href="email-verify.html">メール認証</a><a href="password-reset.html">パスワード再設定</a>
+    <span class="demo-group">作家</span>
+    <a href="artist-signup.html">作家登録</a><a href="artist-dashboard.html">ダッシュボード</a><a href="product-new.html">出品</a><a href="product-edit.html">商品編集</a><a href="product-manage.html">商品管理</a><a href="order-manage.html">受注管理</a><a href="artist-order-detail.html">受注詳細</a><a href="artist-messages.html">作家メッセージ</a><a href="artist-profile-edit.html">プロフィール編集</a><a href="artist-payout.html">振込先設定</a><a href="artist-shop-edit.html">ショップ設定</a>
+    <span class="demo-group">作家登録フロー</span><a href="artist-signup-id.html">本人確認</a><a href="artist-signup-bank.html">振込先登録</a><a href="artist-signup-terms.html">規約同意</a><span class="demo-group">作家管理</span><a href="artist-pending-orders.html">未対応注文</a><a href="artist-reviews.html">レビュー一覧</a><a href="artist-notices.html">お知らせ</a><span class="demo-group">規約・その他</span>
+    <a href="terms.html">利用規約</a><a href="privacy.html">プライバシー</a><a href="tokushoho.html">特商法</a><a href="about.html">会社概要</a><a href="faq.html">FAQ</a><a href="contact.html">お問い合わせ</a><a href="404.html">404</a>
+    <span class="demo-group">運営</span>
+    <a href="admin-dashboard.html">管理ダッシュボード</a><a href="admin-artist-review.html">作家審査</a><a href="admin-users.html">ユーザー管理</a><a href="admin-products.html">商品モデレーション</a><a href="admin-features.html">特集・バナー管理</a><a href="admin-payouts.html" class="current">精算管理</a><a href="admin-inquiries.html">お問い合わせ</a><a href="admin-analytics.html">分析・レポート</a>
+  </nav></div></div>
+
+  <header style="background:#2C1A0E;color:#FAF6EE;padding:12px 0;">
+    <div class="container" style="display:flex;align-items:center;gap:24px;">
+      <a href="admin-dashboard.html" style="display:flex;gap:10px;align-items:center;color:#FAF6EE;text-decoration:none;">
+        <svg viewBox="0 0 48 48" width="32" height="32"><circle cx="24" cy="24" r="22" fill="none" stroke="#FAF6EE" stroke-width="2"/><path d="M14 30 Q24 14 34 30" stroke="#FAF6EE" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="22" r="2.5" fill="#D4B896"/></svg>
+        <span style="font-family:'Zen Old Mincho',serif;font-size:18px;font-weight:700;">Enotter</span>
+        <span style="font-size:10px;background:#B5523F;color:#fff;padding:2px 8px;border-radius:4px;letter-spacing:0.1em;">ADMIN</span>
+      </a>
+      <nav style="margin-left:auto;display:flex;gap:20px;font-size:13px;">
+        <a href="admin-dashboard.html" style="color:rgba(250,246,238,0.7);">ダッシュボード</a>
+        <a href="admin-artist-review.html" style="color:rgba(250,246,238,0.7);">作家審査</a>
+        <a href="admin-users.html" style="color:rgba(250,246,238,0.7);">ユーザー</a>
+        <a href="admin-products.html" style="color:rgba(250,246,238,0.7);">商品</a>
+        
+        <a href="admin-payouts.html" style="color:#FAF6EE;font-weight:700;">精算</a>
+        <a href="admin-analytics.html" style="color:rgba(250,246,238,0.7);">分析</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mvp-page">
+    <div class="container">
+
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:24px;">
+        <div>
+          <span style="font-family:var(--font-hand);color:var(--accent-gold);font-size:13px;">— 運営管理 —</span>
+          <h1 style="font-family:var(--font-mincho);font-size:28px;color:var(--text-dark);margin-top:4px;">精算管理</h1>
+          <p style="font-size:13px;color:var(--text-mid);margin-top:4px;">評価投稿完了を条件に自動で売上を確定。<strong>月末締め・翌月10日払い</strong>で一括振込します。</p>
+        </div>
+        <div style="font-size:13px;color:var(--text-light);">対象月：<strong style="color:var(--text-dark);">2026年5月</strong></div>
+      </div>
+
+      <!-- 自動精算ルール設定 -->
+      <div class="form-card" style="margin-bottom:28px;background:linear-gradient(135deg,#FAF6EE,#F5EDE0);border:1px solid var(--paper-edge);">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:32px;">
+          <div>
+            <h3 style="margin-bottom:4px;">自動精算ルール</h3>
+            <p style="font-size:13px;color:var(--text-mid);margin-bottom:0;">以下の条件が満たされた注文は、売上が作家の残高に自動で計上されます。</p>
+          </div>
+          <button class="btn btn-outline" style="font-size:12px;padding:8px 16px;white-space:nowrap;">ルールを編集</button>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px;">
+          <div style="background:var(--paper);border:1px solid var(--paper-edge);border-radius:10px;padding:18px 20px;">
+            <div style="font-size:11px;color:var(--accent-red);font-weight:700;letter-spacing:0.1em;margin-bottom:8px;">確定条件</div>
+            <div style="font-size:14px;font-weight:700;color:var(--text-dark);margin-bottom:4px;">評価投稿後に即時確定</div>
+            <div style="font-size:12px;color:var(--text-mid);line-height:1.7;">購入者がレビューを投稿した時点で、該当注文の売上を自動的に作家残高へ計上します。</div>
+          </div>
+          <div style="background:var(--paper);border:1px solid var(--paper-edge);border-radius:10px;padding:18px 20px;">
+            <div style="font-size:11px;color:var(--text-light);font-weight:700;letter-spacing:0.1em;margin-bottom:8px;">未評価の場合（フォールバック）</div>
+            <div style="font-size:14px;font-weight:700;color:var(--text-dark);margin-bottom:4px;">お届け完了から <span style="color:var(--accent-red);">7日後</span> に自動確定</div>
+            <div style="font-size:12px;color:var(--text-mid);line-height:1.7;">購入者がレビューを投稿しない場合も、配送完了後7日で自動的に売上を確定します。</div>
+          </div>
+          <div style="background:var(--paper);border:1px solid var(--paper-edge);border-radius:10px;padding:18px 20px;">
+            <div style="font-size:11px;color:var(--text-light);font-weight:700;letter-spacing:0.1em;margin-bottom:8px;">振込タイミング</div>
+            <div style="font-size:14px;font-weight:700;color:var(--text-dark);margin-bottom:4px;">月末締め・<span style="color:var(--accent-red);">翌月10日払い</span></div>
+            <div style="font-size:12px;color:var(--text-mid);line-height:1.7;">当月中に確定した売上を翌月10日に作家の登録口座へ自動振込。最低振込額は1,000円（未達は翌月繰越）。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPIサマリ -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:28px;">
+        <div class="kpi-card">
+          <span class="kpi-label">今月の確定済み売上</span>
+          <span class="kpi-value" style="font-size:22px;">¥3,110,400</span>
+          <span class="kpi-delta up">自動確定済み</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">手数料控除後（振込額）</span>
+          <span class="kpi-value" style="font-size:22px;">¥2,799,360</span>
+          <span class="kpi-delta">手数料10%控除</span>
+        </div>
+        <div class="kpi-card alert">
+          <span class="kpi-label">要対応 / 保留案件</span>
+          <span class="kpi-value" style="color:var(--accent-red);">3<span style="font-size:14px;color:var(--text-light);"> 件</span></span>
+          <span class="kpi-delta">口座未登録・名義不一致</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">次回振込予定日</span>
+          <span class="kpi-value" style="font-size:20px;">6/10</span>
+          <span class="kpi-delta">5月分 → あと10日</span>
+        </div>
+      </div>
+
+      <!-- タブ -->
+      <div style="display:flex;gap:0;border-bottom:2px solid var(--paper-edge);margin-bottom:20px;">
+        <button style="padding:10px 20px;background:none;border:0;border-bottom:2px solid var(--accent-red);color:var(--text-dark);font-weight:700;font-size:13px;cursor:pointer;margin-bottom:-2px;">精算ログ（自動）<span style="background:var(--paper-edge);color:var(--text-mid);font-size:10px;padding:1px 7px;border-radius:999px;margin-left:6px;">218</span></button>
+        <button style="padding:10px 20px;background:none;border:0;border-bottom:2px solid transparent;color:var(--text-mid);font-size:13px;cursor:pointer;">保留・要対応<span style="background:var(--accent-red);color:#fff;font-size:10px;padding:1px 7px;border-radius:999px;margin-left:6px;">3</span></button>
+        <button style="padding:10px 20px;background:none;border:0;border-bottom:2px solid transparent;color:var(--text-mid);font-size:13px;cursor:pointer;">振込履歴</button>
+      </div>
+
+      <!-- 自動精算ログテーブル -->
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-size:13px;color:var(--text-mid);">2026年5月の精算ログ — 計218件が自動確定済み</span>
+        <button class="btn btn-outline" style="font-size:12px;padding:8px 14px;">CSV出力</button>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>確定日時</th>
+            <th>作家名</th>
+            <th>注文番号</th>
+            <th>確定理由</th>
+            <th>売上額</th>
+            <th>手数料（10%）</th>
+            <th>作家残高への加算</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-size:12px;color:var(--text-mid);">2026/05/31 09:02</td>
+            <td style="font-weight:700;">atelier mori</td>
+            <td style="font-size:12px;color:var(--text-mid);">TI-2026-0523-04812</td>
+            <td><span class="status-badge shipped" style="font-size:10px;">評価投稿</span></td>
+            <td>¥4,500</td>
+            <td style="color:var(--accent-red);font-size:12px;">−¥450</td>
+            <td style="font-weight:700;color:var(--wood-dark);">+¥4,050</td>
+          </tr>
+          <tr>
+            <td style="font-size:12px;color:var(--text-mid);">2026/05/31 08:54</td>
+            <td style="font-weight:700;">陶房 つきの</td>
+            <td style="font-size:12px;color:var(--text-mid);">TI-2026-0523-04801</td>
+            <td><span class="status-badge shipped" style="font-size:10px;">評価投稿</span></td>
+            <td>¥8,000</td>
+            <td style="color:var(--accent-red);font-size:12px;">−¥800</td>
+            <td style="font-weight:700;color:var(--wood-dark);">+¥7,200</td>
+          </tr>
+          <tr>
+            <td style="font-size:12px;color:var(--text-mid);">2026/05/30 22:41</td>
+            <td style="font-weight:700;">革工房 KURUMI</td>
+            <td style="font-size:12px;color:var(--text-mid);">TI-2026-0522-04788</td>
+            <td><span class="status-badge new" style="font-size:10px;">7日経過</span></td>
+            <td>¥9,800</td>
+            <td style="color:var(--accent-red);font-size:12px;">−¥980</td>
+            <td style="font-weight:700;color:var(--wood-dark);">+¥8,820</td>
+          </tr>
+          <tr>
+            <td style="font-size:12px;color:var(--text-mid);">2026/05/30 21:18</td>
+            <td style="font-weight:700;">Candle nico</td>
+            <td style="font-size:12px;color:var(--text-mid);">TI-2026-0521-04752</td>
+            <td><span class="status-badge shipped" style="font-size:10px;">評価投稿</span></td>
+            <td>¥2,800</td>
+            <td style="color:var(--accent-red);font-size:12px;">−¥280</td>
+            <td style="font-weight:700;color:var(--wood-dark);">+¥2,520</td>
+          </tr>
+          <tr>
+            <td style="font-size:12px;color:var(--text-mid);">2026/05/30 19:05</td>
+            <td style="font-weight:700;">木工房 ひだまり</td>
+            <td style="font-size:12px;color:var(--text-mid);">TI-2026-0521-04744</td>
+            <td><span class="status-badge shipped" style="font-size:10px;">評価投稿</span></td>
+            <td>¥16,500</td>
+            <td style="color:var(--accent-red);font-size:12px;">−¥1,650</td>
+            <td style="font-weight:700;color:var(--wood-dark);">+¥14,850</td>
+          </tr>
+          <tr>
+            <td style="font-size:12px;color:var(--text-mid);">2026/05/30 14:33</td>
+            <td style="font-weight:700;">布もの店 こよみ</td>
+            <td style="font-size:12px;color:var(--text-mid);">TI-2026-0520-04720</td>
+            <td><span class="status-badge new" style="font-size:10px;">7日経過</span></td>
+            <td>¥5,200</td>
+            <td style="color:var(--accent-red);font-size:12px;">−¥520</td>
+            <td style="font-weight:700;color:var(--wood-dark);">+¥4,680</td>
+          </tr>
+          <tr>
+            <td style="font-size:12px;color:var(--text-mid);">2026/05/29 11:20</td>
+            <td style="font-weight:700;">glass studio hana</td>
+            <td style="font-size:12px;color:var(--text-mid);">TI-2026-0519-04698</td>
+            <td><span class="status-badge shipped" style="font-size:10px;">評価投稿</span></td>
+            <td>¥7,400</td>
+            <td style="color:var(--accent-red);font-size:12px;">−¥740</td>
+            <td style="font-weight:700;color:var(--wood-dark);">+¥6,660</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="text-align:center;font-size:12px;color:var(--text-light);margin-top:16px;">... 残り211件 / 次ページ →</p>
+
+      <!-- 保留案件（要対応） -->
+      <div style="margin-top:40px;">
+        <h3 style="font-family:var(--font-mincho);font-size:18px;color:var(--text-dark);margin-bottom:4px;display:flex;align-items:center;gap:10px;">
+          保留案件（手動対応が必要）
+          <span style="font-size:12px;background:var(--accent-red);color:#fff;padding:2px 10px;border-radius:999px;font-weight:700;">3件</span>
+        </h3>
+        <p style="font-size:13px;color:var(--text-mid);margin-bottom:16px;">口座未登録・名義不一致などにより自動振込できなかった作家への対応が必要です。</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>作家名</th>
+              <th>振込対象月</th>
+              <th>振込予定額</th>
+              <th>保留理由</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#FFF5F5;">
+              <td style="font-weight:700;">キャンドル工房 光</td>
+              <td>2026年5月</td>
+              <td style="font-weight:700;">¥37,800</td>
+              <td><span style="font-size:12px;color:var(--accent-red);font-weight:600;">振込先口座 未登録</span></td>
+              <td><div class="row-actions"><button onclick="location.href='admin-users.html'">作家に連絡</button><button>詳細確認</button></div></td>
+            </tr>
+            <tr style="background:#FFF5F5;">
+              <td style="font-weight:700;">縫い人 さくら</td>
+              <td>2026年5月</td>
+              <td style="font-weight:700;">¥58,320</td>
+              <td><span style="font-size:12px;color:var(--accent-red);font-weight:600;">口座名義が登録名と不一致</span></td>
+              <td><div class="row-actions"><button onclick="location.href='admin-users.html'">作家に連絡</button><button>詳細確認</button></div></td>
+            </tr>
+            <tr style="background:#FFF5F5;">
+              <td style="font-weight:700;">陶工 山野辺</td>
+              <td>2026年5月</td>
+              <td style="font-weight:700;">¥24,300</td>
+              <td><span style="font-size:12px;color:var(--accent-red);font-weight:600;">返金・返品処理が完了していない注文あり</span></td>
+              <td><div class="row-actions"><button onclick="location.href='admin-inquiries.html'">問い合わせ確認</button><button>保留解除</button></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
