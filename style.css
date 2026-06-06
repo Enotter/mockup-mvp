@@ -3262,3 +3262,171 @@ body {
   font-size: 12px;
   margin-bottom: 20px;
 }
+
+/* =========================================================
+   ARTIST SIGNUP FLOW — Utility classes
+   ========================================================= */
+
+/* Centered page title */
+.page-title.center { text-align: center; }
+
+/* Info box — paper-warm callout */
+.info-box {
+  background: var(--paper-warm);
+  border: 1px solid var(--paper-edge);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  font-size: 12px;
+  color: var(--text-mid);
+  line-height: 1.8;
+}
+.info-box p { margin: 0; }
+
+/* Accent callout (gold left border) */
+.note-callout {
+  padding: 12px 14px;
+  background: #F5F0E8;
+  border-left: 3px solid var(--accent-gold);
+  border-radius: 0 6px 6px 0;
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--text-mid);
+  line-height: 1.8;
+}
+.note-callout p { margin: 0; }
+
+/* Inline date picker row */
+.date-inputs {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-mid);
+}
+
+/* Form notices (small hint text) */
+.form-notice {
+  font-size: 12px;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin: 8px 0 0;
+}
+
+/* Form action wrapper */
+.form-action { margin-top: 32px; }
+
+/* Step footer row (back link + counter) */
+.step-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+.step-counter {
+  font-size: 12px;
+  color: var(--text-mid);
+}
+
+/* Upload area inner label */
+.upload-area .upload-label {
+  font-size: 13px;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+.upload-area .upload-icon-lg {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+/* Payout schedule box */
+.schedule-box {
+  background: var(--paper-warm);
+  border: 1px solid var(--paper-edge);
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin-top: 24px;
+}
+.schedule-box .schedule-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.schedule-box ul {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 12px;
+  color: var(--text-mid);
+  line-height: 2;
+  list-style: disc;
+}
+
+/* Artist signup benefit strip */
+.benefit-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--paper-edge);
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-mid);
+}
+.benefit-strip .benefit-value {
+  font-family: var(--font-hand);
+  color: var(--accent-gold);
+  font-size: 24px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Radio / checkbox list */
+.radio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+.radio-list label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 400;
+  color: var(--text-dark);
+}
+.radio-list input[type="radio"],
+.radio-list input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Account type radio (inline row) */
+.radio-row {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+}
+.radio-row label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.radio-row input[type="radio"] {
+  width: 16px;
+  height: 16px;
+}
+
+/* ID type section header */
+.upload-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
