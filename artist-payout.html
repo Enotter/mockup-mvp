@@ -91,35 +91,58 @@
         </div>
       </div>
 
-      <!-- 振込先口座カード（Stripe管理） -->
+      <!-- 振込先口座カード -->
       <div class="form-card">
         <h3>振込先口座・本人確認</h3>
-        <p class="form-card-desc">口座情報・本人確認書類はStripe Connect（Stripe社）が安全に管理しています。変更はStripeダッシュボードから行えます。</p>
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
           <div style="background:#e8f5e9;border:1px solid #c8e6c9;border-radius:10px;padding:16px 18px;">
             <div style="font-size:11px;font-weight:700;color:#388e3c;letter-spacing:0.08em;margin-bottom:6px;">✓ 振込先口座</div>
-            <div style="font-size:14px;font-weight:700;color:var(--text-dark);">登録済み（Stripe管理）</div>
+            <div style="font-size:14px;font-weight:700;color:var(--text-dark);">登録済み</div>
             <div style="font-size:12px;color:var(--text-mid);margin-top:2px;">○○銀行 ○○支店 普通 1234567</div>
           </div>
           <div style="background:#e8f5e9;border:1px solid #c8e6c9;border-radius:10px;padding:16px 18px;">
-            <div style="font-size:11px;font-weight:700;color:#388e3c;letter-spacing:0.08em;margin-bottom:6px;">✓ 本人確認（KYC）</div>
+            <div style="font-size:11px;font-weight:700;color:#388e3c;letter-spacing:0.08em;margin-bottom:6px;">✓ 本人確認</div>
             <div style="font-size:14px;font-weight:700;color:var(--text-dark);">確認済み</div>
-            <div style="font-size:12px;color:var(--text-mid);margin-top:2px;">2026年3月1日 Stripe審査完了</div>
+            <div style="font-size:12px;color:var(--text-mid);margin-top:2px;">2026年3月1日 確認完了</div>
           </div>
         </div>
 
-        <!-- Stripeダッシュボードリンク -->
-        <div style="display:flex;align-items:center;gap:14px;background:var(--paper-warm);border:1px solid var(--paper-edge);border-radius:10px;padding:16px 20px;">
-          <div style="background:#635BFF;border-radius:8px;padding:8px 14px;display:flex;align-items:center;flex-shrink:0;">
-            <svg viewBox="0 0 60 25" width="44" height="18" fill="white"><path d="M59.6 13.4c0-4.2-2-7.5-5.9-7.5-3.9 0-6.3 3.3-6.3 7.4 0 4.9 2.8 7.4 6.7 7.4 1.9 0 3.4-.4 4.5-1.1v-3c-1.1.6-2.4.9-4 .9-1.6 0-3-.6-3.2-2.5h8.1c.1-.3.1-.9.1-1.6zm-8.2-1.5c0-1.8 1.1-2.6 2.2-2.6 1 0 2 .7 2 2.6h-4.2zM41.9 5.9c-1.6 0-2.7.8-3.3 1.3l-.2-1h-3.4v19l3.9-.8V22c.6.4 1.5 1 3 1 3 0 5.8-2.4 5.8-7.6-.1-4.8-2.9-7.5-5.8-7.5zm-1 11.5c-1 0-1.6-.4-2-.8V10.3c.4-.5 1.1-.8 2-.8 1.5 0 2.6 1.7 2.6 3.9 0 2.3-1 4-2.6 4zM31.3 4.6l-3.9.9V2.5l3.9-.9v3zM27.4 6.2h3.9v16.5h-3.9V6.2zM22.9 7.3l-.3-1.1H19.4v16.5h3.9V11c.9-1.2 2.5-1 3-.8V6.2c-.6-.2-2.6-.5-3.4 1.1zM15 3.2l-3.8.8-.1 13.7c0 2.5 1.9 4.4 4.4 4.4 1.4 0 2.4-.3 3-.5v-3.1c-.5.2-3.3 1-3.3-1.5V9.4h3.3V6.2H15V3.2zM4.4 10.2c0-.6.5-.8 1.4-.8 1.2 0 2.8.4 4 1.1V7c-1.3-.5-2.7-.8-4-.8C2.4 6.2 0 7.9 0 11.1c0 5 6.8 4.2 6.8 6.3 0 .7-.6 1-1.6 1-1.4 0-3.1-.6-4.5-1.4v3.5c1.5.7 3.1 1 4.5 1 3.4 0 5.8-1.7 5.8-5C11 11 4.4 12 4.4 10.2z"/></svg>
+        <details>
+          <summary style="cursor:pointer;list-style:none;padding:10px 16px;background:#fff;border:1px solid var(--paper-edge);border-radius:8px;font-size:13px;font-weight:700;color:var(--text-dark);display:inline-flex;align-items:center;gap:6px;">
+            口座情報を変更する
+          </summary>
+          <div style="padding-top:20px;">
+            <div class="form-row-2">
+              <div class="field-block">
+                <label>銀行名 <span class="form-required">必須</span></label>
+                <input type="text" placeholder="○○銀行" />
+              </div>
+              <div class="field-block">
+                <label>支店名 <span class="form-required">必須</span></label>
+                <input type="text" placeholder="○○支店" />
+              </div>
+            </div>
+            <div class="field-block">
+              <label>口座種別 <span class="form-required">必須</span></label>
+              <div style="display:flex;gap:10px;">
+                <label style="display:flex;gap:6px;align-items:center;font-size:13px;cursor:pointer;"><input type="radio" name="account-type" checked /> 普通</label>
+                <label style="display:flex;gap:6px;align-items:center;font-size:13px;cursor:pointer;"><input type="radio" name="account-type" /> 当座</label>
+              </div>
+            </div>
+            <div class="form-row-2">
+              <div class="field-block">
+                <label>口座番号 <span class="form-required">必須・数字7桁</span></label>
+                <input type="text" placeholder="1234567" maxlength="7" />
+              </div>
+              <div class="field-block">
+                <label>口座名義（カタカナ） <span class="form-required">必須</span></label>
+                <input type="text" placeholder="カナモリ サク" />
+              </div>
+            </div>
+            <button class="btn btn-primary" style="margin-top:8px;">口座情報を保存する</button>
           </div>
-          <div style="flex:1;">
-            <div style="font-size:13px;font-weight:700;color:var(--text-dark);">口座・本人確認情報を変更する</div>
-            <div style="font-size:12px;color:var(--text-mid);margin-top:2px;">Stripeダッシュボードで変更できます。変更後、Enotterに自動で反映されます。</div>
-          </div>
-          <button class="btn btn-outline" style="font-size:12px;padding:10px 18px;white-space:nowrap;">Stripeを開く →</button>
-        </div>
+        </details>
       </div>
 
       <!-- 振込履歴テーブル -->
