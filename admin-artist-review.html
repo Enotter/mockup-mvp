@@ -200,21 +200,9 @@
           <div id="reject-form" style="display:none;margin-top:0;">
             <div style="background:#FFF5F5;border:1.5px solid var(--accent-red);border-radius:10px;padding:18px 20px;">
               <div style="font-size:13px;font-weight:700;color:var(--accent-red);margin-bottom:14px;">却下理由を入力してください</div>
-              <div style="margin-bottom:12px;">
-                <label style="font-size:12px;color:var(--text-mid);display:block;margin-bottom:6px;">却下理由 <span style="color:var(--accent-red);">必須</span></label>
-                <select style="width:100%;padding:9px 12px;border:1.5px solid #ddd;border-radius:8px;font-size:13px;background:#fff;">
-                  <option value="">選択してください</option>
-                  <option>本人確認書類が不備・不鮮明</option>
-                  <option>申請情報と書類の内容が一致しない</option>
-                  <option>ハンドメイド作品以外の出品が疑われる</option>
-                  <option>活動実績が確認できない</option>
-                  <option>振込先口座情報に不備がある</option>
-                  <option>その他（下記に詳細を記入）</option>
-                </select>
-              </div>
               <div style="margin-bottom:16px;">
-                <label style="font-size:12px;color:var(--text-mid);display:block;margin-bottom:6px;">作家への通知メッセージ <span style="font-size:11px;color:var(--text-light);">任意・申請者にメールで送信されます</span></label>
-                <textarea rows="3" placeholder="例：提出いただいた本人確認書類が不鮮明で内容の確認ができませんでした。お手数ですが鮮明な画像で再申請をお願いします。" style="width:100%;padding:9px 12px;border:1.5px solid #ddd;border-radius:8px;font-size:12px;line-height:1.6;resize:vertical;box-sizing:border-box;"></textarea>
+                <label style="font-size:12px;color:var(--text-mid);display:block;margin-bottom:6px;">作家への通知メッセージ <span style="color:var(--accent-red);">必須</span> <span style="font-size:11px;color:var(--text-light);">申請者にメールで送信されます</span></label>
+                <textarea rows="4" placeholder="例：申請内容を確認いたしましたが、今回はご登録をお断りさせていただきます。詳細はお問い合わせください。" style="width:100%;padding:9px 12px;border:1.5px solid #ddd;border-radius:8px;font-size:12px;line-height:1.6;resize:vertical;box-sizing:border-box;"></textarea>
               </div>
               <div style="display:flex;gap:10px;">
                 <button class="btn btn-outline" style="flex:1;font-size:13px;" onclick="hideRejectForm()">キャンセル</button>
