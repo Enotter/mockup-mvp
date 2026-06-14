@@ -58,7 +58,7 @@
         <h2>はじめまして</h2>
         <p>無料の会員登録で、お気に入りの作品と作家にすぐ出会えます。</p>
 
-        <form class="auth-form">
+        <form class="auth-form" onsubmit="location.href='email-verify.html'; return false;">
           <div class="form-field"><label>メールアドレス <span class="form-required">必須</span></label><input type="email" placeholder="your@email.com" /><span class="form-helper">認証メールをお送りします</span></div>
 
           <div class="form-field"><label>パスワード <span class="form-required">必須</span></label><input type="password" placeholder="8〜64文字（英数字混在）" /><span class="form-helper">強度: ●●●○○ ふつう</span></div>
@@ -74,7 +74,7 @@
               <span><a href="privacy.html" style="color:var(--accent-red);text-decoration:underline;text-decoration-style:dotted;">プライバシーポリシー</a>に同意します <span class="form-required">必須</span></span></label>
           </div>
 
-          <button class="btn btn-primary auth-submit" onclick="location.href='email-verify.html'">登録する</button>
+          <button type="submit" class="btn btn-primary auth-submit">登録する</button>
         </form>
 
         <div class="divider">または</div>

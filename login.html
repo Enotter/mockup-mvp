@@ -60,21 +60,21 @@
         <h2>おかえりなさい</h2>
         <p>ログインして、お気に入りの作品や作家とつながりましょう。</p>
 
-        <form class="auth-form">
+        <form class="auth-form" onsubmit="location.href='index.html'; return false;">
           <div class="form-field"><label>メールアドレス</label><input type="email" placeholder="your@email.com" /></div>
           <div class="form-field"><label>パスワード</label><input type="password" placeholder="••••••••" /></div>
 
           <div class="forgot"><a href="password-reset.html">パスワードをお忘れですか？</a></div>
 
-          <button class="btn btn-primary auth-submit" onclick="location.href='mypage.html'">ログイン</button>
+          <button type="submit" class="btn btn-primary auth-submit">ログイン</button>
         </form>
 
         <div class="divider">または</div>
 
         <div class="sns-login">
-          <button class="sns-btn google" onclick="location.href='mypage.html'"><span class="ico">G</span>Googleでログイン</button>
-          <button class="sns-btn apple" onclick="location.href='mypage.html'"><span class="ico"></span>Appleでログイン</button>
-          <button class="sns-btn line" onclick="location.href='mypage.html'"><span class="ico">L</span>LINEでログイン</button>
+          <button type="button" class="sns-btn google" onclick="location.href='index.html'"><span class="ico">G</span>Googleでログイン</button>
+          <button type="button" class="sns-btn apple" onclick="location.href='index.html'"><span class="ico"></span>Appleでログイン</button>
+          <button type="button" class="sns-btn line" onclick="location.href='index.html'"><span class="ico">L</span>LINEでログイン</button>
         </div>
 
         <p style="text-align:center;font-size:12px;color:var(--text-mid);margin-top:32px;">
